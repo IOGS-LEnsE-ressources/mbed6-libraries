@@ -53,12 +53,7 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">How to use these libraries</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#download-files-from-the-github-repository">Download files from the GitHub repository</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#download-the-repository">Download the repository</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#clone-the-repository">Clone the repository</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#download-specific-files">Download specific files</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#download-files-from-the-github-repository">Download files from the GitHub repository</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#create-a-mbed6-project">Create a MBED6 project</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#keil-studio-cloud">Keil Studio Cloud</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#mbed-studio">MBED Studio</a></li>
@@ -126,96 +121,7 @@
 </ul>
 <section id="download-files-from-the-github-repository">
 <h2>Download files from the GitHub repository<a class="headerlink" href="#download-files-from-the-github-repository" title="Link to this heading"></a></h2>
-<p>There are different ways to get a copy of a repository’s files on <strong>GitHub</strong>. You can:</p>
-<ul class="simple">
-<li><p><strong>Download</strong> a snapshot of a repository’s files as a <strong>zip file</strong> to your own (local) computer.</p></li>
-<li><p><strong>Clone</strong> a repository to your local computer using <em>Git</em>.</p></li>
-<li><p><strong>Fork</strong> a repository to create a new repository on GitHub.</p></li>
-<li><p><strong>Browse</strong> the repository’s directories and download only specific files.</p></li>
-</ul>
-<p>From the GitHub Documentation : <a class="reference external" href="https://docs.github.com/en/get-started/start-your-journey/downloading-files-from-github">Downloading files from GitHub</a>.</p>
-<section id="download-the-repository">
-<h3>Download the repository<a class="headerlink" href="#download-the-repository" title="Link to this heading"></a></h3>
-<p>This is the <strong>easiest way</strong> to obtain the most <strong>up-to-date source code</strong>.</p>
-<p>To download a repository, you need to follow these steps:</p>
-<ol class="arabic">
-<li><p>Navigate to the main page of the repository you want to clone.</p></li>
-<li><p>Above the list of files, click <span class="menuselection">&lt;&gt; Code</span>.</p>
-<blockquote>
-<div><figure class="align-center">
-<a class="reference internal image-reference" href="../_images/git_hub_code_icon.png"><img alt="../_images/git_hub_code_icon.png" src="../_images/git_hub_code_icon.png" style="width: 50%;" /></a>
-</figure>
-</div></blockquote>
-</li>
-<li><p>Click <span class="menuselection">Download ZIP</span></p>
-<blockquote>
-<div><figure class="align-center">
-<a class="reference internal image-reference" href="../_images/git_hub_download.png"><img alt="../_images/git_hub_download.png" src="../_images/git_hub_download.png" style="width: 80%;" /></a>
-</figure>
-</div></blockquote>
-</li>
-<li><p>Change the current working directory to the location where you want to download the repository ZIP file.</p></li>
-<li><p>Go into your file browser and go to the selected directory for this repository.</p></li>
-<li><p>Unzip the archive file.</p></li>
-</ol>
-</section>
-<section id="clone-the-repository">
-<h3>Clone the repository<a class="headerlink" href="#clone-the-repository" title="Link to this heading"></a></h3>
-<p>This is the <strong>best way</strong> to obtain the most <strong>up-to-date source code</strong>. However, you need to be familiar with the use of <strong>Git</strong> and a client software able to manage git repository must be installed (such as <strong class="program">Git Bash</strong> or <strong class="program">GitHub Desktop</strong>…).</p>
-<p>To clone a repository, you need to follow these steps:</p>
-<ol class="arabic">
-<li><p>Navigate to the main page of the repository you want to clone.</p></li>
-<li><p>Above the list of files, click <span class="menuselection">&lt;&gt; Code</span>.</p>
-<blockquote>
-<div><figure class="align-center">
-<a class="reference internal image-reference" href="../_images/git_hub_code_icon.png"><img alt="../_images/git_hub_code_icon.png" src="../_images/git_hub_code_icon.png" style="width: 50%;" /></a>
-</figure>
-</div></blockquote>
-</li>
-<li><p>Copy the URL for the repository in the corresponding HTTPS <cite>Clone</cite> sub-section.</p>
-<blockquote>
-<div><figure class="align-center">
-<a class="reference internal image-reference" href="../_images/git_hub_https_clone.png"><img alt="../_images/git_hub_https_clone.png" src="../_images/git_hub_https_clone.png" style="width: 80%;" /></a>
-</figure>
-</div></blockquote>
-</li>
-<li><p>Open <strong class="program">Git Bash</strong> (or another git management software).</p></li>
-<li><p>Change the current working directory to the location where you want the cloned directory.</p></li>
-<li><p>Type <strong class="command">git clone</strong>, and then paste the URL you copied earlier.</p>
-<blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">YOUR</span><span class="o">-</span><span class="n">USERNAME</span><span class="o">/</span><span class="n">YOUR</span><span class="o">-</span><span class="n">REPOSITORY</span>
-</pre></div>
-</div>
-</div></blockquote>
-</li>
-<li><p>Press <kbd class="kbd docutils literal notranslate">Enter</kbd> to create your local clone.</p></li>
-<li><p>Go into your file browser and go to the selected directory for this repository.</p></li>
-</ol>
-<p>From the GitHub Documentation : <a class="reference external" href="https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository">Cloning a repository</a>.</p>
-</section>
-<section id="download-specific-files">
-<h3>Download specific files<a class="headerlink" href="#download-specific-files" title="Link to this heading"></a></h3>
-<p>The most <strong>boring way</strong> to obtain files in a GitHub repository is to browse in the different directories and to manually download each file you need.</p>
-<p>To download specific files from a repository, you need to follow these steps:</p>
-<ol class="arabic">
-<li><p>Navigate to the main page of the repository you want to clone.</p></li>
-<li><p>Browse through the different directories.</p>
-<blockquote>
-<div><figure class="align-center">
-<a class="reference internal image-reference" href="../_images/git_hub_browse.png"><img alt="../_images/git_hub_browse.png" src="../_images/git_hub_browse.png" style="width: 80%;" /></a>
-</figure>
-</div></blockquote>
-</li>
-<li><p>Open a file and click <span class="menuselection">Download raw file</span> icon.</p>
-<blockquote>
-<div><figure class="align-center">
-<a class="reference internal image-reference" href="../_images/git_hub_raw_download.png"><img alt="../_images/git_hub_raw_download.png" src="../_images/git_hub_raw_download.png" style="width: 80%;" /></a>
-</figure>
-</div></blockquote>
-</li>
-<li><p>Change the current working directory to the location where you want to download the raw file.</p></li>
-</ol>
-</section>
+<p>There are different ways to get a copy of a repository’s files on <strong>GitHub</strong>. To have more informations on how to download a repository, use this tutorial: <a class="reference external" href="http://lense.institutoptique.fr/github/">How To Use GitHub repositories</a> from the LEnsE.</p>
 </section>
 <section id="create-a-mbed6-project">
 <h2>Create a MBED6 project<a class="headerlink" href="#create-a-mbed6-project" title="Link to this heading"></a></h2>
