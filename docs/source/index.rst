@@ -6,6 +6,10 @@
 Welcome to MBED Libraries's documentation!
 ==========================================
 
+.. toctree::
+   :maxdepth: 2
+   
+   How to use these libraries<contents/how_to>
 
 .. toctree::
    :maxdepth: 2
