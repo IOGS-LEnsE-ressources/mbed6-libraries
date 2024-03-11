@@ -3,8 +3,12 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to MBED Libraries's documentation!
-==========================================
+Welcome to MBED6 Libraries's documentation!
+===========================================
+
+You're actually on the *GitHup Page* of the `MBED6 Libraries Git Repository <https://github.com/IOGS-LEnsE-ressources/mbed6-libraries>`_.
+
+This repository gathers **ressources** to integrate some components into **embedded systems** using Nucleo boards and MBED6 free open source IoT operating system.
 
 .. toctree::
    :maxdepth: 2
