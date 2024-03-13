@@ -19,6 +19,7 @@
 
 #include "font.h"
 #include "st7735.h"
+#include "st7735_constants.h"
 #include <cstdint>
 
 
@@ -112,6 +113,10 @@ void ST7735::clear_screen(uint16_t color)
 	this->set_window(0, SIZE_X, 0, SIZE_Y);
 	// draw individual pixels
 	this->set_color(this->__bg_color, CACHE_SIZE_MEM);
+}
+
+bool ST7735::clear_zone(uint16_t x0, uint16_t y0, uint16_t w, uint16_t h, uint16_t color){
+    return this->fill_rect(x0, y0, w, h, color);
 }
 
 

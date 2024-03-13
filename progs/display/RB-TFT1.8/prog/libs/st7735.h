@@ -119,12 +119,23 @@ class ST7735 : public LCD_graphics {
 		* @param color 	uint16_t - Color in 16 bits mode
 		*/		
 		void 	clear_screen(uint16_t color);
-		
+
 		/**
-        * @brief Set the screen size in pixels
-		* @param width  uint16_t - width of the screen in pixels
-		* @param height uint16_t - height of the screen in pixels
-		*/		
+         * @brief Clear a part of the screen in a specific color
+		 * @param x0  uint16_t - start position on X axis
+		 * @param y0  uint16_t - start position on Y axis		
+         * @param width  uint16_t - width of the zone in pixels
+		 * @param height uint16_t - height of the zone in pixels
+		 * @param color 	uint16_t - Color in 16 bits mode
+         * @return false if the positions are out of range of the screen
+		 */		
+		bool 	clear_zone(uint16_t x0, uint16_t y0, uint16_t w, uint16_t h, uint16_t color);
+
+		/**
+         * @brief Set the screen size in pixels
+		 * @param width  uint16_t - width of the screen in pixels
+		 * @param height uint16_t - height of the screen in pixels
+		 */		
 		void 	set_screen_size(uint16_t width, uint16_t height);
 		
 		/**
