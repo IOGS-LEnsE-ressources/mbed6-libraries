@@ -19,11 +19,7 @@ There are different ways to get a copy of a repository's files on **GitHub**. To
 Create a MBED6 project
 **********************
 
-Keil Studio Cloud
-=================
-
-MBED Studio
-===========
+See the training from the LEnsE: `Nucleo Basics / Creation of a MBED project <https://iogs-lense-training.github.io/nucleo-basics/contents/gen_mbed_project.html>`
 
 Paste files into the project
 ****************************

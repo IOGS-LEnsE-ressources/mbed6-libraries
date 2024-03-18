@@ -60,8 +60,6 @@ int main()
 
     int k = my_lcd.get_buffer().size();
     printf("Screen Buffer size = %d\r\n", k);
-
-
     
     my_lcd.draw_pixel(5, 10, SSD1306_WHITE);
     my_lcd.fill_rect(10, 20, 20, 30, SSD1306_WHITE);
