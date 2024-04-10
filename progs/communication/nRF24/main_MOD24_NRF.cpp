@@ -4,8 +4,6 @@
  */
 
 #include "mbed.h"
-#include <cstdint>
-#include <string.h>
 #include "MOD24_NRF.h"
 
 #define WAIT_TIME_MS 500 
@@ -15,7 +13,8 @@ char        charStr[128];
 
 // RF Transmission of data
 #define TRANSFER_SIZE   8
-nRF24L01P       nRF24_mod(D11, D12, D13, PA_12, PA_11, PB_12);
+SPI     my_spi(D11, D12, D13);
+nRF24L01P       nRF24_mod(&my_spi, D8, D7, D6);
 // MOSI, MISO, SCK, CSN, CE, IRQ
 char        dataToSend[TRANSFER_SIZE] = {1, 50, 60, 128, 36, 66, 255, 255};
 char        dataReceived[TRANSFER_SIZE] = {0};

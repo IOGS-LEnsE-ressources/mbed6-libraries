@@ -171,12 +171,12 @@ typedef enum {
  * Methods
  */
 
-nRF24L01P::nRF24L01P(PinName mosi, 
-                     PinName miso, 
-                     PinName sck, 
+nRF24L01P::nRF24L01P(SPI *spi, 
                      PinName csn,
                      PinName ce,
-                     PinName irq) : spi_(mosi, miso, sck), nCS_(csn), ce_(ce), nIRQ_(irq) {
+                     PinName irq) : nCS_(csn), ce_(ce), nIRQ_(irq) {
+    if(spi){delete this->spi_;}
+	this->spi_ = spi;   
 
     mode = _NRF24L01P_MODE_UNKNOWN;
 
@@ -184,8 +184,8 @@ nRF24L01P::nRF24L01P(PinName mosi,
 
     nCS_ = 1;
 
-    spi_.frequency(_NRF24L01P_SPI_MAX_DATA_RATE/5);     // 2Mbit, 1/5th the maximum transfer rate for the SPI bus
-    spi_.format(8,0);                                   // 8-bit, ClockPhase = 0, ClockPolarity = 0
+    this->spi_->frequency(_NRF24L01P_SPI_MAX_DATA_RATE/5);     // 2Mbit, 1/5th the maximum transfer rate for the SPI bus
+    this->spi_->format(8,0);                                   // 8-bit, ClockPhase = 0, ClockPolarity = 0
 
     wait_us(_NRF24L01P_TIMING_Tundef2pd_us);    // Wait for Power-on reset
 
@@ -602,14 +602,14 @@ void nRF24L01P::setRxAddress(unsigned long long address, int width, int pipe) {
 
     nCS_ = 0;
 
-    int status = spi_.write(cn);
+    int status = this->spi_->write(cn);
 
     while ( width-- > 0 ) {
 
         //
         // LSByte first
         //
-        spi_.write((int) (address & 0xFF));
+        this->spi_->write((int) (address & 0xFF));
         address >>= 8;
 
     }
@@ -679,14 +679,14 @@ void nRF24L01P::setTxAddress(unsigned long long address, int width) {
 
     nCS_ = 0;
 
-    int status = spi_.write(cn);
+    int status = this->spi_->write(cn);
 
     while ( width-- > 0 ) {
 
         //
         // LSByte first
         //
-        spi_.write((int) (address & 0xFF));
+        this->spi_->write((int) (address & 0xFF));
         address >>= 8;
 
     }
@@ -745,14 +745,14 @@ unsigned long long nRF24L01P::getRxAddress(int pipe) {
 
     nCS_ = 0;
 
-    int status = spi_.write(cn);
+    int status = this->spi_->write(cn);
 
     for ( int i=0; i<width; i++ ) {
 
         //
         // LSByte first
         //
-        address |= ( ( (unsigned long long)( spi_.write(_NRF24L01P_SPI_CMD_NOP) & 0xFF ) ) << (i*8) );
+        address |= ( ( (unsigned long long)( this->spi_->write(_NRF24L01P_SPI_CMD_NOP) & 0xFF ) ) << (i*8) );
 
     }
 
@@ -801,14 +801,14 @@ unsigned long long nRF24L01P::getTxAddress(void) {
 
     nCS_ = 0;
 
-    int status = spi_.write(cn);
+    int status = this->spi_->write(cn);
 
     for ( int i=0; i<width; i++ ) {
 
         //
         // LSByte first
         //
-        address |= ( ( (unsigned long long)( spi_.write(_NRF24L01P_SPI_CMD_NOP) & 0xFF ) ) << (i*8) );
+        address |= ( ( (unsigned long long)( this->spi_->write(_NRF24L01P_SPI_CMD_NOP) & 0xFF ) ) << (i*8) );
 
     }
 
@@ -853,11 +853,11 @@ int nRF24L01P::write(int pipe, char *data, int count) {
 	
     nCS_ = 0;
 
-    int status = spi_.write(_NRF24L01P_SPI_CMD_WR_TX_PAYLOAD);
+    int status = this->spi_->write(_NRF24L01P_SPI_CMD_WR_TX_PAYLOAD);
 
     for ( int i = 0; i < count; i++ ) {
 
-        spi_.write(*data++);
+        this->spi_->write(*data++);
 
     }
 
@@ -910,9 +910,9 @@ int nRF24L01P::read(int pipe, char *data, int count) {
 
         nCS_ = 0;
 
-        int status = spi_.write(_NRF24L01P_SPI_CMD_R_RX_PL_WID);
+        int status = this->spi_->write(_NRF24L01P_SPI_CMD_R_RX_PL_WID);
 
-        int rxPayloadWidth = spi_.write(_NRF24L01P_SPI_CMD_NOP);
+        int rxPayloadWidth = this->spi_->write(_NRF24L01P_SPI_CMD_NOP);
         
         nCS_ = 1;
 
@@ -922,9 +922,9 @@ int nRF24L01P::read(int pipe, char *data, int count) {
 
             nCS_ = 0;
     
-            int status = spi_.write(_NRF24L01P_SPI_CMD_FLUSH_RX);
+            int status = this->spi_->write(_NRF24L01P_SPI_CMD_FLUSH_RX);
     
-            int rxPayloadWidth = spi_.write(_NRF24L01P_SPI_CMD_NOP);
+            int rxPayloadWidth = this->spi_->write(_NRF24L01P_SPI_CMD_NOP);
             
             nCS_ = 1;
             
@@ -939,11 +939,11 @@ int nRF24L01P::read(int pipe, char *data, int count) {
 
             nCS_ = 0;
         
-            int status = spi_.write(_NRF24L01P_SPI_CMD_RD_RX_PAYLOAD);
+            int status = this->spi_->write(_NRF24L01P_SPI_CMD_RD_RX_PAYLOAD);
         
             for ( int i = 0; i < count; i++ ) {
         
-                *data++ = spi_.write(_NRF24L01P_SPI_CMD_NOP);
+                *data++ = this->spi_->write(_NRF24L01P_SPI_CMD_NOP);
         
             }
 
@@ -988,9 +988,9 @@ void nRF24L01P::setRegister(int regAddress, int regData) {
 
     nCS_ = 0;
 
-    int status = spi_.write(cn);
+    int status = this->spi_->write(cn);
 
-    spi_.write(regData & 0xFF);
+    this->spi_->write(regData & 0xFF);
 
     nCS_ = 1;
 
@@ -1006,9 +1006,9 @@ int nRF24L01P::getRegister(int regAddress) {
 
     nCS_ = 0;
 
-    int status = spi_.write(cn);
+    int status = this->spi_->write(cn);
 
-    int dn = spi_.write(_NRF24L01P_SPI_CMD_NOP);
+    int dn = this->spi_->write(_NRF24L01P_SPI_CMD_NOP);
 
     nCS_ = 1;
 
@@ -1020,7 +1020,7 @@ int nRF24L01P::getStatusRegister(void) {
 
     nCS_ = 0;
 
-    int status = spi_.write(_NRF24L01P_SPI_CMD_NOP);
+    int status = this->spi_->write(_NRF24L01P_SPI_CMD_NOP);
 
     nCS_ = 1;
 

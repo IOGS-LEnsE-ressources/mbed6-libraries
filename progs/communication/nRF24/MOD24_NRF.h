@@ -90,14 +90,12 @@ public:
     /**
      * Constructor.
      *
-     * @param mosi mbed pin to use for MOSI line of SPI interface.
-     * @param miso mbed pin to use for MISO line of SPI interface.
-     * @param sck mbed pin to use for SCK line of SPI interface.
+     * @param spi SPI interface.
      * @param csn mbed pin to use for not chip select line of SPI interface.
      * @param ce mbed pin to use for the chip enable line.
      * @param irq mbed pin to use for the interrupt request line.
      */
-    nRF24L01P(PinName mosi, PinName miso, PinName sck, PinName csn, PinName ce, PinName irq = NC);
+    nRF24L01P(SPI *spi, PinName csn, PinName ce, PinName irq = NC);
 
     /**
      * Set the RF frequency.
@@ -337,7 +335,7 @@ private:
      */
     int getStatusRegister(void);
 
-    SPI         spi_;
+    SPI         *spi_;
     DigitalOut  nCS_;
     DigitalOut  ce_;
     InterruptIn nIRQ_;
