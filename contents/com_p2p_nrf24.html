@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Communication / Between two microcontrollers &mdash; MBED Libraries 0.1 documentation</title>
+  <title>Communication / nRF24L01 &mdash; MBED Libraries 0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../_static/sphinx-toolbox-code.css" />
@@ -27,8 +27,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Communication / nRF24L01" href="com_p2p_nrf24.html" />
-    <link rel="prev" title="Display / RB-TFT 1.8" href="disp_graph_rb18.html" /> 
+    <link rel="next" title="Communication / With a smartphone" href="com_smartphone.html" />
+    <link rel="prev" title="Communication / Between two microcontrollers" href="com_p2p.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -67,8 +67,15 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Communication</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Between microcontrollers</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="com_p2p_nrf24.html">nRF24L01</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="com_p2p.html">Between microcontrollers</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">nRF24L01</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#main-characteristics">Main characteristics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#different-versions">Different versions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#mikro-elektronika-nrf-s-t-click">Mikro Elektronika nRF S / T Click</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="com_smartphone.html">With a smartphone</a></li>
@@ -94,9 +101,10 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Communication / Between two microcontrollers</li>
+          <li class="breadcrumb-item"><a href="com_p2p.html">Communication / Between two microcontrollers</a></li>
+      <li class="breadcrumb-item active">Communication / nRF24L01</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/contents/com_p2p.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/contents/com_p2p_nrf24.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -104,21 +112,40 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="communication-between-two-microcontrollers">
-<h1>Communication / Between two microcontrollers<a class="headerlink" href="#communication-between-two-microcontrollers" title="Link to this heading"></a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="com_p2p_nrf24.html">nRF24L01</a></li>
-</ul>
-</div>
+  <section id="communication-nrf24l01">
+<h1>Communication / nRF24L01<a class="headerlink" href="#communication-nrf24l01" title="Link to this heading"></a></h1>
+<p>The <strong>nRF24L01</strong> is a popular 2.4GHz RF (radio frequency) <strong>transceiver module</strong> developed by <em>Nordic Semiconductor</em>. It is commonly used for <strong>wireless communication</strong> in various applications, particularly in the realm of embedded systems and IoT (Internet of Things) devices.</p>
+<section id="main-characteristics">
+<h2>Main characteristics<a class="headerlink" href="#main-characteristics" title="Link to this heading"></a></h2>
+<p>Key features of the nRF24L01 module include:</p>
+<ol class="arabic simple">
+<li><p><strong>2.4GHz ISM Band</strong>: The nRF24L01 operates in the 2.4GHz ISM (Industrial, Scientific, and Medical) band, which is license-free and globally available for use in wireless communication.</p></li>
+<li><p><strong>Low Power Consumption</strong>: The module is designed for low power consumption, making it suitable for battery-powered applications where energy efficiency is essential.</p></li>
+<li><p><strong>SPI Interface</strong>: Communication with the nRF24L01 module is typically done using the SPI (Serial Peripheral Interface) protocol, which allows for high-speed data transfer and easy integration with microcontrollers and other digital devices.</p></li>
+<li><p><strong>Wireless Communication</strong>: The nRF24L01 supports point-to-point and multi-node communication, allowing devices to transmit and receive data wirelessly over relatively short distances.</p></li>
+<li><p><strong>Enhanced ShockBurst™</strong>: Nordic Semiconductor’s proprietary Enhanced ShockBurst™ protocol provides features such as automatic packet handling, packet acknowledgment, and built-in retransmission for reliable communication in noisy environments.</p></li>
+<li><p><strong>Adjustable Data Rate</strong>: The module supports adjustable data rates ranging from 250kbps to 2Mbps, allowing developers to optimize performance and range based on their specific requirements.</p></li>
+<li><p><strong>Low-Cost and Compact</strong>: The nRF24L01 module is relatively inexpensive and compact, making it a cost-effective solution for wireless communication in embedded systems and DIY projects.</p></li>
+</ol>
+<p>Applications of the nRF24L01 module include wireless sensor networks, remote control systems, home automation, IoT devices, toy controllers, wireless keyboards and mice, and more. Its versatility, low power consumption, and ease of integration make it a popular choice among hobbyists, developers, and engineers for various wireless communication projects.</p>
+</section>
+<section id="different-versions">
+<h2>Different versions<a class="headerlink" href="#different-versions" title="Link to this heading"></a></h2>
+<p>There are different implementations of the nRF24L01.</p>
+<section id="mikro-elektronika-nrf-s-t-click">
+<h3>Mikro Elektronika nRF S / T Click<a class="headerlink" href="#mikro-elektronika-nrf-s-t-click" title="Link to this heading"></a></h3>
+<p>This click board features the <strong>nRF24L01P</strong>, a low-power, high-performance 2.4GHz GFSK transceiver from <em>Nordic Semiconductors</em>.</p>
+<p>More informations on the MikroE website: <a class="reference external" href="https://www.mikroe.com/nrf-s-click">nRF S Click</a> or <a class="reference external" href="https://www.mikroe.com/nrf-t-click">nRF T Click</a>.</p>
+</section>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="disp_graph_rb18.html" class="btn btn-neutral float-left" title="Display / RB-TFT 1.8" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="com_p2p_nrf24.html" class="btn btn-neutral float-right" title="Communication / nRF24L01" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="com_p2p.html" class="btn btn-neutral float-left" title="Communication / Between two microcontrollers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="com_smartphone.html" class="btn btn-neutral float-right" title="Communication / With a smartphone" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
