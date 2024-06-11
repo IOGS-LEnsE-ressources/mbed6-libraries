@@ -19,7 +19,6 @@
 
 #include "font.h"
 #include "st7735.h"
-#include "st7735_constants.h"
 #include <cstdint>
 
 
@@ -97,9 +96,9 @@ void	ST7735::init(void){
 	//  MH: horizontal refresh order 
 	//      0 -> refresh left to right 
 	//      1 -> refresh right to left
-	// 0xA0 = 1010 0000
+	// 0x60 = 0b0110 0000
 	this->send_command(MADCTL);
-	this->send_data_8bits(0xA0);	
+	this->send_data_8bits(0b01100000);	
 	// Main screen turn on
 	this->send_command(DISPON);
 	wait_us(200000);	// 200 ms
@@ -113,10 +112,6 @@ void ST7735::clear_screen(uint16_t color)
 	this->set_window(0, SIZE_X, 0, SIZE_Y);
 	// draw individual pixels
 	this->set_color(this->__bg_color, CACHE_SIZE_MEM);
-}
-
-bool ST7735::clear_zone(uint16_t x0, uint16_t y0, uint16_t w, uint16_t h, uint16_t color){
-    return this->fill_rect(x0, y0, w, h, color);
 }
 
 
