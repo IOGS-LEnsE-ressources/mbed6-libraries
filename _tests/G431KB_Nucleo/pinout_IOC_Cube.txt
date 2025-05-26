@@ -1,0 +1,27 @@
+STM32 Cube pinout configuration
+===============================
+
+PA8		Digital Input / EXTI
+PA9		Digital Input / EXTI
+
+PB8		Digital Output / LED1
+PB6		Digital Output 
+PA10	Digital Output 
+
+PA0		Analog Input 
+PA1		Analog Input 
+
+PA4		Analog Output
+
+PA6		PWM - TIM3
+PA7		PWM - TIM17
+PA11	PWM - TIM4
+PA12	PWM - TIM16
+
+PB3-4-5		SPI1
+
+PB7-PA15	I2C1
+
+Clocks
+------
+TIMER - 170 MHz / 2 = 85 MHz
