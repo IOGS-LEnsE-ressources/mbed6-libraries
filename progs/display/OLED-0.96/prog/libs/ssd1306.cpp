@@ -132,6 +132,7 @@ bool 	SSD1306::send_data (std::vector<uint8_t> data, uint16_t size)
     for(int i = 0; i < size; i++)
         buff[i+1] = data[i];
 	ack = this->__i2c->write(SSD_I2C_ADDRESS, buff, size+1);
+		delete buff;
     return  (ack == 0) ? SSD1306_SUCCESS : SSD1306_ERROR;
 }
 
