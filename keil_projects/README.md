@@ -90,3 +90,15 @@ int main(){
 
 Dossier `libs`
 
+
+### Fichier binaire à télécharger
+
+Par défaut, les fichiers exécutables compilés par Keil uVision sont des fichiers `*.axf`. 
+Ces fichiers ne peuvent pas être directement téléversés dans les cartes Nucléo. Il faut passer par la création d'un fichier binaire (`*.bin`).
+
+Pour 
+
+`Project` / `Options for Target 'project name'`
+Onglet `User`
+Cocher `Run #1` et ajouter : `$K\ARM\ARMCLANG\bin\fromelf.exe --bin --output=@L.bin !L` 
+Cliquer OK
