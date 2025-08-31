@@ -57,7 +57,7 @@ Exécuter la commande suivante pour associer une cible à votre projet (ici Nucl
 
 Afin de créer les fichiers spécifiques à Keil, exécuter la commande suivante :
 
-``mbed export -i uvision5 -m K64F``
+``mbed export -i uvision6 -m NUCLEO_L476RG``
 
 ## Adaptation du projet
 
