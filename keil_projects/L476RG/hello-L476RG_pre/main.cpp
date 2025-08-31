@@ -1,9 +1,7 @@
 /*  
  *  Structure of a main file for embedded project @ LEnsE
  *****************************************************************
- *  Tested with Nucleo XnnnMM board / Mbed OS 6
- *****************************************************************
- *  Pre-compiler json file at the end of this file
+ *  Tested with Nucleo L476RG board / Mbed OS 6
  *****************************************************************
  *  ProTIS / https://lense.institutoptique.fr/
  *      Based on Mbed OS 6 example : mbed-os-example-blinky-baremetal

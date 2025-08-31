@@ -16,8 +16,9 @@
  */
 
 #include "mbed.h"
-#include "WS2812.h"
-#include "PixelArray.h"
+
+#include "libs/WS2812.h"
+#include "libs/PixelArray.h"
 
 #define     STRIP_SIZE      2
 
