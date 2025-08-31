@@ -525,16 +525,6 @@
               <FilePath>C:/Keil_v5/mbed-os/drivers/include/drivers/CAN.h</FilePath>
             </File>
             <File>
-              <FileName>can_api.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/can_api.c</FilePath>
-            </File>
-            <File>
-              <FileName>can_api.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>C:/Keil_v5/mbed-os/hal/include/hal/can_api.h</FilePath>
-            </File>
-            <File>
               <FileName>can_device.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/can_device.h</FilePath>
@@ -3443,6 +3433,16 @@
               <FileName>watchdog_api.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/hal/include/hal/watchdog_api.h</FilePath>
+            </File>
+            <File>
+              <FileName>can_api.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:\Keil_v5\mbed-os\targets\TARGET_STM\can_api.c</FilePath>
+            </File>
+            <File>
+              <FileName>can_api.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>C:\Keil_v5\mbed-os\hal\include\hal\can_api.h</FilePath>
             </File>
           </Files>
         </Group>

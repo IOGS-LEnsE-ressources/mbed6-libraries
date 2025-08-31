@@ -340,7 +340,7 @@
               <MiscControls>-fno-rtti -Wno-armcc-pragma-push-pop -fshort-wchar -mfpu=fpv4-sp-d16 -g -Wno-deprecated-register --target=arm-arm-none-eabi -fdata-sections -Wno-armcc-pragma-anon-unions -fno-exceptions -fno-c++-static-destructors -mthumb -mfloat-abi=hard -mcpu=cortex-m4 -c -fshort-enums -Wno-reserved-user-defined-literal -include mbed_config.h</MiscControls>
               <Define>TARGET_FF_ARDUINO_UNO USE_FULL_LL_DRIVER MBED_BUILD_TIMESTAMP=1748017191.963155 DEVICE_INTERRUPTIN=1 TOOLCHAIN_ARMC6 __CMSIS_RTOS DEVICE_I2C_ASYNCH=1 USE_HAL_DRIVER DEVICE_MPU=1 DEVICE_SLEEP=1 TOOLCHAIN_ARM TARGET_CORTEX TARGET_CORTEX_M DEVICE_SPI_ASYNCH=1 TARGET_STM MBED_RAM_START=0x20000000 DEVICE_ANALOGIN=1 TARGET_MCU_STM32L4 MBED_SPLIT_HEAP DEVICE_WATCHDOG=1 TARGET_STM32L476xG DEVICE_PORTOUT=1 TARGET_LIKE_CORTEX_M4 TARGET_NAME=NUCLEO_L476RG TARGET_RELEASE DEVICE_SERIAL=1 __MBED__=1 DEVICE_FLASH=1 TOOLCHAIN_ARM_STD TARGET_RTOS_M4_M7 TRANSACTION_QUEUE_SIZE_SPI=2 DEVICE_SERIAL_ASYNCH=1 TARGET_M4 TARGET_STM32L4 MULADDC_CANNOT_USE_R7 EXTRA_IDLE_STACK_REQUIRED MBED_TICKLESS DEVICE_PORTINOUT=1 DEVICE_RESET_REASON=1 MBED_MINIMAL_PRINTF MBED_DEBUG TARGET_LIKE_MBED __MICROLIB TARGET_MCU_STM32L476xG __CORTEX_M4 MBED_RTOS_SINGLE_THREAD DEVICE_I2CSLAVE=1 MBED_RAM1_SIZE=0x8000 MBED_RAM1_START=0x10000000 DEVICE_LPTICKER=1 DEVICE_SPI=1 TARGET_MCU_STM32 TARGET_NUCLEO_L476RG DEVICE_I2C=1 MBED_TRAP_ERRORS_ENABLED=1 ARM_MATH_CM4 DEVICE_PWMOUT=1 DEVICE_SPISLAVE=1 DEVICE_RTC=1 DEVICE_ANALOGOUT=1 DEVICE_CAN=1 __FPU_PRESENT=1 DEVICE_TRNG=1 COMPONENT_FLASHIAP=1 MBED_ROM_SIZE=0x100000 MBED_RAM_SIZE=0x18000 DEVICE_SERIAL_FC=1 DEVICE_CRC=1 DEVICE_STDIO_MESSAGES=1 DEVICE_USTICKER=1 MBED_ROM_START=0x8000000 STM32L476xx __MBED_CMSIS_RTOS_CM __ASSERT_MSG DEVICE_PORTIN=1</Define>
               <Undefine></Undefine>
-              <IncludePath>.;C:/Keil_v5/mbed-os;C:/Keil_v5/mbed-os/cmsis;C:/Keil_v5/mbed-os/cmsis/CMSIS_5;C:/Keil_v5/mbed-os/cmsis/CMSIS_5/CMSIS;C:/Keil_v5/mbed-os/cmsis/CMSIS_5/CMSIS/RTOS2;C:/Keil_v5/mbed-os/cmsis/CMSIS_5/CMSIS/TARGET_CORTEX_M;C:/Keil_v5/mbed-os/cmsis/CMSIS_5/CMSIS/TARGET_CORTEX_M/Include;C:/Keil_v5/mbed-os/cmsis/device;C:/Keil_v5/mbed-os/cmsis/device/RTE;C:/Keil_v5/mbed-os/cmsis/device/RTE/include;C:/Keil_v5/mbed-os/cmsis/device/rtos;C:/Keil_v5/mbed-os/connectivity;C:/Keil_v5/mbed-os/connectivity/cellular;C:/Keil_v5/mbed-os/connectivity/drivers;C:/Keil_v5/mbed-os/connectivity/drivers/802.15.4_RF;C:/Keil_v5/mbed-os/connectivity/drivers/802.15.4_RF/atmel-rf-driver;C:/Keil_v5/mbed-os/connectivity/drivers/802.15.4_RF/mcr20a-rf-driver;C:/Keil_v5/mbed-os/connectivity/drivers/802.15.4_RF/stm-s2lp-rf-driver;C:/Keil_v5/mbed-os/connectivity/drivers/cellular;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/Altair;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/Altair/ALT1250;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/Altair/ALT1250/PPP;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/GEMALTO;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/GEMALTO/CINTERION;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/GENERIC;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/GENERIC/GENERIC_AT3GPP;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/MultiTech;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/MultiTech/DragonflyNano;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/MultiTech/DragonflyNano/PPP;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/QUECTEL;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/QUECTEL/BC95;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/QUECTEL/BG96;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/QUECTEL/EC2X;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/QUECTEL/M26;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/QUECTEL/UG96;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/RiotMicro;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/RiotMicro/AT;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/TELIT;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/TELIT/HE910;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/TELIT/ME310;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/TELIT/ME910;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/UBLOX;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/UBLOX/AT;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/UBLOX/N2XX;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/UBLOX/PPP;C:/Keil_v5/mbed-os/connectivity/drivers/emac/TARGET_STM;C:/Keil_v5/mbed-os/connectivity/drivers/mbedtls/TARGET_STM;C:/Keil_v5/mbed-os/connectivity/drivers/nfc;C:/Keil_v5/mbed-os/connectivity/drivers/nfc/PN512;C:/Keil_v5/mbed-os/connectivity/drivers/wifi;C:/Keil_v5/mbed-os/connectivity/drivers/wifi/esp8266-driver;C:/Keil_v5/mbed-os/connectivity/libraries;C:/Keil_v5/mbed-os/connectivity/libraries/mbed-coap;C:/Keil_v5/mbed-os/connectivity/libraries/nanostack-libservice;C:/Keil_v5/mbed-os/connectivity/libraries/ppp;C:/Keil_v5/mbed-os/connectivity/lorawan;C:/Keil_v5/mbed-os/connectivity/lwipstack;C:/Keil_v5/mbed-os/connectivity/mbedtls;C:/Keil_v5/mbed-os/connectivity/nanostack;C:/Keil_v5/mbed-os/connectivity/netsocket;C:/Keil_v5/mbed-os/connectivity/nfc;C:/Keil_v5/mbed-os/drivers;C:/Keil_v5/mbed-os/drivers/device_key;C:/Keil_v5/mbed-os/drivers/include;C:/Keil_v5/mbed-os/drivers/include/drivers;C:/Keil_v5/mbed-os/drivers/include/drivers/interfaces;C:/Keil_v5/mbed-os/drivers/usb;C:/Keil_v5/mbed-os/events;C:/Keil_v5/mbed-os/features;C:/Keil_v5/mbed-os/features/frameworks;C:/Keil_v5/mbed-os/features/frameworks/greentea-client;C:/Keil_v5/mbed-os/features/frameworks/mbed-client-cli;C:/Keil_v5/mbed-os/features/frameworks/unity;C:/Keil_v5/mbed-os/features/frameworks/utest;C:/Keil_v5/mbed-os/hal;C:/Keil_v5/mbed-os/hal/include;C:/Keil_v5/mbed-os/hal/include/hal;C:/Keil_v5/mbed-os/hal/usb;C:/Keil_v5/mbed-os/hal/usb/include;C:/Keil_v5/mbed-os/hal/usb/include/usb;C:/Keil_v5/mbed-os/platform;C:/Keil_v5/mbed-os/platform/cxxsupport;C:/Keil_v5/mbed-os/platform/include;C:/Keil_v5/mbed-os/platform/include/platform;C:/Keil_v5/mbed-os/platform/include/platform/internal;C:/Keil_v5/mbed-os/platform/mbed-trace;C:/Keil_v5/mbed-os/platform/mbed-trace/include;C:/Keil_v5/mbed-os/platform/mbed-trace/include/mbed-trace;C:/Keil_v5/mbed-os/platform/randlib;C:/Keil_v5/mbed-os/platform/source;C:/Keil_v5/mbed-os/platform/source/minimal-printf;C:/Keil_v5/mbed-os/rtos;C:/Keil_v5/mbed-os/rtos/include;C:/Keil_v5/mbed-os/rtos/include/rtos;C:/Keil_v5/mbed-os/rtos/include/rtos/internal;C:/Keil_v5/mbed-os/rtos/source;C:/Keil_v5/mbed-os/storage;C:/Keil_v5/mbed-os/storage/blockdevice;C:/Keil_v5/mbed-os/storage/blockdevice/COMPONENT_FLASHIAP;C:/Keil_v5/mbed-os/storage/blockdevice/include;C:/Keil_v5/mbed-os/storage/blockdevice/include/blockdevice;C:/Keil_v5/mbed-os/storage/blockdevice/include/blockdevice/internal;C:/Keil_v5/mbed-os/storage/filesystem;C:/Keil_v5/mbed-os/storage/kvstore;C:/Keil_v5/mbed-os/targets/TARGET_STM;C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4;C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW;C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/CMSIS;C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver;C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/Legacy;C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/TARGET_STM32L476xG;C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/TARGET_STM32L476xG/TARGET_NUCLEO_L476RG;D:/tools/git_repo/digital_methods/keil_stm32/MBED_os/boards/L476RG/hello-L476RG/mbed-os;./pre_build</IncludePath>
+              <IncludePath>.;C:/Keil_v5/mbed-os;C:/Keil_v5/mbed-os/cmsis;C:/Keil_v5/mbed-os/cmsis/CMSIS_5;C:/Keil_v5/mbed-os/cmsis/CMSIS_5/CMSIS;C:/Keil_v5/mbed-os/cmsis/CMSIS_5/CMSIS/RTOS2;C:/Keil_v5/mbed-os/cmsis/CMSIS_5/CMSIS/TARGET_CORTEX_M;C:/Keil_v5/mbed-os/cmsis/CMSIS_5/CMSIS/TARGET_CORTEX_M/Include;C:/Keil_v5/mbed-os/cmsis/device;C:/Keil_v5/mbed-os/cmsis/device/RTE;C:/Keil_v5/mbed-os/cmsis/device/RTE/include;C:/Keil_v5/mbed-os/cmsis/device/rtos;C:/Keil_v5/mbed-os/connectivity;C:/Keil_v5/mbed-os/connectivity/cellular;C:/Keil_v5/mbed-os/connectivity/drivers;C:/Keil_v5/mbed-os/connectivity/drivers/802.15.4_RF;C:/Keil_v5/mbed-os/connectivity/drivers/802.15.4_RF/atmel-rf-driver;C:/Keil_v5/mbed-os/connectivity/drivers/802.15.4_RF/mcr20a-rf-driver;C:/Keil_v5/mbed-os/connectivity/drivers/802.15.4_RF/stm-s2lp-rf-driver;C:/Keil_v5/mbed-os/connectivity/drivers/cellular;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/Altair;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/Altair/ALT1250;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/Altair/ALT1250/PPP;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/GEMALTO;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/GEMALTO/CINTERION;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/GENERIC;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/GENERIC/GENERIC_AT3GPP;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/MultiTech;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/MultiTech/DragonflyNano;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/MultiTech/DragonflyNano/PPP;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/QUECTEL;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/QUECTEL/BC95;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/QUECTEL/BG96;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/QUECTEL/EC2X;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/QUECTEL/M26;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/QUECTEL/UG96;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/RiotMicro;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/RiotMicro/AT;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/TELIT;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/TELIT/HE910;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/TELIT/ME310;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/TELIT/ME910;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/UBLOX;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/UBLOX/AT;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/UBLOX/N2XX;C:/Keil_v5/mbed-os/connectivity/drivers/cellular/UBLOX/PPP;C:/Keil_v5/mbed-os/connectivity/drivers/emac/TARGET_STM;C:/Keil_v5/mbed-os/connectivity/drivers/mbedtls/TARGET_STM;C:/Keil_v5/mbed-os/connectivity/drivers/nfc;C:/Keil_v5/mbed-os/connectivity/drivers/nfc/PN512;C:/Keil_v5/mbed-os/connectivity/drivers/wifi;C:/Keil_v5/mbed-os/connectivity/drivers/wifi/esp8266-driver;C:/Keil_v5/mbed-os/connectivity/libraries;C:/Keil_v5/mbed-os/connectivity/libraries/mbed-coap;C:/Keil_v5/mbed-os/connectivity/libraries/nanostack-libservice;C:/Keil_v5/mbed-os/connectivity/libraries/ppp;C:/Keil_v5/mbed-os/connectivity/lorawan;C:/Keil_v5/mbed-os/connectivity/lwipstack;C:/Keil_v5/mbed-os/connectivity/mbedtls;C:/Keil_v5/mbed-os/connectivity/nanostack;C:/Keil_v5/mbed-os/connectivity/netsocket;C:/Keil_v5/mbed-os/connectivity/nfc;C:/Keil_v5/mbed-os/drivers;C:/Keil_v5/mbed-os/drivers/device_key;C:/Keil_v5/mbed-os/drivers/include;C:/Keil_v5/mbed-os/drivers/include/drivers;C:/Keil_v5/mbed-os/drivers/include/drivers/interfaces;C:/Keil_v5/mbed-os/drivers/usb;C:/Keil_v5/mbed-os/events;C:/Keil_v5/mbed-os/features;C:/Keil_v5/mbed-os/features/frameworks;C:/Keil_v5/mbed-os/features/frameworks/greentea-client;C:/Keil_v5/mbed-os/features/frameworks/mbed-client-cli;C:/Keil_v5/mbed-os/features/frameworks/unity;C:/Keil_v5/mbed-os/features/frameworks/utest;C:/Keil_v5/mbed-os/hal;C:/Keil_v5/mbed-os/hal/include;C:/Keil_v5/mbed-os/hal/include/hal;C:/Keil_v5/mbed-os/hal/usb;C:/Keil_v5/mbed-os/hal/usb/include;C:/Keil_v5/mbed-os/hal/usb/include/usb;C:/Keil_v5/mbed-os/platform;C:/Keil_v5/mbed-os/platform/cxxsupport;C:/Keil_v5/mbed-os/platform/include;C:/Keil_v5/mbed-os/platform/include/platform;C:/Keil_v5/mbed-os/platform/include/platform/internal;C:/Keil_v5/mbed-os/platform/mbed-trace;C:/Keil_v5/mbed-os/platform/mbed-trace/include;C:/Keil_v5/mbed-os/platform/mbed-trace/include/mbed-trace;C:/Keil_v5/mbed-os/platform/randlib;C:/Keil_v5/mbed-os/platform/source;C:/Keil_v5/mbed-os/platform/source/minimal-printf;C:/Keil_v5/mbed-os/rtos;C:/Keil_v5/mbed-os/rtos/include;C:/Keil_v5/mbed-os/rtos/include/rtos;C:/Keil_v5/mbed-os/rtos/include/rtos/internal;C:/Keil_v5/mbed-os/rtos/source;C:/Keil_v5/mbed-os/storage;C:/Keil_v5/mbed-os/storage/blockdevice;C:/Keil_v5/mbed-os/storage/blockdevice/COMPONENT_FLASHIAP;C:/Keil_v5/mbed-os/storage/blockdevice/include;C:/Keil_v5/mbed-os/storage/blockdevice/include/blockdevice;C:/Keil_v5/mbed-os/storage/blockdevice/include/blockdevice/internal;C:/Keil_v5/mbed-os/storage/filesystem;C:/Keil_v5/mbed-os/storage/kvstore;C:/Keil_v5/mbed-os/targets/TARGET_STM;C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4;C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW;C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/CMSIS;C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver;C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/Legacy;C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/TARGET_STM32L476xG;C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/TARGET_STM32L476xG/TARGET_NUCLEO_L476RG;D:/tools/git_repo/digital_methods/keil_stm32/MBED_os/boards/L476RG/hello-L476RG/mbed-os</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -371,7 +371,7 @@
             <TextAddressRange>0</TextAddressRange>
             <DataAddressRange>0</DataAddressRange>
             <pXoBase></pXoBase>
-            <ScatterFile></ScatterFile>
+            <ScatterFile>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/TARGET_STM32L476xG/TOOLCHAIN_ARM/stm32l476xg.sct</ScatterFile>
             <IncludeLibs></IncludeLibs>
             <IncludeLibsPath></IncludeLibsPath>
             <Misc>--predefine="-DMBED_RAM_START=0x20000000" --predefine="-DMBED_RAM_SIZE=0x18000" --library_type=microlib --any_contingency --verbose --keep=os_cb_sections --predefine="-DXIP_ENABLE=0" --predefine="-DMBED_RAM1_START=0x10000000" --predefine="-DMBED_BOOT_STACK_SIZE=4096" --show_full_path --cpu=Cortex-M4 --predefine="-DMBED_RAM1_SIZE=0x8000" --remove --predefine="-DMBED_ROM_SIZE=0x100000" --predefine="-DMBED_ROM_START=0x8000000"</Misc>
@@ -405,6 +405,11 @@
               <FilePath>C:/Keil_v5/mbed-os/hal/include/hal/analogout_api.h</FilePath>
             </File>
             <File>
+              <FileName>ATCmdParser.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/platform/source/ATCmdParser.cpp</FilePath>
+            </File>
+            <File>
               <FileName>ATCmdParser.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/platform/include/platform/ATCmdParser.h</FilePath>
@@ -420,9 +425,19 @@
               <FilePath>C:/Keil_v5/mbed-os/hal/include/hal/buffer.h</FilePath>
             </File>
             <File>
+              <FileName>BufferedBlockDevice.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/storage/blockdevice/source/BufferedBlockDevice.cpp</FilePath>
+            </File>
+            <File>
               <FileName>BufferedBlockDevice.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/storage/blockdevice/include/blockdevice/BufferedBlockDevice.h</FilePath>
+            </File>
+            <File>
+              <FileName>BufferedSerial.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/drivers/source/BufferedSerial.cpp</FilePath>
             </File>
             <File>
               <FileName>BufferedSerial.h</FileName>
@@ -430,14 +445,29 @@
               <FilePath>C:/Keil_v5/mbed-os/drivers/include/drivers/BufferedSerial.h</FilePath>
             </File>
             <File>
+              <FileName>BusIn.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/drivers/source/BusIn.cpp</FilePath>
+            </File>
+            <File>
               <FileName>BusIn.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/drivers/include/drivers/BusIn.h</FilePath>
             </File>
             <File>
+              <FileName>BusInOut.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/drivers/source/BusInOut.cpp</FilePath>
+            </File>
+            <File>
               <FileName>BusInOut.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/drivers/include/drivers/BusInOut.h</FilePath>
+            </File>
+            <File>
+              <FileName>BusOut.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/drivers/source/BusOut.cpp</FilePath>
             </File>
             <File>
               <FileName>BusOut.h</FileName>
@@ -455,14 +485,14 @@
               <FilePath>C:/Keil_v5/mbed-os/platform/include/platform/Callback.h</FilePath>
             </File>
             <File>
+              <FileName>CAN.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/drivers/source/CAN.cpp</FilePath>
+            </File>
+            <File>
               <FileName>CAN.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/drivers/include/drivers/CAN.h</FilePath>
-            </File>
-            <File>
-              <FileName>can_api.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>C:/Keil_v5/mbed-os/hal/include/hal/can_api.h</FilePath>
             </File>
             <File>
               <FileName>can_device.h</FileName>
@@ -473,6 +503,11 @@
               <FileName>can_helper.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/hal/include/hal/can_helper.h</FilePath>
+            </File>
+            <File>
+              <FileName>ChainingBlockDevice.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/storage/blockdevice/source/ChainingBlockDevice.cpp</FilePath>
             </File>
             <File>
               <FileName>ChainingBlockDevice.h</FileName>
@@ -528,6 +563,11 @@
               <FileName>cmsis_version.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/cmsis/CMSIS_5/CMSIS/TARGET_CORTEX_M/Include/cmsis_version.h</FilePath>
+            </File>
+            <File>
+              <FileName>ConditionVariable.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/rtos/source/ConditionVariable.cpp</FilePath>
             </File>
             <File>
               <FileName>ConditionVariable.h</FileName>
@@ -620,6 +660,11 @@
               <FilePath>C:/Keil_v5/mbed-os/hal/include/hal/critical_section_api.h</FilePath>
             </File>
             <File>
+              <FileName>CriticalSectionLock.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/platform/source/CriticalSectionLock.cpp</FilePath>
+            </File>
+            <File>
               <FileName>CriticalSectionLock.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/platform/include/platform/CriticalSectionLock.h</FilePath>
@@ -630,9 +675,19 @@
               <FilePath>C:/Keil_v5/mbed-os/platform/include/platform/CThunk.h</FilePath>
             </File>
             <File>
+              <FileName>CThunkBase.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/platform/source/CThunkBase.cpp</FilePath>
+            </File>
+            <File>
               <FileName>CThunkBase.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/platform/include/platform/internal/CThunkBase.h</FilePath>
+            </File>
+            <File>
+              <FileName>DeepSleepLock.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/platform/source/DeepSleepLock.cpp</FilePath>
             </File>
             <File>
               <FileName>DeepSleepLock.h</FileName>
@@ -645,14 +700,29 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/device.h</FilePath>
             </File>
             <File>
+              <FileName>DigitalIn.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/drivers/source/DigitalIn.cpp</FilePath>
+            </File>
+            <File>
               <FileName>DigitalIn.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/drivers/include/drivers/DigitalIn.h</FilePath>
             </File>
             <File>
+              <FileName>DigitalInOut.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/drivers/source/DigitalInOut.cpp</FilePath>
+            </File>
+            <File>
               <FileName>DigitalInOut.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/drivers/include/drivers/DigitalInOut.h</FilePath>
+            </File>
+            <File>
+              <FileName>DigitalOut.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/drivers/source/DigitalOut.cpp</FilePath>
             </File>
             <File>
               <FileName>DigitalOut.h</FileName>
@@ -670,9 +740,19 @@
               <FilePath>C:/Keil_v5/mbed-os/hal/include/hal/dma_api.h</FilePath>
             </File>
             <File>
+              <FileName>EventFlags.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/rtos/source/EventFlags.cpp</FilePath>
+            </File>
+            <File>
               <FileName>EventFlags.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/rtos/include/rtos/EventFlags.h</FilePath>
+            </File>
+            <File>
+              <FileName>ExhaustibleBlockDevice.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/storage/blockdevice/source/ExhaustibleBlockDevice.cpp</FilePath>
             </File>
             <File>
               <FileName>ExhaustibleBlockDevice.h</FileName>
@@ -680,9 +760,19 @@
               <FilePath>C:/Keil_v5/mbed-os/storage/blockdevice/include/blockdevice/ExhaustibleBlockDevice.h</FilePath>
             </File>
             <File>
+              <FileName>FileBase.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/platform/source/FileBase.cpp</FilePath>
+            </File>
+            <File>
               <FileName>FileBase.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/platform/include/platform/FileBase.h</FilePath>
+            </File>
+            <File>
+              <FileName>FileHandle.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/platform/source/FileHandle.cpp</FilePath>
             </File>
             <File>
               <FileName>FileHandle.h</FileName>
@@ -695,9 +785,19 @@
               <FilePath>C:/Keil_v5/mbed-os/platform/include/platform/FileLike.h</FilePath>
             </File>
             <File>
+              <FileName>FilePath.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/platform/source/FilePath.cpp</FilePath>
+            </File>
+            <File>
               <FileName>FilePath.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/platform/include/platform/FilePath.h</FilePath>
+            </File>
+            <File>
+              <FileName>FileSystemHandle.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/platform/source/FileSystemHandle.cpp</FilePath>
             </File>
             <File>
               <FileName>FileSystemHandle.h</FileName>
@@ -710,9 +810,19 @@
               <FilePath>C:/Keil_v5/mbed-os/platform/include/platform/FileSystemLike.h</FilePath>
             </File>
             <File>
+              <FileName>flash_api.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/flash_api.c</FilePath>
+            </File>
+            <File>
               <FileName>flash_api.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/hal/include/hal/flash_api.h</FilePath>
+            </File>
+            <File>
+              <FileName>FlashIAP.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/drivers/source/FlashIAP.cpp</FilePath>
             </File>
             <File>
               <FileName>FlashIAP.h</FileName>
@@ -720,9 +830,19 @@
               <FilePath>C:/Keil_v5/mbed-os/drivers/include/drivers/FlashIAP.h</FilePath>
             </File>
             <File>
+              <FileName>FlashSimBlockDevice.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/storage/blockdevice/source/FlashSimBlockDevice.cpp</FilePath>
+            </File>
+            <File>
               <FileName>FlashSimBlockDevice.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/storage/blockdevice/include/blockdevice/FlashSimBlockDevice.h</FilePath>
+            </File>
+            <File>
+              <FileName>gpio_api.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/gpio_api.c</FilePath>
             </File>
             <File>
               <FileName>gpio_api.h</FileName>
@@ -730,9 +850,19 @@
               <FilePath>C:/Keil_v5/mbed-os/hal/include/hal/gpio_api.h</FilePath>
             </File>
             <File>
+              <FileName>gpio_irq_api.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/gpio_irq_api.c</FilePath>
+            </File>
+            <File>
               <FileName>gpio_irq_api.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/hal/include/hal/gpio_irq_api.h</FilePath>
+            </File>
+            <File>
+              <FileName>gpio_irq_device.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/gpio_irq_device.c</FilePath>
             </File>
             <File>
               <FileName>gpio_irq_device.h</FileName>
@@ -745,6 +875,16 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/gpio_object.h</FilePath>
             </File>
             <File>
+              <FileName>hal_tick_overrides.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/hal_tick_overrides.c</FilePath>
+            </File>
+            <File>
+              <FileName>HeapBlockDevice.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/storage/blockdevice/source/HeapBlockDevice.cpp</FilePath>
+            </File>
+            <File>
               <FileName>HeapBlockDevice.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/storage/blockdevice/include/blockdevice/HeapBlockDevice.h</FilePath>
@@ -755,9 +895,19 @@
               <FilePath>C:/Keil_v5/mbed-os/drivers/include/drivers/HighResClock.h</FilePath>
             </File>
             <File>
+              <FileName>I2C.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/drivers/source/I2C.cpp</FilePath>
+            </File>
+            <File>
               <FileName>I2C.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/drivers/include/drivers/I2C.h</FilePath>
+            </File>
+            <File>
+              <FileName>i2c_api.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/i2c_api.c</FilePath>
             </File>
             <File>
               <FileName>i2c_api.h</FileName>
@@ -765,9 +915,19 @@
               <FilePath>C:/Keil_v5/mbed-os/hal/include/hal/i2c_api.h</FilePath>
             </File>
             <File>
+              <FileName>i2c_device.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/i2c_device.c</FilePath>
+            </File>
+            <File>
               <FileName>i2c_device.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/i2c_device.h</FilePath>
+            </File>
+            <File>
+              <FileName>I2CSlave.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/drivers/source/I2CSlave.cpp</FilePath>
             </File>
             <File>
               <FileName>I2CSlave.h</FileName>
@@ -795,6 +955,11 @@
               <FilePath>C:/Keil_v5/mbed-os/drivers/include/drivers/interfaces/InterfaceDigitalOut.h</FilePath>
             </File>
             <File>
+              <FileName>InterruptIn.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/drivers/source/InterruptIn.cpp</FilePath>
+            </File>
+            <File>
               <FileName>InterruptIn.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/drivers/include/drivers/InterruptIn.h</FilePath>
@@ -805,9 +970,19 @@
               <FilePath>C:/Keil_v5/mbed-os/hal/include/hal/itm_api.h</FilePath>
             </File>
             <File>
+              <FileName>Kernel.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/rtos/source/Kernel.cpp</FilePath>
+            </File>
+            <File>
               <FileName>Kernel.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/rtos/include/rtos/Kernel.h</FilePath>
+            </File>
+            <File>
+              <FileName>LocalFileSystem.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/platform/source/LocalFileSystem.cpp</FilePath>
             </File>
             <File>
               <FileName>LocalFileSystem.h</FileName>
@@ -825,6 +1000,11 @@
               <FilePath>C:/Keil_v5/mbed-os/drivers/include/drivers/LowPowerTicker.h</FilePath>
             </File>
             <File>
+              <FileName>LowPowerTickerWrapper.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/hal/source/LowPowerTickerWrapper.cpp</FilePath>
+            </File>
+            <File>
               <FileName>LowPowerTickerWrapper.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/hal/include/hal/LowPowerTickerWrapper.h</FilePath>
@@ -838,6 +1018,11 @@
               <FileName>LowPowerTimer.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/drivers/include/drivers/LowPowerTimer.h</FilePath>
+            </File>
+            <File>
+              <FileName>lp_ticker.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/lp_ticker.c</FilePath>
             </File>
             <File>
               <FileName>lp_ticker_api.h</FileName>
@@ -860,9 +1045,24 @@
               <FilePath>C:/Keil_v5/mbed-os/mbed.h</FilePath>
             </File>
             <File>
+              <FileName>mbed_alloc_wrappers.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/platform/source/mbed_alloc_wrappers.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>mbed_application.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/platform/source/mbed_application.c</FilePath>
+            </File>
+            <File>
               <FileName>mbed_application.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/platform/include/platform/mbed_application.h</FilePath>
+            </File>
+            <File>
+              <FileName>mbed_assert.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/platform/source/mbed_assert.c</FilePath>
             </File>
             <File>
               <FileName>mbed_assert.h</FileName>
@@ -875,9 +1075,19 @@
               <FilePath>C:/Keil_v5/mbed-os/platform/include/platform/mbed_atomic.h</FilePath>
             </File>
             <File>
+              <FileName>mbed_atomic_impl.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/platform/source/mbed_atomic_impl.c</FilePath>
+            </File>
+            <File>
               <FileName>mbed_atomic_impl.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/platform/include/platform/internal/mbed_atomic_impl.h</FilePath>
+            </File>
+            <File>
+              <FileName>mbed_board.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/platform/source/mbed_board.c</FilePath>
             </File>
             <File>
               <FileName>mbed_chrono.h</FileName>
@@ -890,14 +1100,34 @@
               <FilePath>C:/Keil_v5/mbed-os/cmsis/device/mbed_cmsis_conf.h</FilePath>
             </File>
             <File>
+              <FileName>mbed_compat.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/hal/source/mbed_compat.c</FilePath>
+            </File>
+            <File>
               <FileName>mbed_crash_data_offsets.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/platform/source/mbed_crash_data_offsets.h</FilePath>
             </File>
             <File>
+              <FileName>mbed_crc_api.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/mbed_crc_api.c</FilePath>
+            </File>
+            <File>
+              <FileName>mbed_critical.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/platform/source/mbed_critical.c</FilePath>
+            </File>
+            <File>
               <FileName>mbed_critical.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/platform/include/platform/mbed_critical.h</FilePath>
+            </File>
+            <File>
+              <FileName>mbed_critical_section_api.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/hal/source/mbed_critical_section_api.c</FilePath>
             </File>
             <File>
               <FileName>mbed_debug.h</FileName>
@@ -910,9 +1140,19 @@
               <FilePath>C:/Keil_v5/mbed-os/platform/include/platform/mbed_enum_flags.h</FilePath>
             </File>
             <File>
+              <FileName>mbed_error.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/platform/source/mbed_error.c</FilePath>
+            </File>
+            <File>
               <FileName>mbed_error.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/platform/include/platform/mbed_error.h</FilePath>
+            </File>
+            <File>
+              <FileName>mbed_error_hist.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/platform/source/mbed_error_hist.c</FilePath>
             </File>
             <File>
               <FileName>mbed_error_hist.h</FileName>
@@ -920,9 +1160,34 @@
               <FilePath>C:/Keil_v5/mbed-os/platform/include/platform/internal/mbed_error_hist.h</FilePath>
             </File>
             <File>
+              <FileName>mbed_fault_handler.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/platform/source/TARGET_CORTEX_M/mbed_fault_handler.c</FilePath>
+            </File>
+            <File>
               <FileName>mbed_fault_handler.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/platform/include/platform/internal/mbed_fault_handler.h</FilePath>
+            </File>
+            <File>
+              <FileName>mbed_flash_api.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/hal/source/mbed_flash_api.c</FilePath>
+            </File>
+            <File>
+              <FileName>mbed_gpio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/hal/source/mbed_gpio.c</FilePath>
+            </File>
+            <File>
+              <FileName>mbed_gpio_irq.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/hal/source/mbed_gpio_irq.c</FilePath>
+            </File>
+            <File>
+              <FileName>mbed_interface.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/platform/source/mbed_interface.c</FilePath>
             </File>
             <File>
               <FileName>mbed_interface.h</FileName>
@@ -930,9 +1195,34 @@
               <FilePath>C:/Keil_v5/mbed-os/platform/include/platform/mbed_interface.h</FilePath>
             </File>
             <File>
+              <FileName>mbed_io.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/features/frameworks/mbed-greentea-io/mbed_io.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>mbed_itm_api.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/hal/source/mbed_itm_api.c</FilePath>
+            </File>
+            <File>
+              <FileName>mbed_lp_ticker_api.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/hal/source/mbed_lp_ticker_api.c</FilePath>
+            </File>
+            <File>
+              <FileName>mbed_lp_ticker_wrapper.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/hal/source/mbed_lp_ticker_wrapper.cpp</FilePath>
+            </File>
+            <File>
               <FileName>mbed_lp_ticker_wrapper.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/hal/include/hal/mbed_lp_ticker_wrapper.h</FilePath>
+            </File>
+            <File>
+              <FileName>mbed_mem_trace.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/platform/source/mbed_mem_trace.cpp</FilePath>
             </File>
             <File>
               <FileName>mbed_mem_trace.h</FileName>
@@ -940,9 +1230,19 @@
               <FilePath>C:/Keil_v5/mbed-os/platform/include/platform/mbed_mem_trace.h</FilePath>
             </File>
             <File>
+              <FileName>mbed_mktime.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/platform/source/mbed_mktime.c</FilePath>
+            </File>
+            <File>
               <FileName>mbed_mktime.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/platform/include/platform/mbed_mktime.h</FilePath>
+            </File>
+            <File>
+              <FileName>mbed_mpu_mgmt.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/platform/source/mbed_mpu_mgmt.c</FilePath>
             </File>
             <File>
               <FileName>mbed_mpu_mgmt.h</FileName>
@@ -950,14 +1250,54 @@
               <FilePath>C:/Keil_v5/mbed-os/platform/include/platform/mbed_mpu_mgmt.h</FilePath>
             </File>
             <File>
+              <FileName>mbed_mpu_v7m.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/hal/source/mpu/mbed_mpu_v7m.c</FilePath>
+            </File>
+            <File>
+              <FileName>mbed_mpu_v8m.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/hal/source/mpu/mbed_mpu_v8m.c</FilePath>
+            </File>
+            <File>
+              <FileName>mbed_os_timer.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/platform/source/mbed_os_timer.cpp</FilePath>
+            </File>
+            <File>
               <FileName>mbed_os_timer.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/platform/include/platform/internal/mbed_os_timer.h</FilePath>
             </File>
             <File>
+              <FileName>mbed_overrides.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/mbed_overrides.c</FilePath>
+            </File>
+            <File>
+              <FileName>mbed_pinmap_common.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/hal/source/mbed_pinmap_common.c</FilePath>
+            </File>
+            <File>
+              <FileName>mbed_pinmap_default.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/hal/source/mbed_pinmap_default.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>mbed_poll.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/platform/source/mbed_poll.cpp</FilePath>
+            </File>
+            <File>
               <FileName>mbed_poll.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/platform/include/platform/mbed_poll.h</FilePath>
+            </File>
+            <File>
+              <FileName>mbed_power_mgmt.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/platform/source/mbed_power_mgmt.c</FilePath>
             </File>
             <File>
               <FileName>mbed_power_mgmt.h</FileName>
@@ -970,14 +1310,39 @@
               <FilePath>C:/Keil_v5/mbed-os/platform/include/platform/mbed_preprocessor.h</FilePath>
             </File>
             <File>
+              <FileName>mbed_printf_armlink_overrides.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/platform/source/minimal-printf/mbed_printf_armlink_overrides.c</FilePath>
+            </File>
+            <File>
+              <FileName>mbed_printf_implementation.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/platform/source/minimal-printf/mbed_printf_implementation.c</FilePath>
+            </File>
+            <File>
               <FileName>mbed_printf_implementation.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/platform/source/minimal-printf/mbed_printf_implementation.h</FilePath>
             </File>
             <File>
+              <FileName>mbed_printf_wrapper.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/platform/source/minimal-printf/mbed_printf_wrapper.c</FilePath>
+            </File>
+            <File>
+              <FileName>mbed_retarget.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/platform/source/mbed_retarget.cpp</FilePath>
+            </File>
+            <File>
               <FileName>mbed_retarget.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/platform/include/platform/mbed_retarget.h</FilePath>
+            </File>
+            <File>
+              <FileName>mbed_rtc_time.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/platform/source/mbed_rtc_time.cpp</FilePath>
             </File>
             <File>
               <FileName>mbed_rtc_time.h</FileName>
@@ -1005,9 +1370,24 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/mbed_rtx.h</FilePath>
             </File>
             <File>
+              <FileName>mbed_sdk_boot.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/platform/source/mbed_sdk_boot.c</FilePath>
+            </File>
+            <File>
+              <FileName>mbed_semihost_api.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/platform/source/mbed_semihost_api.c</FilePath>
+            </File>
+            <File>
               <FileName>mbed_semihost_api.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/platform/include/platform/mbed_semihost_api.h</FilePath>
+            </File>
+            <File>
+              <FileName>mbed_stats.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/platform/source/mbed_stats.c</FilePath>
             </File>
             <File>
               <FileName>mbed_stats.h</FileName>
@@ -1015,9 +1395,19 @@
               <FilePath>C:/Keil_v5/mbed-os/platform/include/platform/mbed_stats.h</FilePath>
             </File>
             <File>
+              <FileName>mbed_thread.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/platform/source/mbed_thread.cpp</FilePath>
+            </File>
+            <File>
               <FileName>mbed_thread.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/platform/include/platform/mbed_thread.h</FilePath>
+            </File>
+            <File>
+              <FileName>mbed_ticker_api.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/hal/source/mbed_ticker_api.c</FilePath>
             </File>
             <File>
               <FileName>mbed_toolchain.h</FileName>
@@ -1025,9 +1415,29 @@
               <FilePath>C:/Keil_v5/mbed-os/platform/include/platform/mbed_toolchain.h</FilePath>
             </File>
             <File>
+              <FileName>mbed_trace.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/platform/mbed-trace/source/mbed_trace.c</FilePath>
+            </File>
+            <File>
               <FileName>mbed_trace.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/platform/mbed-trace/include/mbed-trace/mbed_trace.h</FilePath>
+            </File>
+            <File>
+              <FileName>mbed_tz_context.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/cmsis/CMSIS_5/CMSIS/TARGET_CORTEX_M/Source/mbed_tz_context.c</FilePath>
+            </File>
+            <File>
+              <FileName>mbed_us_ticker_api.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/hal/source/mbed_us_ticker_api.c</FilePath>
+            </File>
+            <File>
+              <FileName>mbed_usb_phy.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/hal/usb/source/mbed_usb_phy.cpp</FilePath>
             </File>
             <File>
               <FileName>mbed_version.h</FileName>
@@ -1040,9 +1450,24 @@
               <FilePath>C:/Keil_v5/mbed-os/platform/include/platform/mbed_wait_api.h</FilePath>
             </File>
             <File>
+              <FileName>mbed_wait_api_no_rtos.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/platform/source/mbed_wait_api_no_rtos.c</FilePath>
+            </File>
+            <File>
+              <FileName>MbedCRC.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/drivers/source/MbedCRC.cpp</FilePath>
+            </File>
+            <File>
               <FileName>MbedCRC.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/drivers/include/drivers/MbedCRC.h</FilePath>
+            </File>
+            <File>
+              <FileName>MBRBlockDevice.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/storage/blockdevice/source/MBRBlockDevice.cpp</FilePath>
             </File>
             <File>
               <FileName>MBRBlockDevice.h</FileName>
@@ -1070,6 +1495,16 @@
               <FilePath>C:/Keil_v5/mbed-os/cmsis/CMSIS_5/CMSIS/TARGET_CORTEX_M/Include/mpu_armv8.h</FilePath>
             </File>
             <File>
+              <FileName>mstd_mutex.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/platform/cxxsupport/mstd_mutex.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Mutex.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/rtos/source/Mutex.cpp</FilePath>
+            </File>
+            <File>
               <FileName>Mutex.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/rtos/include/rtos/Mutex.h</FilePath>
@@ -1095,14 +1530,29 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/objects.h</FilePath>
             </File>
             <File>
+              <FileName>ObservingBlockDevice.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/storage/blockdevice/source/ObservingBlockDevice.cpp</FilePath>
+            </File>
+            <File>
               <FileName>ObservingBlockDevice.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/storage/blockdevice/include/blockdevice/ObservingBlockDevice.h</FilePath>
             </File>
             <File>
+              <FileName>OSPI.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/drivers/source/OSPI.cpp</FilePath>
+            </File>
+            <File>
               <FileName>OSPI.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/drivers/include/drivers/OSPI.h</FilePath>
+            </File>
+            <File>
+              <FileName>ospi_api.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/ospi_api.c</FilePath>
             </File>
             <File>
               <FileName>ospi_api.h</FileName>
@@ -1115,6 +1565,11 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/PeripheralNames.h</FilePath>
             </File>
             <File>
+              <FileName>PeripheralPins.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/TARGET_STM32L476xG/TARGET_NUCLEO_L476RG/PeripheralPins.c</FilePath>
+            </File>
+            <File>
               <FileName>PeripheralPins.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/PeripheralPins.h</FilePath>
@@ -1123,6 +1578,11 @@
               <FileName>pin_device.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/pin_device.h</FilePath>
+            </File>
+            <File>
+              <FileName>pinmap.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/pinmap.c</FilePath>
             </File>
             <File>
               <FileName>pinmap.h</FileName>
@@ -1160,14 +1620,29 @@
               <FilePath>C:/Keil_v5/mbed-os/cmsis/CMSIS_5/CMSIS/TARGET_CORTEX_M/Include/pmu_armv8.h</FilePath>
             </File>
             <File>
+              <FileName>port_api.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/port_api.c</FilePath>
+            </File>
+            <File>
               <FileName>port_api.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/hal/include/hal/port_api.h</FilePath>
             </File>
             <File>
+              <FileName>PortIn.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/drivers/source/PortIn.cpp</FilePath>
+            </File>
+            <File>
               <FileName>PortIn.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/drivers/include/drivers/PortIn.h</FilePath>
+            </File>
+            <File>
+              <FileName>PortInOut.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/drivers/source/PortInOut.cpp</FilePath>
             </File>
             <File>
               <FileName>PortInOut.h</FileName>
@@ -1180,9 +1655,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/PortNames.h</FilePath>
             </File>
             <File>
+              <FileName>PortOut.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/drivers/source/PortOut.cpp</FilePath>
+            </File>
+            <File>
               <FileName>PortOut.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/drivers/include/drivers/PortOut.h</FilePath>
+            </File>
+            <File>
+              <FileName>ProfilingBlockDevice.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/storage/blockdevice/source/ProfilingBlockDevice.cpp</FilePath>
             </File>
             <File>
               <FileName>ProfilingBlockDevice.h</FileName>
@@ -1190,9 +1675,19 @@
               <FilePath>C:/Keil_v5/mbed-os/storage/blockdevice/include/blockdevice/ProfilingBlockDevice.h</FilePath>
             </File>
             <File>
+              <FileName>PwmOut.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/drivers/source/PwmOut.cpp</FilePath>
+            </File>
+            <File>
               <FileName>PwmOut.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/drivers/include/drivers/PwmOut.h</FilePath>
+            </File>
+            <File>
+              <FileName>pwmout_api.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/pwmout_api.c</FilePath>
             </File>
             <File>
               <FileName>pwmout_api.h</FileName>
@@ -1200,14 +1695,29 @@
               <FilePath>C:/Keil_v5/mbed-os/hal/include/hal/pwmout_api.h</FilePath>
             </File>
             <File>
+              <FileName>pwmout_device.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/pwmout_device.c</FilePath>
+            </File>
+            <File>
               <FileName>pwmout_device.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/pwmout_device.h</FilePath>
             </File>
             <File>
+              <FileName>QSPI.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/drivers/source/QSPI.cpp</FilePath>
+            </File>
+            <File>
               <FileName>QSPI.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/drivers/include/drivers/QSPI.h</FilePath>
+            </File>
+            <File>
+              <FileName>qspi_api.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/qspi_api.c</FilePath>
             </File>
             <File>
               <FileName>qspi_api.h</FileName>
@@ -1225,6 +1735,11 @@
               <FilePath>C:/Keil_v5/mbed-os/drivers/include/drivers/RawCAN.h</FilePath>
             </File>
             <File>
+              <FileName>ReadOnlyBlockDevice.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/storage/blockdevice/source/ReadOnlyBlockDevice.cpp</FilePath>
+            </File>
+            <File>
               <FileName>ReadOnlyBlockDevice.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/storage/blockdevice/include/blockdevice/ReadOnlyBlockDevice.h</FilePath>
@@ -1235,14 +1750,29 @@
               <FilePath>C:/Keil_v5/mbed-os/drivers/include/drivers/RealTimeClock.h</FilePath>
             </File>
             <File>
+              <FileName>reset_reason.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/reset_reason.c</FilePath>
+            </File>
+            <File>
               <FileName>reset_reason_api.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/hal/include/hal/reset_reason_api.h</FilePath>
             </File>
             <File>
+              <FileName>ResetReason.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/drivers/source/ResetReason.cpp</FilePath>
+            </File>
+            <File>
               <FileName>ResetReason.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/drivers/include/drivers/ResetReason.h</FilePath>
+            </File>
+            <File>
+              <FileName>rtc_api.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/rtc_api.c</FilePath>
             </File>
             <File>
               <FileName>rtc_api.h</FileName>
@@ -1290,9 +1820,19 @@
               <FilePath>C:/Keil_v5/mbed-os/platform/include/platform/ScopedRomWriteLock.h</FilePath>
             </File>
             <File>
+              <FileName>Semaphore.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/rtos/source/Semaphore.cpp</FilePath>
+            </File>
+            <File>
               <FileName>Semaphore.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/rtos/include/rtos/Semaphore.h</FilePath>
+            </File>
+            <File>
+              <FileName>serial_api.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/serial_api.c</FilePath>
             </File>
             <File>
               <FileName>serial_api.h</FileName>
@@ -1305,14 +1845,34 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/serial_api_hal.h</FilePath>
             </File>
             <File>
+              <FileName>serial_device.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/serial_device.c</FilePath>
+            </File>
+            <File>
+              <FileName>SerialBase.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/drivers/source/SerialBase.cpp</FilePath>
+            </File>
+            <File>
               <FileName>SerialBase.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/drivers/include/drivers/SerialBase.h</FilePath>
             </File>
             <File>
+              <FileName>SerialWireOutput.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/drivers/source/SerialWireOutput.cpp</FilePath>
+            </File>
+            <File>
               <FileName>SerialWireOutput.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/drivers/include/drivers/SerialWireOutput.h</FilePath>
+            </File>
+            <File>
+              <FileName>SFDP.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/storage/blockdevice/source/SFDP.cpp</FilePath>
             </File>
             <File>
               <FileName>SFDP.h</FileName>
@@ -1330,9 +1890,19 @@
               <FilePath>C:/Keil_v5/mbed-os/platform/include/platform/SingletonPtr.h</FilePath>
             </File>
             <File>
+              <FileName>sleep.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/sleep.c</FilePath>
+            </File>
+            <File>
               <FileName>sleep_api.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/hal/include/hal/sleep_api.h</FilePath>
+            </File>
+            <File>
+              <FileName>SlicingBlockDevice.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/storage/blockdevice/source/SlicingBlockDevice.cpp</FilePath>
             </File>
             <File>
               <FileName>SlicingBlockDevice.h</FileName>
@@ -1345,9 +1915,19 @@
               <FilePath>C:/Keil_v5/mbed-os/platform/include/platform/Span.h</FilePath>
             </File>
             <File>
+              <FileName>SPI.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/drivers/source/SPI.cpp</FilePath>
+            </File>
+            <File>
               <FileName>SPI.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/drivers/include/drivers/SPI.h</FilePath>
+            </File>
+            <File>
+              <FileName>spi_api.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/spi_api.c</FilePath>
             </File>
             <File>
               <FileName>spi_api.h</FileName>
@@ -1360,6 +1940,11 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/spi_device.h</FilePath>
             </File>
             <File>
+              <FileName>SPISlave.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/drivers/source/SPISlave.cpp</FilePath>
+            </File>
+            <File>
               <FileName>SPISlave.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/drivers/include/drivers/SPISlave.h</FilePath>
@@ -1368,6 +1953,11 @@
               <FileName>startup_stm32l476xx.S</FileName>
               <FileType>2</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/TARGET_STM32L476xG/TOOLCHAIN_ARM/startup_stm32l476xx.S</FilePath>
+            </File>
+            <File>
+              <FileName>static_pinmap.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/hal/source/static_pinmap.cpp</FilePath>
             </File>
             <File>
               <FileName>static_pinmap.h</FileName>
@@ -1515,9 +2105,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/CMSIS/stm32l4xx.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_hal.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_hal.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_hal_adc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_adc.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_hal_adc.h</FileName>
@@ -1525,9 +2125,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_adc.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_hal_adc_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_adc_ex.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_hal_adc_ex.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_adc_ex.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_hal_can.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_can.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_hal_can.h</FileName>
@@ -1535,9 +2145,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_can.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_hal_can_legacy.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/Legacy/stm32l4xx_hal_can_legacy.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_hal_can_legacy.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/Legacy/stm32l4xx_hal_can_legacy.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_hal_comp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_comp.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_hal_comp.h</FileName>
@@ -1550,9 +2170,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/stm32l4xx_hal_conf.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_hal_cortex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_cortex.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_hal_cortex.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_cortex.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_hal_crc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_crc.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_hal_crc.h</FileName>
@@ -1560,9 +2190,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_crc.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_hal_crc_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_crc_ex.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_hal_crc_ex.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_crc_ex.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_hal_cryp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_cryp.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_hal_cryp.h</FileName>
@@ -1570,9 +2210,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_cryp.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_hal_cryp_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_cryp_ex.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_hal_cryp_ex.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_cryp_ex.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_hal_dac.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_dac.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_hal_dac.h</FileName>
@@ -1580,9 +2230,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_dac.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_hal_dac_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_dac_ex.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_hal_dac_ex.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_dac_ex.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_hal_dcmi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_dcmi.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_hal_dcmi.h</FileName>
@@ -1595,9 +2255,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_def.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_hal_dfsdm.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_dfsdm.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_hal_dfsdm.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_dfsdm.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_hal_dfsdm_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_dfsdm_ex.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_hal_dfsdm_ex.h</FileName>
@@ -1605,9 +2275,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_dfsdm_ex.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_hal_dma.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_dma.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_hal_dma.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_dma.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_hal_dma2d.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_dma2d.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_hal_dma2d.h</FileName>
@@ -1615,9 +2295,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_dma2d.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_hal_dma_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_dma_ex.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_hal_dma_ex.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_dma_ex.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_hal_dsi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_dsi.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_hal_dsi.h</FileName>
@@ -1625,9 +2315,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_dsi.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_hal_exti.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_exti.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_hal_exti.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_exti.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_hal_firewall.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_firewall.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_hal_firewall.h</FileName>
@@ -1635,9 +2335,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_firewall.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_hal_flash.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_flash.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_hal_flash.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_flash.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_hal_flash_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_flash_ex.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_hal_flash_ex.h</FileName>
@@ -1645,14 +2355,29 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_flash_ex.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_hal_flash_ramfunc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_flash_ramfunc.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_hal_flash_ramfunc.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_flash_ramfunc.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_hal_gfxmmu.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_gfxmmu.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_hal_gfxmmu.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_gfxmmu.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_hal_gpio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_gpio.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_hal_gpio.h</FileName>
@@ -1665,9 +2390,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_gpio_ex.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_hal_hash.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_hash.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_hal_hash.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_hash.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_hal_hash_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_hash_ex.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_hal_hash_ex.h</FileName>
@@ -1675,9 +2410,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_hash_ex.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_hal_hcd.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_hcd.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_hal_hcd.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_hcd.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_hal_i2c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_i2c.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_hal_i2c.h</FileName>
@@ -1685,9 +2430,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_i2c.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_hal_i2c_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_i2c_ex.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_hal_i2c_ex.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_i2c_ex.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_hal_irda.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_irda.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_hal_irda.h</FileName>
@@ -1700,9 +2455,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_irda_ex.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_hal_iwdg.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_iwdg.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_hal_iwdg.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_iwdg.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_hal_lcd.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_lcd.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_hal_lcd.h</FileName>
@@ -1710,9 +2475,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_lcd.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_hal_lptim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_lptim.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_hal_lptim.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_lptim.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_hal_ltdc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_ltdc.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_hal_ltdc.h</FileName>
@@ -1720,9 +2495,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_ltdc.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_hal_ltdc_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_ltdc_ex.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_hal_ltdc_ex.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_ltdc_ex.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_hal_mmc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_mmc.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_hal_mmc.h</FileName>
@@ -1730,9 +2515,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_mmc.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_hal_mmc_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_mmc_ex.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_hal_mmc_ex.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_mmc_ex.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_hal_nand.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_nand.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_hal_nand.h</FileName>
@@ -1740,9 +2535,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_nand.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_hal_nor.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_nor.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_hal_nor.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_nor.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_hal_opamp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_opamp.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_hal_opamp.h</FileName>
@@ -1750,9 +2555,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_opamp.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_hal_opamp_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_opamp_ex.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_hal_opamp_ex.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_opamp_ex.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_hal_ospi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_ospi.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_hal_ospi.h</FileName>
@@ -1760,9 +2575,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_ospi.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_hal_pcd.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_pcd.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_hal_pcd.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_pcd.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_hal_pcd_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_pcd_ex.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_hal_pcd_ex.h</FileName>
@@ -1770,9 +2595,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_pcd_ex.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_hal_pka.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_pka.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_hal_pka.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_pka.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_hal_pssi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_pssi.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_hal_pssi.h</FileName>
@@ -1780,9 +2615,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_pssi.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_hal_pwr.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_hal_pwr.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_hal_pwr_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr_ex.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_hal_pwr_ex.h</FileName>
@@ -1790,9 +2635,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr_ex.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_hal_qspi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_qspi.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_hal_qspi.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_qspi.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_hal_rcc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_hal_rcc.h</FileName>
@@ -1800,9 +2655,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_hal_rcc_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc_ex.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_hal_rcc_ex.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc_ex.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_hal_rng.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_rng.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_hal_rng.h</FileName>
@@ -1810,9 +2675,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_rng.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_hal_rng_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_rng_ex.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_hal_rng_ex.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_rng_ex.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_hal_rtc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_rtc.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_hal_rtc.h</FileName>
@@ -1820,9 +2695,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_rtc.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_hal_rtc_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_rtc_ex.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_hal_rtc_ex.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_rtc_ex.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_hal_sai.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_sai.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_hal_sai.h</FileName>
@@ -1830,9 +2715,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_sai.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_hal_sai_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_sai_ex.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_hal_sai_ex.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_sai_ex.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_hal_sd.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_sd.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_hal_sd.h</FileName>
@@ -1840,9 +2735,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_sd.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_hal_sd_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_sd_ex.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_hal_sd_ex.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_sd_ex.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_hal_smartcard.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_smartcard.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_hal_smartcard.h</FileName>
@@ -1850,9 +2755,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_smartcard.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_hal_smartcard_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_smartcard_ex.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_hal_smartcard_ex.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_smartcard_ex.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_hal_smbus.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_smbus.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_hal_smbus.h</FileName>
@@ -1860,9 +2775,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_smbus.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_hal_smbus_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_smbus_ex.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_hal_smbus_ex.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_smbus_ex.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_hal_spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_spi.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_hal_spi.h</FileName>
@@ -1870,9 +2795,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_spi.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_hal_spi_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_spi_ex.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_hal_spi_ex.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_spi_ex.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_hal_sram.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_sram.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_hal_sram.h</FileName>
@@ -1880,9 +2815,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_sram.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_hal_swpmi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_swpmi.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_hal_swpmi.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_swpmi.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_hal_tim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_tim.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_hal_tim.h</FileName>
@@ -1890,9 +2835,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_tim.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_hal_tim_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_tim_ex.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_hal_tim_ex.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_tim_ex.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_hal_tsc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_tsc.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_hal_tsc.h</FileName>
@@ -1900,9 +2855,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_tsc.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_hal_uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_uart.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_hal_uart.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_uart.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_hal_uart_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_uart_ex.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_hal_uart_ex.h</FileName>
@@ -1910,9 +2875,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_uart_ex.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_hal_usart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_usart.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_hal_usart.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_usart.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_hal_usart_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_usart_ex.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_hal_usart_ex.h</FileName>
@@ -1920,9 +2895,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_usart_ex.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_hal_wwdg.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_wwdg.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_hal_wwdg.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_hal_wwdg.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_ll_adc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_adc.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_ll_adc.h</FileName>
@@ -1935,6 +2920,11 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_bus.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_ll_comp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_comp.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_ll_comp.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_comp.h</FilePath>
@@ -1945,9 +2935,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_cortex.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_ll_crc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_crc.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_ll_crc.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_crc.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_ll_crs.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_crs.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_ll_crs.h</FileName>
@@ -1955,14 +2955,29 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_crs.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_ll_dac.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_dac.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_ll_dac.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_dac.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_ll_dma.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_dma.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_ll_dma.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_dma.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_ll_dma2d.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_dma2d.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_ll_dma2d.h</FileName>
@@ -1975,9 +2990,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_dmamux.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_ll_exti.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_exti.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_ll_exti.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_exti.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_ll_fmc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_fmc.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_ll_fmc.h</FileName>
@@ -1985,9 +3010,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_fmc.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_ll_gpio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_gpio.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_ll_gpio.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_gpio.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_ll_i2c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_i2c.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_ll_i2c.h</FileName>
@@ -2000,9 +3035,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_iwdg.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_ll_lptim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_lptim.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_ll_lptim.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_lptim.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_ll_lpuart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_lpuart.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_ll_lpuart.h</FileName>
@@ -2010,9 +3055,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_lpuart.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_ll_opamp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_opamp.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_ll_opamp.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_opamp.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_ll_pka.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_pka.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_ll_pka.h</FileName>
@@ -2020,9 +3075,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_pka.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_ll_pwr.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_pwr.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_ll_pwr.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_pwr.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_ll_rcc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_rcc.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_ll_rcc.h</FileName>
@@ -2030,9 +3095,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_rcc.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_ll_rng.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_rng.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_ll_rng.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_rng.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_ll_rtc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_rtc.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_ll_rtc.h</FileName>
@@ -2040,14 +3115,29 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_rtc.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_ll_sdmmc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_sdmmc.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_ll_sdmmc.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_sdmmc.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_ll_spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_spi.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_ll_spi.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_spi.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_ll_swpmi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_swpmi.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_ll_swpmi.h</FileName>
@@ -2060,9 +3150,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_system.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_ll_tim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_tim.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_ll_tim.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_tim.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_ll_usart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_usart.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_ll_usart.h</FileName>
@@ -2070,9 +3170,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_usart.h</FilePath>
             </File>
             <File>
+              <FileName>stm32l4xx_ll_usb.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_usb.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32l4xx_ll_usb.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_usb.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_ll_utils.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_utils.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_ll_utils.h</FileName>
@@ -2085,9 +3195,29 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/STM32L4xx_HAL_Driver/stm32l4xx_ll_wwdg.h</FilePath>
             </File>
             <File>
+              <FileName>stm_spi_api.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/stm_spi_api.c</FilePath>
+            </File>
+            <File>
+              <FileName>Stream.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/platform/source/Stream.cpp</FilePath>
+            </File>
+            <File>
               <FileName>Stream.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/platform/include/platform/Stream.h</FilePath>
+            </File>
+            <File>
+              <FileName>system_clock.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/TARGET_STM32L476xG/system_clock.c</FilePath>
+            </File>
+            <File>
+              <FileName>system_stm32l4xx.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/system_stm32l4xx.c</FilePath>
             </File>
             <File>
               <FileName>system_stm32l4xx.h</FileName>
@@ -2095,9 +3225,19 @@
               <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/STM32Cube_FW/CMSIS/system_stm32l4xx.h</FilePath>
             </File>
             <File>
+              <FileName>SysTimer.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/platform/source/SysTimer.cpp</FilePath>
+            </File>
+            <File>
               <FileName>SysTimer.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/platform/include/platform/internal/SysTimer.h</FilePath>
+            </File>
+            <File>
+              <FileName>ThisThread.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/rtos/source/ThisThread.cpp</FilePath>
             </File>
             <File>
               <FileName>ThisThread.h</FileName>
@@ -2105,9 +3245,19 @@
               <FilePath>C:/Keil_v5/mbed-os/rtos/include/rtos/ThisThread.h</FilePath>
             </File>
             <File>
+              <FileName>Thread.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/rtos/source/Thread.cpp</FilePath>
+            </File>
+            <File>
               <FileName>Thread.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/rtos/include/rtos/Thread.h</FilePath>
+            </File>
+            <File>
+              <FileName>Ticker.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/drivers/source/Ticker.cpp</FilePath>
             </File>
             <File>
               <FileName>Ticker.h</FileName>
@@ -2125,14 +3275,29 @@
               <FilePath>C:/Keil_v5/mbed-os/drivers/include/drivers/TickerDataClock.h</FilePath>
             </File>
             <File>
+              <FileName>Timeout.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/drivers/source/Timeout.cpp</FilePath>
+            </File>
+            <File>
               <FileName>Timeout.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/drivers/include/drivers/Timeout.h</FilePath>
             </File>
             <File>
+              <FileName>Timer.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/drivers/source/Timer.cpp</FilePath>
+            </File>
+            <File>
               <FileName>Timer.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/drivers/include/drivers/Timer.h</FilePath>
+            </File>
+            <File>
+              <FileName>TimerEvent.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/drivers/source/TimerEvent.cpp</FilePath>
             </File>
             <File>
               <FileName>TimerEvent.h</FileName>
@@ -2145,6 +3310,11 @@
               <FilePath>C:/Keil_v5/mbed-os/platform/include/platform/Transaction.h</FilePath>
             </File>
             <File>
+              <FileName>trng_api.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/trng_api.c</FilePath>
+            </File>
+            <File>
               <FileName>trng_api.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/hal/include/hal/trng_api.h</FilePath>
@@ -2155,9 +3325,19 @@
               <FilePath>C:/Keil_v5/mbed-os/cmsis/CMSIS_5/CMSIS/TARGET_CORTEX_M/Include/tz_context.h</FilePath>
             </File>
             <File>
+              <FileName>UnbufferedSerial.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/drivers/source/UnbufferedSerial.cpp</FilePath>
+            </File>
+            <File>
               <FileName>UnbufferedSerial.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/drivers/include/drivers/UnbufferedSerial.h</FilePath>
+            </File>
+            <File>
+              <FileName>us_ticker.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/us_ticker.c</FilePath>
             </File>
             <File>
               <FileName>us_ticker_api.h</FileName>
@@ -2185,6 +3365,11 @@
               <FilePath>C:/Keil_v5/mbed-os/hal/usb/include/usb/USBPhy.h</FilePath>
             </File>
             <File>
+              <FileName>USBPhy_STM32.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/USBPhy_STM32.cpp</FilePath>
+            </File>
+            <File>
               <FileName>USBPhyEvents.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/hal/usb/include/usb/USBPhyEvents.h</FilePath>
@@ -2200,14 +3385,34 @@
               <FilePath>C:/Keil_v5/mbed-os/hal/usb/include/usb/USBPhyTypes.h</FilePath>
             </File>
             <File>
+              <FileName>Watchdog.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/drivers/source/Watchdog.cpp</FilePath>
+            </File>
+            <File>
               <FileName>Watchdog.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/drivers/include/drivers/Watchdog.h</FilePath>
             </File>
             <File>
+              <FileName>watchdog_api.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:/Keil_v5/mbed-os/targets/TARGET_STM/watchdog_api.c</FilePath>
+            </File>
+            <File>
               <FileName>watchdog_api.h</FileName>
               <FileType>5</FileType>
               <FilePath>C:/Keil_v5/mbed-os/hal/include/hal/watchdog_api.h</FilePath>
+            </File>
+            <File>
+              <FileName>can_api.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:\Keil_v5\mbed-os\targets\TARGET_STM\can_api.c</FilePath>
+            </File>
+            <File>
+              <FileName>can_api.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>C:\Keil_v5\mbed-os\hal\include\hal\can_api.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -2227,76 +3432,7 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>pre_build</GroupName>
-          <GroupOption>
-            <CommonProperty>
-              <UseCPPCompiler>0</UseCPPCompiler>
-              <RVCTCodeConst>0</RVCTCodeConst>
-              <RVCTZI>0</RVCTZI>
-              <RVCTOtherData>0</RVCTOtherData>
-              <ModuleSelection>0</ModuleSelection>
-              <IncludeInBuild>0</IncludeInBuild>
-              <AlwaysBuild>0</AlwaysBuild>
-              <GenerateAssemblyFile>0</GenerateAssemblyFile>
-              <AssembleAssemblyFile>0</AssembleAssemblyFile>
-              <PublicsOnly>2</PublicsOnly>
-              <StopOnExitCode>11</StopOnExitCode>
-              <CustomArgument></CustomArgument>
-              <IncludeLibraryModules></IncludeLibraryModules>
-              <ComprImg>1</ComprImg>
-            </CommonProperty>
-            <GroupArmAds>
-              <Cads>
-                <interw>2</interw>
-                <Optim>0</Optim>
-                <oTime>2</oTime>
-                <SplitLS>2</SplitLS>
-                <OneElfS>2</OneElfS>
-                <Strict>2</Strict>
-                <EnumInt>2</EnumInt>
-                <PlainCh>2</PlainCh>
-                <Ropi>2</Ropi>
-                <Rwpi>2</Rwpi>
-                <wLevel>0</wLevel>
-                <uThumb>2</uThumb>
-                <uSurpInc>2</uSurpInc>
-                <uC99>2</uC99>
-                <uGnu>2</uGnu>
-                <useXO>2</useXO>
-                <v6Lang>0</v6Lang>
-                <v6LangP>0</v6LangP>
-                <vShortEn>2</vShortEn>
-                <vShortWch>2</vShortWch>
-                <v6Lto>2</v6Lto>
-                <v6WtE>2</v6WtE>
-                <v6Rtti>2</v6Rtti>
-                <VariousControls>
-                  <MiscControls></MiscControls>
-                  <Define></Define>
-                  <Undefine></Undefine>
-                  <IncludePath></IncludePath>
-                </VariousControls>
-              </Cads>
-              <Aads>
-                <interw>2</interw>
-                <Ropi>2</Ropi>
-                <Rwpi>2</Rwpi>
-                <thumb>2</thumb>
-                <SplitLS>2</SplitLS>
-                <SwStkChk>2</SwStkChk>
-                <NoWarn>2</NoWarn>
-                <uSurpInc>2</uSurpInc>
-                <useXO>2</useXO>
-                <ClangAsOpt>0</ClangAsOpt>
-                <VariousControls>
-                  <MiscControls></MiscControls>
-                  <Define></Define>
-                  <Undefine></Undefine>
-                  <IncludePath></IncludePath>
-                </VariousControls>
-              </Aads>
-            </GroupArmAds>
-          </GroupOption>
+          <GroupName>mbed-pre</GroupName>
           <Files>
             <File>
               <FileName>analogin.o</FileName>
@@ -2327,1221 +3463,6 @@
               <FileName>analogout_device.o</FileName>
               <FileType>3</FileType>
               <FilePath>.\pre_build\analogout_device.o</FilePath>
-            </File>
-            <File>
-              <FileName>atcmdparser.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\atcmdparser.o</FilePath>
-            </File>
-            <File>
-              <FileName>bufferedblockdevice.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\bufferedblockdevice.o</FilePath>
-            </File>
-            <File>
-              <FileName>bufferedserial.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\bufferedserial.o</FilePath>
-            </File>
-            <File>
-              <FileName>busin.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\busin.o</FilePath>
-            </File>
-            <File>
-              <FileName>businout.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\businout.o</FilePath>
-            </File>
-            <File>
-              <FileName>busout.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\busout.o</FilePath>
-            </File>
-            <File>
-              <FileName>can.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\can.o</FilePath>
-            </File>
-            <File>
-              <FileName>can_api.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\can_api.o</FilePath>
-            </File>
-            <File>
-              <FileName>chainingblockdevice.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\chainingblockdevice.o</FilePath>
-            </File>
-            <File>
-              <FileName>conditionvariable.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\conditionvariable.o</FilePath>
-            </File>
-            <File>
-              <FileName>criticalsectionlock.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\criticalsectionlock.o</FilePath>
-            </File>
-            <File>
-              <FileName>cthunkbase.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\cthunkbase.o</FilePath>
-            </File>
-            <File>
-              <FileName>deepsleeplock.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\deepsleeplock.o</FilePath>
-            </File>
-            <File>
-              <FileName>digitalin.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\digitalin.o</FilePath>
-            </File>
-            <File>
-              <FileName>digitalinout.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\digitalinout.o</FilePath>
-            </File>
-            <File>
-              <FileName>digitalout.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\digitalout.o</FilePath>
-            </File>
-            <File>
-              <FileName>eventflags.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\eventflags.o</FilePath>
-            </File>
-            <File>
-              <FileName>exhaustibleblockdevice.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\exhaustibleblockdevice.o</FilePath>
-            </File>
-            <File>
-              <FileName>filebase.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\filebase.o</FilePath>
-            </File>
-            <File>
-              <FileName>filehandle.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\filehandle.o</FilePath>
-            </File>
-            <File>
-              <FileName>filepath.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\filepath.o</FilePath>
-            </File>
-            <File>
-              <FileName>filesystemhandle.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\filesystemhandle.o</FilePath>
-            </File>
-            <File>
-              <FileName>flash_api.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\flash_api.o</FilePath>
-            </File>
-            <File>
-              <FileName>flashiap.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\flashiap.o</FilePath>
-            </File>
-            <File>
-              <FileName>flashsimblockdevice.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\flashsimblockdevice.o</FilePath>
-            </File>
-            <File>
-              <FileName>gpio_api.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\gpio_api.o</FilePath>
-            </File>
-            <File>
-              <FileName>gpio_irq_api.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\gpio_irq_api.o</FilePath>
-            </File>
-            <File>
-              <FileName>gpio_irq_device.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\gpio_irq_device.o</FilePath>
-            </File>
-            <File>
-              <FileName>hal_tick_overrides.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\hal_tick_overrides.o</FilePath>
-            </File>
-            <File>
-              <FileName>heapblockdevice.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\heapblockdevice.o</FilePath>
-            </File>
-            <File>
-              <FileName>i2c.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\i2c.o</FilePath>
-            </File>
-            <File>
-              <FileName>i2c_api.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\i2c_api.o</FilePath>
-            </File>
-            <File>
-              <FileName>i2c_device.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\i2c_device.o</FilePath>
-            </File>
-            <File>
-              <FileName>i2cslave.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\i2cslave.o</FilePath>
-            </File>
-            <File>
-              <FileName>interruptin.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\interruptin.o</FilePath>
-            </File>
-            <File>
-              <FileName>kernel.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\kernel.o</FilePath>
-            </File>
-            <File>
-              <FileName>localfilesystem.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\localfilesystem.o</FilePath>
-            </File>
-            <File>
-              <FileName>lowpowertickerwrapper.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\lowpowertickerwrapper.o</FilePath>
-            </File>
-            <File>
-              <FileName>lp_ticker.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\lp_ticker.o</FilePath>
-            </File>
-            <File>
-              <FileName>main.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\main.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbed_alloc_wrappers.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbed_alloc_wrappers.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbed_application.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbed_application.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbed_assert.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbed_assert.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbed_atomic_impl.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbed_atomic_impl.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbed_board.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbed_board.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbed_compat.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbed_compat.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbed_crc_api.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbed_crc_api.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbed_critical.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbed_critical.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbed_critical_section_api.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbed_critical_section_api.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbed_error.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbed_error.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbed_error_hist.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbed_error_hist.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbed_fault_handler.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbed_fault_handler.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbed_flash_api.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbed_flash_api.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbed_gpio.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbed_gpio.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbed_gpio_irq.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbed_gpio_irq.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbed_interface.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbed_interface.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbed_io.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbed_io.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbed_itm_api.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbed_itm_api.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbed_lp_ticker_api.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbed_lp_ticker_api.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbed_lp_ticker_wrapper.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbed_lp_ticker_wrapper.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbed_mem_trace.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbed_mem_trace.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbed_mktime.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbed_mktime.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbed_mpu_mgmt.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbed_mpu_mgmt.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbed_mpu_v7m.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbed_mpu_v7m.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbed_mpu_v8m.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbed_mpu_v8m.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbed_os_timer.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbed_os_timer.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbed_overrides.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbed_overrides.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbed_pinmap_common.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbed_pinmap_common.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbed_pinmap_default.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbed_pinmap_default.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbed_poll.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbed_poll.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbed_power_mgmt.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbed_power_mgmt.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbed_printf_armlink_overrides.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbed_printf_armlink_overrides.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbed_printf_implementation.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbed_printf_implementation.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbed_printf_wrapper.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbed_printf_wrapper.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbed_retarget.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbed_retarget.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbed_rtc_time.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbed_rtc_time.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbed_sdk_boot.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbed_sdk_boot.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbed_semihost_api.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbed_semihost_api.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbed_stats.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbed_stats.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbed_thread.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbed_thread.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbed_ticker_api.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbed_ticker_api.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbed_trace.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbed_trace.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbed_tz_context.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbed_tz_context.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbed_us_ticker_api.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbed_us_ticker_api.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbed_usb_phy.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbed_usb_phy.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbed_wait_api_no_rtos.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbed_wait_api_no_rtos.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbedcrc.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbedcrc.o</FilePath>
-            </File>
-            <File>
-              <FileName>mbrblockdevice.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mbrblockdevice.o</FilePath>
-            </File>
-            <File>
-              <FileName>mstd_mutex.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mstd_mutex.o</FilePath>
-            </File>
-            <File>
-              <FileName>mutex.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\mutex.o</FilePath>
-            </File>
-            <File>
-              <FileName>observingblockdevice.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\observingblockdevice.o</FilePath>
-            </File>
-            <File>
-              <FileName>ospi.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\ospi.o</FilePath>
-            </File>
-            <File>
-              <FileName>ospi_api.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\ospi_api.o</FilePath>
-            </File>
-            <File>
-              <FileName>peripheralpins.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\peripheralpins.o</FilePath>
-            </File>
-            <File>
-              <FileName>pinmap.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\pinmap.o</FilePath>
-            </File>
-            <File>
-              <FileName>port_api.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\port_api.o</FilePath>
-            </File>
-            <File>
-              <FileName>portin.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\portin.o</FilePath>
-            </File>
-            <File>
-              <FileName>portinout.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\portinout.o</FilePath>
-            </File>
-            <File>
-              <FileName>portout.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\portout.o</FilePath>
-            </File>
-            <File>
-              <FileName>profilingblockdevice.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\profilingblockdevice.o</FilePath>
-            </File>
-            <File>
-              <FileName>pwmout.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\pwmout.o</FilePath>
-            </File>
-            <File>
-              <FileName>pwmout_api.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\pwmout_api.o</FilePath>
-            </File>
-            <File>
-              <FileName>pwmout_device.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\pwmout_device.o</FilePath>
-            </File>
-            <File>
-              <FileName>qspi.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\qspi.o</FilePath>
-            </File>
-            <File>
-              <FileName>qspi_api.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\qspi_api.o</FilePath>
-            </File>
-            <File>
-              <FileName>readonlyblockdevice.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\readonlyblockdevice.o</FilePath>
-            </File>
-            <File>
-              <FileName>reset_reason.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\reset_reason.o</FilePath>
-            </File>
-            <File>
-              <FileName>resetreason.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\resetreason.o</FilePath>
-            </File>
-            <File>
-              <FileName>rtc_api.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\rtc_api.o</FilePath>
-            </File>
-            <File>
-              <FileName>semaphore.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\semaphore.o</FilePath>
-            </File>
-            <File>
-              <FileName>serial_api.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\serial_api.o</FilePath>
-            </File>
-            <File>
-              <FileName>serial_device.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\serial_device.o</FilePath>
-            </File>
-            <File>
-              <FileName>serialbase.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\serialbase.o</FilePath>
-            </File>
-            <File>
-              <FileName>serialwireoutput.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\serialwireoutput.o</FilePath>
-            </File>
-            <File>
-              <FileName>sfdp.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\sfdp.o</FilePath>
-            </File>
-            <File>
-              <FileName>sleep.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\sleep.o</FilePath>
-            </File>
-            <File>
-              <FileName>slicingblockdevice.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\slicingblockdevice.o</FilePath>
-            </File>
-            <File>
-              <FileName>spi.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\spi.o</FilePath>
-            </File>
-            <File>
-              <FileName>spi_api.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\spi_api.o</FilePath>
-            </File>
-            <File>
-              <FileName>spislave.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\spislave.o</FilePath>
-            </File>
-            <File>
-              <FileName>startup_stm32l476xx.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\startup_stm32l476xx.o</FilePath>
-            </File>
-            <File>
-              <FileName>static_pinmap.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\static_pinmap.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm_spi_api.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm_spi_api.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_adc.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_adc.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_adc_ex.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_adc_ex.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_can.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_can.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_can_legacy.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_can_legacy.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_comp.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_comp.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_cortex.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_cortex.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_crc.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_crc.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_crc_ex.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_crc_ex.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_cryp.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_cryp.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_cryp_ex.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_cryp_ex.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_dac.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_dac.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_dac_ex.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_dac_ex.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_dcmi.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_dcmi.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_dfsdm.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_dfsdm.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_dfsdm_ex.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_dfsdm_ex.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_dma.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_dma.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_dma_ex.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_dma_ex.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_dma2d.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_dma2d.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_dsi.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_dsi.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_exti.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_exti.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_firewall.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_firewall.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_flash.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_flash.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_flash_ex.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_flash_ex.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_flash_ramfunc.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_flash_ramfunc.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_gfxmmu.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_gfxmmu.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_gpio.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_gpio.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_hash.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_hash.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_hash_ex.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_hash_ex.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_hcd.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_hcd.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_i2c.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_i2c.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_i2c_ex.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_i2c_ex.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_irda.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_irda.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_iwdg.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_iwdg.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_lcd.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_lcd.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_lptim.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_lptim.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_ltdc.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_ltdc.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_ltdc_ex.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_ltdc_ex.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_mmc.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_mmc.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_mmc_ex.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_mmc_ex.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_nand.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_nand.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_nor.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_nor.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_opamp.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_opamp.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_opamp_ex.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_opamp_ex.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_ospi.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_ospi.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_pcd.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_pcd.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_pcd_ex.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_pcd_ex.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_pka.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_pka.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_pssi.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_pssi.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_pwr.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_pwr.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_pwr_ex.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_pwr_ex.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_qspi.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_qspi.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_rcc.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_rcc.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_rcc_ex.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_rcc_ex.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_rng.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_rng.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_rng_ex.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_rng_ex.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_rtc.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_rtc.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_rtc_ex.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_rtc_ex.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_sai.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_sai.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_sai_ex.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_sai_ex.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_sd.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_sd.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_sd_ex.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_sd_ex.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_smartcard.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_smartcard.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_smartcard_ex.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_smartcard_ex.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_smbus.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_smbus.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_smbus_ex.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_smbus_ex.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_spi.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_spi.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_spi_ex.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_spi_ex.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_sram.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_sram.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_swpmi.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_swpmi.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_tim.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_tim.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_tim_ex.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_tim_ex.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_tsc.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_tsc.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_uart.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_uart.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_uart_ex.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_uart_ex.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_usart.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_usart.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_usart_ex.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_usart_ex.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_wwdg.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_hal_wwdg.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_ll_adc.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_ll_adc.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_ll_comp.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_ll_comp.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_ll_crc.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_ll_crc.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_ll_crs.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_ll_crs.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_ll_dac.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_ll_dac.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_ll_dma.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_ll_dma.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_ll_dma2d.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_ll_dma2d.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_ll_exti.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_ll_exti.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_ll_fmc.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_ll_fmc.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_ll_gpio.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_ll_gpio.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_ll_i2c.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_ll_i2c.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_ll_lptim.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_ll_lptim.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_ll_lpuart.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_ll_lpuart.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_ll_opamp.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_ll_opamp.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_ll_pka.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_ll_pka.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_ll_pwr.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_ll_pwr.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_ll_rcc.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_ll_rcc.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_ll_rng.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_ll_rng.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_ll_rtc.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_ll_rtc.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_ll_sdmmc.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_ll_sdmmc.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_ll_spi.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_ll_spi.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_ll_swpmi.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_ll_swpmi.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_ll_tim.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_ll_tim.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_ll_usart.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_ll_usart.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_ll_usb.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_ll_usb.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_ll_utils.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stm32l4xx_ll_utils.o</FilePath>
-            </File>
-            <File>
-              <FileName>stream.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\stream.o</FilePath>
-            </File>
-            <File>
-              <FileName>system_clock.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\system_clock.o</FilePath>
-            </File>
-            <File>
-              <FileName>system_stm32l4xx.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\system_stm32l4xx.o</FilePath>
-            </File>
-            <File>
-              <FileName>systimer.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\systimer.o</FilePath>
-            </File>
-            <File>
-              <FileName>thisthread.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\thisthread.o</FilePath>
-            </File>
-            <File>
-              <FileName>thread.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\thread.o</FilePath>
-            </File>
-            <File>
-              <FileName>ticker.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\ticker.o</FilePath>
-            </File>
-            <File>
-              <FileName>timeout.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\timeout.o</FilePath>
-            </File>
-            <File>
-              <FileName>timer.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\timer.o</FilePath>
-            </File>
-            <File>
-              <FileName>timerevent.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\timerevent.o</FilePath>
-            </File>
-            <File>
-              <FileName>trng_api.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\trng_api.o</FilePath>
-            </File>
-            <File>
-              <FileName>unbufferedserial.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\unbufferedserial.o</FilePath>
-            </File>
-            <File>
-              <FileName>us_ticker.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\us_ticker.o</FilePath>
-            </File>
-            <File>
-              <FileName>usbphy_stm32.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\usbphy_stm32.o</FilePath>
-            </File>
-            <File>
-              <FileName>watchdog.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\watchdog.o</FilePath>
-            </File>
-            <File>
-              <FileName>watchdog_api.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\pre_build\watchdog_api.o</FilePath>
             </File>
           </Files>
         </Group>

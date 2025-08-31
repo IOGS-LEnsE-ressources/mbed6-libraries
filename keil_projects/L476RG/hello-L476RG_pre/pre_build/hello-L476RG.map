@@ -345,41 +345,6 @@ Loading object .\build\can.o.
               definition:  mbed::CAN::CAN(can_pinmap_t const&)
               definition:  mbed::CAN::CAN(can_pinmap_t const&, int)
               definition:  mbed::CAN::~CAN()
-Loading object .\build\can_api.o.
-              definition:  can_init_direct
-              reference :  pin_function
-              reference :  pin_mode
-              reference :  HAL_CAN_Init
-              definition:  can_frequency
-              reference :  HAL_CAN_ConfigFilter
-              reference :  mbed_assert_internal
-              reference :  error
-              definition:  can_init_freq
-              reference :  PinMap_CAN_RD
-              reference :  pinmap_peripheral
-              reference :  PinMap_CAN_TD
-              reference :  pinmap_merge
-              reference :  pinmap_find_function
-              definition:  can_init
-              definition:  can_irq_init
-              definition:  can_irq_free
-              definition:  can_free
-              reference :  HAL_RCC_GetPCLK1Freq
-              reference :  HAL_GetTick
-              definition:  can_write
-              definition:  can_read
-              definition:  can_reset
-              definition:  can_rderror
-              definition:  can_tderror
-              definition:  can_monitor
-              definition:  can_mode
-              definition:  can_filter
-              definition:  CAN1_RX0_IRQHandler
-              definition:  CAN1_TX_IRQHandler
-              definition:  CAN1_SCE_IRQHandler
-              definition:  can_irq_set
-              definition:  can_rd_pinmap
-              definition:  can_td_pinmap
 Loading object .\build\chainingblockdevice.o.
               definition:  mbed::ChainingBlockDevice::ChainingBlockDevice__sub_object(mbed::BlockDevice**, unsigned int)
               definition:  vtable for mbed::ChainingBlockDevice
@@ -4625,6 +4590,41 @@ Loading object .\build\watchdog_api.o.
               definition:  hal_watchdog_stop
               definition:  hal_watchdog_get_reload_value
               definition:  hal_watchdog_get_platform_features
+Loading object .\build\can_api.o.
+              definition:  can_init_direct
+              reference :  pin_function
+              reference :  pin_mode
+              reference :  HAL_CAN_Init
+              definition:  can_frequency
+              reference :  HAL_CAN_ConfigFilter
+              reference :  mbed_assert_internal
+              reference :  error
+              definition:  can_init_freq
+              reference :  PinMap_CAN_RD
+              reference :  pinmap_peripheral
+              reference :  PinMap_CAN_TD
+              reference :  pinmap_merge
+              reference :  pinmap_find_function
+              definition:  can_init
+              definition:  can_irq_init
+              definition:  can_irq_free
+              definition:  can_free
+              reference :  HAL_RCC_GetPCLK1Freq
+              reference :  HAL_GetTick
+              definition:  can_write
+              definition:  can_read
+              definition:  can_reset
+              definition:  can_rderror
+              definition:  can_tderror
+              definition:  can_monitor
+              definition:  can_mode
+              definition:  can_filter
+              definition:  CAN1_RX0_IRQHandler
+              definition:  CAN1_TX_IRQHandler
+              definition:  CAN1_SCE_IRQHandler
+              definition:  can_irq_set
+              definition:  can_rd_pinmap
+              definition:  can_td_pinmap
 Loading object .\build\main.o.
 Adding cpp init reference.              definition:  main
               reference :  __2printf
@@ -4633,7 +4633,6 @@ Adding cpp init reference.              definition:  main
               reference :  gpio_init_out
               definition:  __ARM_use_no_argv
               reference :  _printf_percent
-              reference :  _printf_widthprec
               reference :  _printf_sizespec
               reference :  _printf_f
               reference :  _printf_fp_dec
@@ -5253,9 +5252,9 @@ Resolving $Sub$$ and $Super$$ Symbols.
               definition:  $Super$$_printf_longlong_oct
               definition:  $Super$$_printf_truncate_unsigned
               definition:  $Super$$_printf_l
-              definition:  $Super$$_printf_str
-              definition:  $Super$$_printf_ll
+              definition:  $Super$$main
               definition:  $Super$$_printf_wctomb
+              definition:  $Super$$_printf_ll
               definition:  $Super$$_printf_charcount
               definition:  $Super$$_printf_u
               definition:  $Super$$_printf_d
@@ -5273,8 +5272,8 @@ Resolving $Sub$$ and $Super$$ Symbols.
               definition:  $Super$$_printf_ls
               definition:  $Super$$_printf_llx
               definition:  $Super$$_printf_n
+              definition:  $Super$$_printf_str
               definition:  $Super$$_printf_x
-              definition:  $Super$$main
               definition:  BuildAttributes$$THM_ISAv4$E$P$D$K$B$S$7EM$VFPi3$EXTD16$VFPS$VFMA$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$~IW$USESV6$~STKCKD$USESV7$~SHL$OTIME$ROPI$EBA8$MICROLIB$REQ8$PRES8$EABIv2
 Building image.
 Finding section cross-references
@@ -5827,72 +5826,6 @@ Section Cross References
     .\build\can.o(.rodata._ZTVN4mbed3CANE) refers to .\build\can.o(.text._ZN4mbed3CAND0Ev) for mbed::CAN::~CAN__deallocating()
     .\build\can.o(.rodata._ZTVN4mbed3CANE) refers to .\build\can.o(.text._ZN4mbed3CAN4lockEv) for mbed::CAN::lock()
     .\build\can.o(.rodata._ZTVN4mbed3CANE) refers to .\build\can.o(.text._ZN4mbed3CAN6unlockEv) for mbed::CAN::unlock()
-    .\build\can_api.o(.text.can_init_direct) refers to .\build\can_api.o(.text._can_init_freq_direct) for _can_init_freq_direct
-    .\build\can_api.o(.ARM.exidx.text.can_init_direct) refers to .\build\can_api.o(.text.can_init_direct) for [Anonymous Symbol]
-    .\build\can_api.o(.text._can_init_freq_direct) refers to .\build\pinmap.o(.text.pin_function) for pin_function
-    .\build\can_api.o(.text._can_init_freq_direct) refers to .\build\pinmap.o(.text.pin_mode) for pin_mode
-    .\build\can_api.o(.text._can_init_freq_direct) refers to .\build\stm32l4xx_hal_can_legacy.o(.text.HAL_CAN_Init) for HAL_CAN_Init
-    .\build\can_api.o(.text._can_init_freq_direct) refers to .\build\can_api.o(.text.can_frequency) for can_frequency
-    .\build\can_api.o(.text._can_init_freq_direct) refers to .\build\stm32l4xx_hal_can_legacy.o(.text.HAL_CAN_ConfigFilter) for HAL_CAN_ConfigFilter
-    .\build\can_api.o(.text._can_init_freq_direct) refers to .\build\mbed_assert.o(.text.mbed_assert_internal) for mbed_assert_internal
-    .\build\can_api.o(.text._can_init_freq_direct) refers to .\build\can_api.o(.rodata.str1.1) for .L.str.4
-    .\build\can_api.o(.text._can_init_freq_direct) refers to .\build\mbed_error.o(.text.error) for error
-    .\build\can_api.o(.ARM.exidx.text._can_init_freq_direct) refers to .\build\can_api.o(.text._can_init_freq_direct) for [Anonymous Symbol]
-    .\build\can_api.o(.text.can_init_freq) refers to .\build\peripheralpins.o(.rodata.PinMap_CAN_RD) for PinMap_CAN_RD
-    .\build\can_api.o(.text.can_init_freq) refers to .\build\mbed_pinmap_common.o(.text.pinmap_peripheral) for pinmap_peripheral
-    .\build\can_api.o(.text.can_init_freq) refers to .\build\peripheralpins.o(.rodata.PinMap_CAN_TD) for PinMap_CAN_TD
-    .\build\can_api.o(.text.can_init_freq) refers to .\build\mbed_pinmap_common.o(.text.pinmap_merge) for pinmap_merge
-    .\build\can_api.o(.text.can_init_freq) refers to .\build\mbed_pinmap_common.o(.text.pinmap_find_function) for pinmap_find_function
-    .\build\can_api.o(.text.can_init_freq) refers to .\build\can_api.o(.text._can_init_freq_direct) for _can_init_freq_direct
-    .\build\can_api.o(.ARM.exidx.text.can_init_freq) refers to .\build\can_api.o(.text.can_init_freq) for [Anonymous Symbol]
-    .\build\can_api.o(.text.can_init) refers to .\build\peripheralpins.o(.rodata.PinMap_CAN_RD) for PinMap_CAN_RD
-    .\build\can_api.o(.text.can_init) refers to .\build\mbed_pinmap_common.o(.text.pinmap_peripheral) for pinmap_peripheral
-    .\build\can_api.o(.text.can_init) refers to .\build\peripheralpins.o(.rodata.PinMap_CAN_TD) for PinMap_CAN_TD
-    .\build\can_api.o(.text.can_init) refers to .\build\mbed_pinmap_common.o(.text.pinmap_merge) for pinmap_merge
-    .\build\can_api.o(.text.can_init) refers to .\build\mbed_pinmap_common.o(.text.pinmap_find_function) for pinmap_find_function
-    .\build\can_api.o(.text.can_init) refers to .\build\can_api.o(.text._can_init_freq_direct) for _can_init_freq_direct
-    .\build\can_api.o(.ARM.exidx.text.can_init) refers to .\build\can_api.o(.text.can_init) for [Anonymous Symbol]
-    .\build\can_api.o(.text.can_irq_init) refers to .\build\can_api.o(.bss.irq_handler) for irq_handler
-    .\build\can_api.o(.text.can_irq_init) refers to .\build\can_api.o(.bss.can_irq_contexts) for can_irq_contexts
-    .\build\can_api.o(.ARM.exidx.text.can_irq_init) refers to .\build\can_api.o(.text.can_irq_init) for [Anonymous Symbol]
-    .\build\can_api.o(.text.can_irq_free) refers to .\build\can_api.o(.bss.can_irq_contexts) for can_irq_contexts
-    .\build\can_api.o(.ARM.exidx.text.can_irq_free) refers to .\build\can_api.o(.text.can_irq_free) for [Anonymous Symbol]
-    .\build\can_api.o(.ARM.exidx.text.can_free) refers to .\build\can_api.o(.text.can_free) for [Anonymous Symbol]
-    .\build\can_api.o(.text.can_frequency) refers to .\build\stm32l4xx_hal_rcc.o(.text.HAL_RCC_GetPCLK1Freq) for HAL_RCC_GetPCLK1Freq
-    .\build\can_api.o(.text.can_frequency) refers to .\build\can_api.o(.rodata.timing_pts) for timing_pts
-    .\build\can_api.o(.text.can_frequency) refers to .\build\hal_tick_overrides.o(.text.HAL_GetTick) for HAL_GetTick
-    .\build\can_api.o(.text.can_frequency) refers to .\build\mbed_error.o(.text.error) for error
-    .\build\can_api.o(.ARM.exidx.text.can_frequency) refers to .\build\can_api.o(.text.can_frequency) for [Anonymous Symbol]
-    .\build\can_api.o(.ARM.exidx.text.can_write) refers to .\build\can_api.o(.text.can_write) for [Anonymous Symbol]
-    .\build\can_api.o(.ARM.exidx.text.can_read) refers to .\build\can_api.o(.text.can_read) for [Anonymous Symbol]
-    .\build\can_api.o(.text.can_reset) refers to .\build\stm32l4xx_hal_can_legacy.o(.text.HAL_CAN_Init) for HAL_CAN_Init
-    .\build\can_api.o(.text.can_reset) refers to .\build\can_api.o(.text.can_frequency) for can_frequency
-    .\build\can_api.o(.text.can_reset) refers to .\build\can_api.o(.rodata.str1.1) for .L.str.5
-    .\build\can_api.o(.text.can_reset) refers to .\build\mbed_error.o(.text.error) for error
-    .\build\can_api.o(.ARM.exidx.text.can_reset) refers to .\build\can_api.o(.text.can_reset) for [Anonymous Symbol]
-    .\build\can_api.o(.ARM.exidx.text.can_rderror) refers to .\build\can_api.o(.text.can_rderror) for [Anonymous Symbol]
-    .\build\can_api.o(.ARM.exidx.text.can_tderror) refers to .\build\can_api.o(.text.can_tderror) for [Anonymous Symbol]
-    .\build\can_api.o(.ARM.exidx.text.can_monitor) refers to .\build\can_api.o(.text.can_monitor) for [Anonymous Symbol]
-    .\build\can_api.o(.ARM.exidx.text.can_mode) refers to .\build\can_api.o(.text.can_mode) for [Anonymous Symbol]
-    .\build\can_api.o(.text.can_filter) refers to .\build\stm32l4xx_hal_can_legacy.o(.text.HAL_CAN_ConfigFilter) for HAL_CAN_ConfigFilter
-    .\build\can_api.o(.ARM.exidx.text.can_filter) refers to .\build\can_api.o(.text.can_filter) for [Anonymous Symbol]
-    .\build\can_api.o(.text.CAN1_RX0_IRQHandler) refers to .\build\can_api.o(.text.can_irq) for can_irq
-    .\build\can_api.o(.ARM.exidx.text.CAN1_RX0_IRQHandler) refers to .\build\can_api.o(.text.CAN1_RX0_IRQHandler) for [Anonymous Symbol]
-    .\build\can_api.o(.text.can_irq) refers to .\build\can_api.o(.bss.irq_handler) for irq_handler
-    .\build\can_api.o(.text.can_irq) refers to .\build\can_api.o(.bss.can_irq_contexts) for can_irq_contexts
-    .\build\can_api.o(.ARM.exidx.text.can_irq) refers to .\build\can_api.o(.text.can_irq) for [Anonymous Symbol]
-    .\build\can_api.o(.text.CAN1_TX_IRQHandler) refers to .\build\can_api.o(.text.can_irq) for can_irq
-    .\build\can_api.o(.ARM.exidx.text.CAN1_TX_IRQHandler) refers to .\build\can_api.o(.text.CAN1_TX_IRQHandler) for [Anonymous Symbol]
-    .\build\can_api.o(.text.CAN1_SCE_IRQHandler) refers to .\build\can_api.o(.text.can_irq) for can_irq
-    .\build\can_api.o(.ARM.exidx.text.CAN1_SCE_IRQHandler) refers to .\build\can_api.o(.text.CAN1_SCE_IRQHandler) for [Anonymous Symbol]
-    .\build\can_api.o(.text.can_irq_set) refers to .\build\can_api.o(.text.CAN1_TX_IRQHandler) for CAN1_TX_IRQHandler
-    .\build\can_api.o(.text.can_irq_set) refers to .\build\can_api.o(.text.CAN1_RX0_IRQHandler) for CAN1_RX0_IRQHandler
-    .\build\can_api.o(.text.can_irq_set) refers to .\build\can_api.o(.text.CAN1_SCE_IRQHandler) for CAN1_SCE_IRQHandler
-    .\build\can_api.o(.ARM.exidx.text.can_irq_set) refers to .\build\can_api.o(.text.can_irq_set) for [Anonymous Symbol]
-    .\build\can_api.o(.text.can_rd_pinmap) refers to .\build\peripheralpins.o(.rodata.PinMap_CAN_TD) for PinMap_CAN_TD
-    .\build\can_api.o(.ARM.exidx.text.can_rd_pinmap) refers to .\build\can_api.o(.text.can_rd_pinmap) for [Anonymous Symbol]
-    .\build\can_api.o(.text.can_td_pinmap) refers to .\build\peripheralpins.o(.rodata.PinMap_CAN_RD) for PinMap_CAN_RD
-    .\build\can_api.o(.ARM.exidx.text.can_td_pinmap) refers to .\build\can_api.o(.text.can_td_pinmap) for [Anonymous Symbol]
     .\build\chainingblockdevice.o(.text._ZN4mbed19ChainingBlockDeviceC2EPPNS_11BlockDeviceEj) refers to .\build\chainingblockdevice.o(.rodata._ZTVN4mbed19ChainingBlockDeviceE) for vtable for mbed::ChainingBlockDevice
     .\build\chainingblockdevice.o(.ARM.exidx.text._ZN4mbed19ChainingBlockDeviceC2EPPNS_11BlockDeviceEj) refers to .\build\chainingblockdevice.o(.text._ZN4mbed19ChainingBlockDeviceC2EPPNS_11BlockDeviceEj) for [Anonymous Symbol]
     .\build\chainingblockdevice.o(.text._ZN4mbed19ChainingBlockDevice4initEv) refers to C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(uldiv.o)(.text) for __aeabi_uldivmod
@@ -13173,6 +13106,72 @@ Section Cross References
     .\build\watchdog_api.o(.ARM.exidx.text.hal_watchdog_stop) refers to .\build\watchdog_api.o(.text.hal_watchdog_stop) for [Anonymous Symbol]
     .\build\watchdog_api.o(.ARM.exidx.text.hal_watchdog_get_reload_value) refers to .\build\watchdog_api.o(.text.hal_watchdog_get_reload_value) for [Anonymous Symbol]
     .\build\watchdog_api.o(.ARM.exidx.text.hal_watchdog_get_platform_features) refers to .\build\watchdog_api.o(.text.hal_watchdog_get_platform_features) for [Anonymous Symbol]
+    .\build\can_api.o(.text.can_init_direct) refers to .\build\can_api.o(.text._can_init_freq_direct) for _can_init_freq_direct
+    .\build\can_api.o(.ARM.exidx.text.can_init_direct) refers to .\build\can_api.o(.text.can_init_direct) for [Anonymous Symbol]
+    .\build\can_api.o(.text._can_init_freq_direct) refers to .\build\pinmap.o(.text.pin_function) for pin_function
+    .\build\can_api.o(.text._can_init_freq_direct) refers to .\build\pinmap.o(.text.pin_mode) for pin_mode
+    .\build\can_api.o(.text._can_init_freq_direct) refers to .\build\stm32l4xx_hal_can_legacy.o(.text.HAL_CAN_Init) for HAL_CAN_Init
+    .\build\can_api.o(.text._can_init_freq_direct) refers to .\build\can_api.o(.text.can_frequency) for can_frequency
+    .\build\can_api.o(.text._can_init_freq_direct) refers to .\build\stm32l4xx_hal_can_legacy.o(.text.HAL_CAN_ConfigFilter) for HAL_CAN_ConfigFilter
+    .\build\can_api.o(.text._can_init_freq_direct) refers to .\build\mbed_assert.o(.text.mbed_assert_internal) for mbed_assert_internal
+    .\build\can_api.o(.text._can_init_freq_direct) refers to .\build\can_api.o(.rodata.str1.1) for .L.str.4
+    .\build\can_api.o(.text._can_init_freq_direct) refers to .\build\mbed_error.o(.text.error) for error
+    .\build\can_api.o(.ARM.exidx.text._can_init_freq_direct) refers to .\build\can_api.o(.text._can_init_freq_direct) for [Anonymous Symbol]
+    .\build\can_api.o(.text.can_init_freq) refers to .\build\peripheralpins.o(.rodata.PinMap_CAN_RD) for PinMap_CAN_RD
+    .\build\can_api.o(.text.can_init_freq) refers to .\build\mbed_pinmap_common.o(.text.pinmap_peripheral) for pinmap_peripheral
+    .\build\can_api.o(.text.can_init_freq) refers to .\build\peripheralpins.o(.rodata.PinMap_CAN_TD) for PinMap_CAN_TD
+    .\build\can_api.o(.text.can_init_freq) refers to .\build\mbed_pinmap_common.o(.text.pinmap_merge) for pinmap_merge
+    .\build\can_api.o(.text.can_init_freq) refers to .\build\mbed_pinmap_common.o(.text.pinmap_find_function) for pinmap_find_function
+    .\build\can_api.o(.text.can_init_freq) refers to .\build\can_api.o(.text._can_init_freq_direct) for _can_init_freq_direct
+    .\build\can_api.o(.ARM.exidx.text.can_init_freq) refers to .\build\can_api.o(.text.can_init_freq) for [Anonymous Symbol]
+    .\build\can_api.o(.text.can_init) refers to .\build\peripheralpins.o(.rodata.PinMap_CAN_RD) for PinMap_CAN_RD
+    .\build\can_api.o(.text.can_init) refers to .\build\mbed_pinmap_common.o(.text.pinmap_peripheral) for pinmap_peripheral
+    .\build\can_api.o(.text.can_init) refers to .\build\peripheralpins.o(.rodata.PinMap_CAN_TD) for PinMap_CAN_TD
+    .\build\can_api.o(.text.can_init) refers to .\build\mbed_pinmap_common.o(.text.pinmap_merge) for pinmap_merge
+    .\build\can_api.o(.text.can_init) refers to .\build\mbed_pinmap_common.o(.text.pinmap_find_function) for pinmap_find_function
+    .\build\can_api.o(.text.can_init) refers to .\build\can_api.o(.text._can_init_freq_direct) for _can_init_freq_direct
+    .\build\can_api.o(.ARM.exidx.text.can_init) refers to .\build\can_api.o(.text.can_init) for [Anonymous Symbol]
+    .\build\can_api.o(.text.can_irq_init) refers to .\build\can_api.o(.bss.irq_handler) for irq_handler
+    .\build\can_api.o(.text.can_irq_init) refers to .\build\can_api.o(.bss.can_irq_contexts) for can_irq_contexts
+    .\build\can_api.o(.ARM.exidx.text.can_irq_init) refers to .\build\can_api.o(.text.can_irq_init) for [Anonymous Symbol]
+    .\build\can_api.o(.text.can_irq_free) refers to .\build\can_api.o(.bss.can_irq_contexts) for can_irq_contexts
+    .\build\can_api.o(.ARM.exidx.text.can_irq_free) refers to .\build\can_api.o(.text.can_irq_free) for [Anonymous Symbol]
+    .\build\can_api.o(.ARM.exidx.text.can_free) refers to .\build\can_api.o(.text.can_free) for [Anonymous Symbol]
+    .\build\can_api.o(.text.can_frequency) refers to .\build\stm32l4xx_hal_rcc.o(.text.HAL_RCC_GetPCLK1Freq) for HAL_RCC_GetPCLK1Freq
+    .\build\can_api.o(.text.can_frequency) refers to .\build\can_api.o(.rodata.timing_pts) for timing_pts
+    .\build\can_api.o(.text.can_frequency) refers to .\build\hal_tick_overrides.o(.text.HAL_GetTick) for HAL_GetTick
+    .\build\can_api.o(.text.can_frequency) refers to .\build\mbed_error.o(.text.error) for error
+    .\build\can_api.o(.ARM.exidx.text.can_frequency) refers to .\build\can_api.o(.text.can_frequency) for [Anonymous Symbol]
+    .\build\can_api.o(.ARM.exidx.text.can_write) refers to .\build\can_api.o(.text.can_write) for [Anonymous Symbol]
+    .\build\can_api.o(.ARM.exidx.text.can_read) refers to .\build\can_api.o(.text.can_read) for [Anonymous Symbol]
+    .\build\can_api.o(.text.can_reset) refers to .\build\stm32l4xx_hal_can_legacy.o(.text.HAL_CAN_Init) for HAL_CAN_Init
+    .\build\can_api.o(.text.can_reset) refers to .\build\can_api.o(.text.can_frequency) for can_frequency
+    .\build\can_api.o(.text.can_reset) refers to .\build\can_api.o(.rodata.str1.1) for .L.str.5
+    .\build\can_api.o(.text.can_reset) refers to .\build\mbed_error.o(.text.error) for error
+    .\build\can_api.o(.ARM.exidx.text.can_reset) refers to .\build\can_api.o(.text.can_reset) for [Anonymous Symbol]
+    .\build\can_api.o(.ARM.exidx.text.can_rderror) refers to .\build\can_api.o(.text.can_rderror) for [Anonymous Symbol]
+    .\build\can_api.o(.ARM.exidx.text.can_tderror) refers to .\build\can_api.o(.text.can_tderror) for [Anonymous Symbol]
+    .\build\can_api.o(.ARM.exidx.text.can_monitor) refers to .\build\can_api.o(.text.can_monitor) for [Anonymous Symbol]
+    .\build\can_api.o(.ARM.exidx.text.can_mode) refers to .\build\can_api.o(.text.can_mode) for [Anonymous Symbol]
+    .\build\can_api.o(.text.can_filter) refers to .\build\stm32l4xx_hal_can_legacy.o(.text.HAL_CAN_ConfigFilter) for HAL_CAN_ConfigFilter
+    .\build\can_api.o(.ARM.exidx.text.can_filter) refers to .\build\can_api.o(.text.can_filter) for [Anonymous Symbol]
+    .\build\can_api.o(.text.CAN1_RX0_IRQHandler) refers to .\build\can_api.o(.text.can_irq) for can_irq
+    .\build\can_api.o(.ARM.exidx.text.CAN1_RX0_IRQHandler) refers to .\build\can_api.o(.text.CAN1_RX0_IRQHandler) for [Anonymous Symbol]
+    .\build\can_api.o(.text.can_irq) refers to .\build\can_api.o(.bss.irq_handler) for irq_handler
+    .\build\can_api.o(.text.can_irq) refers to .\build\can_api.o(.bss.can_irq_contexts) for can_irq_contexts
+    .\build\can_api.o(.ARM.exidx.text.can_irq) refers to .\build\can_api.o(.text.can_irq) for [Anonymous Symbol]
+    .\build\can_api.o(.text.CAN1_TX_IRQHandler) refers to .\build\can_api.o(.text.can_irq) for can_irq
+    .\build\can_api.o(.ARM.exidx.text.CAN1_TX_IRQHandler) refers to .\build\can_api.o(.text.CAN1_TX_IRQHandler) for [Anonymous Symbol]
+    .\build\can_api.o(.text.CAN1_SCE_IRQHandler) refers to .\build\can_api.o(.text.can_irq) for can_irq
+    .\build\can_api.o(.ARM.exidx.text.CAN1_SCE_IRQHandler) refers to .\build\can_api.o(.text.CAN1_SCE_IRQHandler) for [Anonymous Symbol]
+    .\build\can_api.o(.text.can_irq_set) refers to .\build\can_api.o(.text.CAN1_TX_IRQHandler) for CAN1_TX_IRQHandler
+    .\build\can_api.o(.text.can_irq_set) refers to .\build\can_api.o(.text.CAN1_RX0_IRQHandler) for CAN1_RX0_IRQHandler
+    .\build\can_api.o(.text.can_irq_set) refers to .\build\can_api.o(.text.CAN1_SCE_IRQHandler) for CAN1_SCE_IRQHandler
+    .\build\can_api.o(.ARM.exidx.text.can_irq_set) refers to .\build\can_api.o(.text.can_irq_set) for [Anonymous Symbol]
+    .\build\can_api.o(.text.can_rd_pinmap) refers to .\build\peripheralpins.o(.rodata.PinMap_CAN_TD) for PinMap_CAN_TD
+    .\build\can_api.o(.ARM.exidx.text.can_rd_pinmap) refers to .\build\can_api.o(.text.can_rd_pinmap) for [Anonymous Symbol]
+    .\build\can_api.o(.text.can_td_pinmap) refers to .\build\peripheralpins.o(.rodata.PinMap_CAN_RD) for PinMap_CAN_RD
+    .\build\can_api.o(.ARM.exidx.text.can_td_pinmap) refers to .\build\can_api.o(.text.can_td_pinmap) for [Anonymous Symbol]
     .\build\main.o(.text) refers (Special) to .\build\mbed_printf_armlink_overrides.o(.text.$Sub$$_printf_percent) for _printf_percent
     .\build\main.o(.text) refers (Special) to .\build\mbed_printf_armlink_overrides.o(.text.$Sub$$_printf_f) for _printf_f
     .\build\main.o(.text) refers (Special) to .\build\mbed_printf_armlink_overrides.o(.text.$Sub$$_printf_fp_dec) for _printf_fp_dec
@@ -14082,51 +14081,6 @@ Removing Unused input sections from the image.
     Removing .\build\can.o(.text._ZN4mbed3CAN6unlockEv), (2 bytes).
     Removing .\build\can.o(.ARM.exidx.text._ZN4mbed3CAN6unlockEv), (8 bytes).
     Removing .\build\can.o(.rodata._ZTVN4mbed3CANE), (24 bytes).
-    Removing .\build\can_api.o(.text), (0 bytes).
-    Removing .\build\can_api.o(.text.can_init_direct), (12 bytes).
-    Removing .\build\can_api.o(.ARM.exidx.text.can_init_direct), (8 bytes).
-    Removing .\build\can_api.o(.text._can_init_freq_direct), (332 bytes).
-    Removing .\build\can_api.o(.ARM.exidx.text._can_init_freq_direct), (8 bytes).
-    Removing .\build\can_api.o(.text.can_init_freq), (112 bytes).
-    Removing .\build\can_api.o(.ARM.exidx.text.can_init_freq), (8 bytes).
-    Removing .\build\can_api.o(.text.can_init), (110 bytes).
-    Removing .\build\can_api.o(.ARM.exidx.text.can_init), (8 bytes).
-    Removing .\build\can_api.o(.text.can_irq_init), (30 bytes).
-    Removing .\build\can_api.o(.ARM.exidx.text.can_irq_init), (8 bytes).
-    Removing .\build\can_api.o(.text.can_irq_free), (36 bytes).
-    Removing .\build\can_api.o(.ARM.exidx.text.can_irq_free), (8 bytes).
-    Removing .\build\can_api.o(.text.can_free), (50 bytes).
-    Removing .\build\can_api.o(.ARM.exidx.text.can_free), (8 bytes).
-    Removing .\build\can_api.o(.text.can_frequency), (352 bytes).
-    Removing .\build\can_api.o(.ARM.exidx.text.can_frequency), (8 bytes).
-    Removing .\build\can_api.o(.text.can_write), (142 bytes).
-    Removing .\build\can_api.o(.ARM.exidx.text.can_write), (8 bytes).
-    Removing .\build\can_api.o(.text.can_read), (164 bytes).
-    Removing .\build\can_api.o(.ARM.exidx.text.can_read), (8 bytes).
-    Removing .\build\can_api.o(.text.can_reset), (68 bytes).
-    Removing .\build\can_api.o(.ARM.exidx.text.can_reset), (8 bytes).
-    Removing .\build\can_api.o(.text.can_rderror), (8 bytes).
-    Removing .\build\can_api.o(.ARM.exidx.text.can_rderror), (8 bytes).
-    Removing .\build\can_api.o(.text.can_tderror), (10 bytes).
-    Removing .\build\can_api.o(.ARM.exidx.text.can_tderror), (8 bytes).
-    Removing .\build\can_api.o(.text.can_monitor), (148 bytes).
-    Removing .\build\can_api.o(.ARM.exidx.text.can_monitor), (8 bytes).
-    Removing .\build\can_api.o(.text.can_mode), (128 bytes).
-    Removing .\build\can_api.o(.ARM.exidx.text.can_mode), (8 bytes).
-    Removing .\build\can_api.o(.text.can_filter), (110 bytes).
-    Removing .\build\can_api.o(.ARM.exidx.text.can_filter), (8 bytes).
-    Removing .\build\can_api.o(.ARM.exidx.text.CAN1_RX0_IRQHandler), (8 bytes).
-    Removing .\build\can_api.o(.ARM.exidx.text.can_irq), (8 bytes).
-    Removing .\build\can_api.o(.ARM.exidx.text.CAN1_TX_IRQHandler), (8 bytes).
-    Removing .\build\can_api.o(.ARM.exidx.text.CAN1_SCE_IRQHandler), (8 bytes).
-    Removing .\build\can_api.o(.text.can_irq_set), (146 bytes).
-    Removing .\build\can_api.o(.ARM.exidx.text.can_irq_set), (8 bytes).
-    Removing .\build\can_api.o(.text.can_rd_pinmap), (10 bytes).
-    Removing .\build\can_api.o(.ARM.exidx.text.can_rd_pinmap), (8 bytes).
-    Removing .\build\can_api.o(.text.can_td_pinmap), (10 bytes).
-    Removing .\build\can_api.o(.ARM.exidx.text.can_td_pinmap), (8 bytes).
-    Removing .\build\can_api.o(.rodata.timing_pts), (184 bytes).
-    Removing .\build\can_api.o(.rodata.str1.1), (54 bytes).
     Removing .\build\chainingblockdevice.o(.text), (0 bytes).
     Removing .\build\chainingblockdevice.o(.text._ZN4mbed19ChainingBlockDeviceC2EPPNS_11BlockDeviceEj), (48 bytes).
     Removing .\build\chainingblockdevice.o(.ARM.exidx.text._ZN4mbed19ChainingBlockDeviceC2EPPNS_11BlockDeviceEj), (8 bytes).
@@ -19706,6 +19660,51 @@ Removing Unused input sections from the image.
     Removing .\build\watchdog_api.o(.text.hal_watchdog_get_platform_features), (24 bytes).
     Removing .\build\watchdog_api.o(.ARM.exidx.text.hal_watchdog_get_platform_features), (8 bytes).
     Removing .\build\watchdog_api.o(.bss.IwdgHandle), (16 bytes).
+    Removing .\build\can_api.o(.text), (0 bytes).
+    Removing .\build\can_api.o(.text.can_init_direct), (12 bytes).
+    Removing .\build\can_api.o(.ARM.exidx.text.can_init_direct), (8 bytes).
+    Removing .\build\can_api.o(.text._can_init_freq_direct), (332 bytes).
+    Removing .\build\can_api.o(.ARM.exidx.text._can_init_freq_direct), (8 bytes).
+    Removing .\build\can_api.o(.text.can_init_freq), (112 bytes).
+    Removing .\build\can_api.o(.ARM.exidx.text.can_init_freq), (8 bytes).
+    Removing .\build\can_api.o(.text.can_init), (110 bytes).
+    Removing .\build\can_api.o(.ARM.exidx.text.can_init), (8 bytes).
+    Removing .\build\can_api.o(.text.can_irq_init), (30 bytes).
+    Removing .\build\can_api.o(.ARM.exidx.text.can_irq_init), (8 bytes).
+    Removing .\build\can_api.o(.text.can_irq_free), (36 bytes).
+    Removing .\build\can_api.o(.ARM.exidx.text.can_irq_free), (8 bytes).
+    Removing .\build\can_api.o(.text.can_free), (50 bytes).
+    Removing .\build\can_api.o(.ARM.exidx.text.can_free), (8 bytes).
+    Removing .\build\can_api.o(.text.can_frequency), (352 bytes).
+    Removing .\build\can_api.o(.ARM.exidx.text.can_frequency), (8 bytes).
+    Removing .\build\can_api.o(.text.can_write), (142 bytes).
+    Removing .\build\can_api.o(.ARM.exidx.text.can_write), (8 bytes).
+    Removing .\build\can_api.o(.text.can_read), (164 bytes).
+    Removing .\build\can_api.o(.ARM.exidx.text.can_read), (8 bytes).
+    Removing .\build\can_api.o(.text.can_reset), (68 bytes).
+    Removing .\build\can_api.o(.ARM.exidx.text.can_reset), (8 bytes).
+    Removing .\build\can_api.o(.text.can_rderror), (8 bytes).
+    Removing .\build\can_api.o(.ARM.exidx.text.can_rderror), (8 bytes).
+    Removing .\build\can_api.o(.text.can_tderror), (10 bytes).
+    Removing .\build\can_api.o(.ARM.exidx.text.can_tderror), (8 bytes).
+    Removing .\build\can_api.o(.text.can_monitor), (148 bytes).
+    Removing .\build\can_api.o(.ARM.exidx.text.can_monitor), (8 bytes).
+    Removing .\build\can_api.o(.text.can_mode), (128 bytes).
+    Removing .\build\can_api.o(.ARM.exidx.text.can_mode), (8 bytes).
+    Removing .\build\can_api.o(.text.can_filter), (110 bytes).
+    Removing .\build\can_api.o(.ARM.exidx.text.can_filter), (8 bytes).
+    Removing .\build\can_api.o(.ARM.exidx.text.CAN1_RX0_IRQHandler), (8 bytes).
+    Removing .\build\can_api.o(.ARM.exidx.text.can_irq), (8 bytes).
+    Removing .\build\can_api.o(.ARM.exidx.text.CAN1_TX_IRQHandler), (8 bytes).
+    Removing .\build\can_api.o(.ARM.exidx.text.CAN1_SCE_IRQHandler), (8 bytes).
+    Removing .\build\can_api.o(.text.can_irq_set), (146 bytes).
+    Removing .\build\can_api.o(.ARM.exidx.text.can_irq_set), (8 bytes).
+    Removing .\build\can_api.o(.text.can_rd_pinmap), (10 bytes).
+    Removing .\build\can_api.o(.ARM.exidx.text.can_rd_pinmap), (8 bytes).
+    Removing .\build\can_api.o(.text.can_td_pinmap), (10 bytes).
+    Removing .\build\can_api.o(.ARM.exidx.text.can_td_pinmap), (8 bytes).
+    Removing .\build\can_api.o(.rodata.timing_pts), (184 bytes).
+    Removing .\build\can_api.o(.rodata.str1.1), (54 bytes).
     Removing .\build\main.o(.text), (0 bytes).
     Removing .\build\main.o(.ARM.exidx.text.main), (8 bytes).
     Removing .\build\main.o(.ARM.exidx.text._GLOBAL__sub_I_main.cpp), (8 bytes).
@@ -20597,99 +20596,99 @@ Image Symbol Table
     [Anonymous Symbol]                       0x08003df4   Section        0  .\build\lp_ticker.o(.text.lp_ticker_read)
     [Anonymous Symbol]                       0x08003e08   Section        0  .\build\lp_ticker.o(.text.lp_ticker_set_interrupt)
     [Anonymous Symbol]                       0x08003f20   Section        0  .\build\main.o(.text.main)
-    [Anonymous Symbol]                       0x08003f84   Section        0  .\build\mbed_assert.o(.text.mbed_assert_internal)
-    [Anonymous Symbol]                       0x08003fa0   Section        0  .\build\mbed_board.o(.text.mbed_die)
-    [Anonymous Symbol]                       0x08004004   Section        0  .\build\mbed_error.o(.text.mbed_error)
-    [Anonymous Symbol]                       0x08004208   Section        0  .\build\mbed_error.o(.text.mbed_error_hook)
-    [Anonymous Symbol]                       0x0800420c   Section        0  .\build\mbed_board.o(.text.mbed_error_printf)
-    [Anonymous Symbol]                       0x08004250   Section        0  .\build\mbed_board.o(.text.mbed_error_puts)
-    [Anonymous Symbol]                       0x080042a8   Section        0  .\build\mbed_board.o(.text.mbed_error_vprintf)
-    mbed_halt_system                         0x080042dd   Thumb Code    68  .\build\mbed_error.o(.text.mbed_halt_system)
-    [Anonymous Symbol]                       0x080042dc   Section        0  .\build\mbed_error.o(.text.mbed_halt_system)
-    [Anonymous Symbol]                       0x08004320   Section        0  .\build\mbed_sdk_boot.o(.text.mbed_main)
-    [Anonymous Symbol]                       0x08004328   Section        0  .\build\mbed_printf_implementation.o(.text.mbed_minimal_formatted_string)
-    mbed_minimal_formatted_string_integer    0x08004b65   Thumb Code   548  .\build\mbed_printf_implementation.o(.text.mbed_minimal_formatted_string_integer)
-    [Anonymous Symbol]                       0x08004b64   Section        0  .\build\mbed_printf_implementation.o(.text.mbed_minimal_formatted_string_integer)
-    mbed_minimal_formatted_string_integer.int2hex_lower 0x08004d88   Number         0  .\build\mbed_printf_implementation.o(.text.mbed_minimal_formatted_string_integer)
-    mbed_minimal_formatted_string_integer.int2hex_upper 0x08004d98   Number         0  .\build\mbed_printf_implementation.o(.text.mbed_minimal_formatted_string_integer)
-    [Anonymous Symbol]                       0x08004db0   Section        0  .\build\mbed_overrides.o(.text.mbed_sdk_init)
-    [Anonymous Symbol]                       0x08004df0   Section        0  .\build\mbedcrc.o(.text.mbed_tiny_compute_crc32)
-    [Anonymous Symbol]                       0x08004e30   Section        0  .\build\pinmap.o(.text.pin_function)
-    [Anonymous Symbol]                       0x08004f6c   Section        0  .\build\pinmap.o(.text.pin_mode)
-    [Anonymous Symbol]                       0x08004ff8   Section        0  .\build\mbed_pinmap_common.o(.text.pinmap_find_function)
-    [Anonymous Symbol]                       0x08005020   Section        0  .\build\mbed_pinmap_common.o(.text.pinmap_merge)
-    [Anonymous Symbol]                       0x08005068   Section        0  .\build\mbed_pinmap_common.o(.text.pinmap_peripheral)
-    print_error_report                       0x080050e9   Thumb Code   264  .\build\mbed_error.o(.text.print_error_report)
-    [Anonymous Symbol]                       0x080050e8   Section        0  .\build\mbed_error.o(.text.print_error_report)
-    schedule_interrupt                       0x08005295   Thumb Code   416  .\build\mbed_ticker_api.o(.text.schedule_interrupt)
-    [Anonymous Symbol]                       0x08005294   Section        0  .\build\mbed_ticker_api.o(.text.schedule_interrupt)
-    [Anonymous Symbol]                       0x08005488   Section        0  .\build\serial_api.o(.text.serial_baud)
-    [Anonymous Symbol]                       0x08005514   Section        0  .\build\serial_api.o(.text.serial_init)
-    [Anonymous Symbol]                       0x080057b0   Section        0  .\build\static_pinmap.o(.text.serial_init_direct)
-    [Anonymous Symbol]                       0x080057c0   Section        0  .\build\serial_device.o(.text.serial_putc)
-    [Anonymous Symbol]                       0x080057ec   Section        0  .\build\serial_api.o(.text.serial_writable)
-    [Anonymous Symbol]                       0x08005808   Section        0  .\build\mbed_power_mgmt.o(.text.sleep_manager_lock_deep_sleep_internal)
-    [Anonymous Symbol]                       0x08005868   Section        0  .\build\mbed_power_mgmt.o(.text.sleep_manager_sleep_auto)
-    [Anonymous Symbol]                       0x0800587c   Section        0  .\build\mbed_power_mgmt.o(.text.sleep_manager_unlock_deep_sleep_internal)
-    system_reset                             0x080058e1   Thumb Code     4  .\build\mbed_error.o(.text.system_reset)
-    [Anonymous Symbol]                       0x080058e0   Section        0  .\build\mbed_error.o(.text.system_reset)
-    [Anonymous Symbol]                       0x080058e4   Section        0  .\build\mbed_thread.o(.text.thread_sleep_for)
-    [Anonymous Symbol]                       0x080058ec   Section        0  .\build\mbed_ticker_api.o(.text.ticker_insert_event_us)
-    [Anonymous Symbol]                       0x08005a00   Section        0  .\build\mbed_ticker_api.o(.text.ticker_irq_handler)
-    [Anonymous Symbol]                       0x08005af0   Section        0  .\build\mbed_ticker_api.o(.text.ticker_read_us)
-    [Anonymous Symbol]                       0x08005b90   Section        0  .\build\mbed_ticker_api.o(.text.ticker_remove_event)
-    [Anonymous Symbol]                       0x08005bcc   Section        0  .\build\mbed_ticker_api.o(.text.ticker_set_handler)
-    [Anonymous Symbol]                       0x08005be8   Section        0  .\build\us_ticker.o(.text.timer_irq_handler)
-    [Anonymous Symbol]                       0x08005c18   Section        0  .\build\us_ticker.o(.text.us_ticker_clear_interrupt)
-    [Anonymous Symbol]                       0x08005c2c   Section        0  .\build\us_ticker.o(.text.us_ticker_disable_interrupt)
-    [Anonymous Symbol]                       0x08005c40   Section        0  .\build\us_ticker.o(.text.us_ticker_fire_interrupt)
-    [Anonymous Symbol]                       0x08005c64   Section        0  .\build\us_ticker.o(.text.us_ticker_get_info)
-    [Anonymous Symbol]                       0x08005c70   Section        0  .\build\us_ticker.o(.text.us_ticker_init)
-    [Anonymous Symbol]                       0x08005c88   Section        0  .\build\mbed_us_ticker_api.o(.text.us_ticker_irq_handler)
-    [Anonymous Symbol]                       0x08005ca4   Section        0  .\build\us_ticker.o(.text.us_ticker_read)
-    [Anonymous Symbol]                       0x08005cb0   Section        0  .\build\us_ticker.o(.text.us_ticker_set_interrupt)
-    [Anonymous Symbol]                       0x08005ccc   Section        0  .\build\mbed_retarget.o(.text.write)
-    i.__aeabi_errno_addr                     0x08005d08   Section        0  C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(errno.o)(i.__aeabi_errno_addr)
-    i.__scatterload_copy                     0x08005d10   Section       14  C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(handlers.o)(i.__scatterload_copy)
-    i.__scatterload_null                     0x08005d1e   Section        2  C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(handlers.o)(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x08005d20   Section       14  C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(handlers.o)(i.__scatterload_zeroinit)
-    i._fflush$full                           0x08005d2e   Section        0  C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(fflush_f.o)(i._fflush$full)
-    do_serial_init()::console_pinmap         0x08005ec8   Data          24  .\build\mbed_retarget.o(.rodata._ZZL14do_serial_initvE14console_pinmap)
-    [Anonymous Symbol]                       0x08005ec8   Section        0  .\build\mbed_retarget.o(.rodata._ZZL14do_serial_initvE14console_pinmap)
-    .Lswitch.table.UART_SetConfig.5          0x08005ee0   Data          16  .\build\stm32l4xx_hal_uart.o(.rodata.cst16)
-    lp_data                                  0x08005f30   Data           8  .\build\mbed_lp_ticker_api.o(.rodata.lp_data)
-    [Anonymous Symbol]                       0x08005f30   Section        0  .\build\mbed_lp_ticker_api.o(.rodata.lp_data)
-    lp_interface                             0x08005f38   Data          36  .\build\mbed_lp_ticker_api.o(.rodata.lp_interface)
-    [Anonymous Symbol]                       0x08005f38   Section        0  .\build\mbed_lp_ticker_api.o(.rodata.lp_interface)
-    lp_ticker_get_info.info                  0x08005f5c   Data           8  .\build\lp_ticker.o(.rodata.lp_ticker_get_info.info)
-    [Anonymous Symbol]                       0x08005f5c   Section        0  .\build\lp_ticker.o(.rodata.lp_ticker_get_info.info)
-    .L.str.19                                0x08005f64   Data          26  .\build\mbed_error.o(.rodata.str1.1)
-    [Anonymous Symbol]                       0x08005f64   Section        0  .\build\mbed_error.o(.rodata.str1.1)
-    .L.str.3                                 0x08005f7e   Data          73  .\build\mbed_error.o(.rodata.str1.1)
-    .L.str.5                                 0x08005fc7   Data          21  .\build\mbed_error.o(.rodata.str1.1)
-    .L.str.4                                 0x08005fdc   Data          81  .\build\mbed_error.o(.rodata.str1.1)
-    .L.str.18                                0x0800602d   Data          79  .\build\mbed_error.o(.rodata.str1.1)
-    .L.str.17                                0x0800607c   Data          19  .\build\mbed_error.o(.rodata.str1.1)
-    .L.str.14                                0x0800608f   Data          16  .\build\mbed_error.o(.rodata.str1.1)
-    [Anonymous Symbol]                       0x0800609f   Section        0  .\build\mbed_retarget.o(.rodata.str1.1)
-    .L.str.2                                 0x080060c2   Data          30  .\build\mbed_retarget.o(.rodata.str1.1)
-    .L.str.4                                 0x080060e0   Data          55  .\build\mbed_retarget.o(.rodata.str1.1)
-    .L.str.10                                0x08006129   Data          35  .\build\mbed_retarget.o(.rodata.str1.1)
-    .L.str.11                                0x0800614c   Data          60  .\build\mbed_retarget.o(.rodata.str1.1)
-    .L.str.3                                 0x08006153   Data          53  .\build\mbed_retarget.o(.rodata.str1.1)
-    .L.str.5                                 0x08006188   Data          51  .\build\serial_api.o(.rodata.str1.1)
-    [Anonymous Symbol]                       0x08006188   Section        0  .\build\serial_api.o(.rodata.str1.1)
-    .L.str                                   0x080061bb   Data          10  .\build\systimer.o(.rodata.str1.1)
-    [Anonymous Symbol]                       0x080061bb   Section        0  .\build\systimer.o(.rodata.str1.1)
-    .L.str.1                                 0x080061c5   Data          48  .\build\systimer.o(.rodata.str1.1)
-    .L.str.2                                 0x080061f5   Data          29  .\build\systimer.o(.rodata.str1.1)
-    us_data                                  0x08006214   Data           8  .\build\mbed_us_ticker_api.o(.rodata.us_data)
-    [Anonymous Symbol]                       0x08006214   Section        0  .\build\mbed_us_ticker_api.o(.rodata.us_data)
-    us_interface                             0x0800621c   Data          36  .\build\mbed_us_ticker_api.o(.rodata.us_interface)
-    [Anonymous Symbol]                       0x0800621c   Section        0  .\build\mbed_us_ticker_api.o(.rodata.us_interface)
-    us_ticker_get_info.info                  0x08006240   Data           8  .\build\us_ticker.o(.rodata.us_ticker_get_info.info)
-    [Anonymous Symbol]                       0x08006240   Section        0  .\build\us_ticker.o(.rodata.us_ticker_get_info.info)
-    .init_array                              0x0800626c   Section        0  C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(cpp_init.o)(.init_array)
+    [Anonymous Symbol]                       0x08003f80   Section        0  .\build\mbed_assert.o(.text.mbed_assert_internal)
+    [Anonymous Symbol]                       0x08003f9c   Section        0  .\build\mbed_board.o(.text.mbed_die)
+    [Anonymous Symbol]                       0x08004000   Section        0  .\build\mbed_error.o(.text.mbed_error)
+    [Anonymous Symbol]                       0x08004204   Section        0  .\build\mbed_error.o(.text.mbed_error_hook)
+    [Anonymous Symbol]                       0x08004208   Section        0  .\build\mbed_board.o(.text.mbed_error_printf)
+    [Anonymous Symbol]                       0x0800424c   Section        0  .\build\mbed_board.o(.text.mbed_error_puts)
+    [Anonymous Symbol]                       0x080042a4   Section        0  .\build\mbed_board.o(.text.mbed_error_vprintf)
+    mbed_halt_system                         0x080042d9   Thumb Code    68  .\build\mbed_error.o(.text.mbed_halt_system)
+    [Anonymous Symbol]                       0x080042d8   Section        0  .\build\mbed_error.o(.text.mbed_halt_system)
+    [Anonymous Symbol]                       0x0800431c   Section        0  .\build\mbed_sdk_boot.o(.text.mbed_main)
+    [Anonymous Symbol]                       0x08004320   Section        0  .\build\mbed_printf_implementation.o(.text.mbed_minimal_formatted_string)
+    mbed_minimal_formatted_string_integer    0x08004b5d   Thumb Code   548  .\build\mbed_printf_implementation.o(.text.mbed_minimal_formatted_string_integer)
+    [Anonymous Symbol]                       0x08004b5c   Section        0  .\build\mbed_printf_implementation.o(.text.mbed_minimal_formatted_string_integer)
+    mbed_minimal_formatted_string_integer.int2hex_lower 0x08004d80   Number         0  .\build\mbed_printf_implementation.o(.text.mbed_minimal_formatted_string_integer)
+    mbed_minimal_formatted_string_integer.int2hex_upper 0x08004d90   Number         0  .\build\mbed_printf_implementation.o(.text.mbed_minimal_formatted_string_integer)
+    [Anonymous Symbol]                       0x08004da8   Section        0  .\build\mbed_overrides.o(.text.mbed_sdk_init)
+    [Anonymous Symbol]                       0x08004de8   Section        0  .\build\mbedcrc.o(.text.mbed_tiny_compute_crc32)
+    [Anonymous Symbol]                       0x08004e28   Section        0  .\build\pinmap.o(.text.pin_function)
+    [Anonymous Symbol]                       0x08004f64   Section        0  .\build\pinmap.o(.text.pin_mode)
+    [Anonymous Symbol]                       0x08004ff0   Section        0  .\build\mbed_pinmap_common.o(.text.pinmap_find_function)
+    [Anonymous Symbol]                       0x08005018   Section        0  .\build\mbed_pinmap_common.o(.text.pinmap_merge)
+    [Anonymous Symbol]                       0x08005060   Section        0  .\build\mbed_pinmap_common.o(.text.pinmap_peripheral)
+    print_error_report                       0x080050e1   Thumb Code   264  .\build\mbed_error.o(.text.print_error_report)
+    [Anonymous Symbol]                       0x080050e0   Section        0  .\build\mbed_error.o(.text.print_error_report)
+    schedule_interrupt                       0x0800528d   Thumb Code   416  .\build\mbed_ticker_api.o(.text.schedule_interrupt)
+    [Anonymous Symbol]                       0x0800528c   Section        0  .\build\mbed_ticker_api.o(.text.schedule_interrupt)
+    [Anonymous Symbol]                       0x08005480   Section        0  .\build\serial_api.o(.text.serial_baud)
+    [Anonymous Symbol]                       0x0800550c   Section        0  .\build\serial_api.o(.text.serial_init)
+    [Anonymous Symbol]                       0x080057a8   Section        0  .\build\static_pinmap.o(.text.serial_init_direct)
+    [Anonymous Symbol]                       0x080057b8   Section        0  .\build\serial_device.o(.text.serial_putc)
+    [Anonymous Symbol]                       0x080057e4   Section        0  .\build\serial_api.o(.text.serial_writable)
+    [Anonymous Symbol]                       0x08005800   Section        0  .\build\mbed_power_mgmt.o(.text.sleep_manager_lock_deep_sleep_internal)
+    [Anonymous Symbol]                       0x08005860   Section        0  .\build\mbed_power_mgmt.o(.text.sleep_manager_sleep_auto)
+    [Anonymous Symbol]                       0x08005874   Section        0  .\build\mbed_power_mgmt.o(.text.sleep_manager_unlock_deep_sleep_internal)
+    system_reset                             0x080058d9   Thumb Code     4  .\build\mbed_error.o(.text.system_reset)
+    [Anonymous Symbol]                       0x080058d8   Section        0  .\build\mbed_error.o(.text.system_reset)
+    [Anonymous Symbol]                       0x080058dc   Section        0  .\build\mbed_thread.o(.text.thread_sleep_for)
+    [Anonymous Symbol]                       0x080058e4   Section        0  .\build\mbed_ticker_api.o(.text.ticker_insert_event_us)
+    [Anonymous Symbol]                       0x080059f8   Section        0  .\build\mbed_ticker_api.o(.text.ticker_irq_handler)
+    [Anonymous Symbol]                       0x08005ae8   Section        0  .\build\mbed_ticker_api.o(.text.ticker_read_us)
+    [Anonymous Symbol]                       0x08005b88   Section        0  .\build\mbed_ticker_api.o(.text.ticker_remove_event)
+    [Anonymous Symbol]                       0x08005bc4   Section        0  .\build\mbed_ticker_api.o(.text.ticker_set_handler)
+    [Anonymous Symbol]                       0x08005be0   Section        0  .\build\us_ticker.o(.text.timer_irq_handler)
+    [Anonymous Symbol]                       0x08005c10   Section        0  .\build\us_ticker.o(.text.us_ticker_clear_interrupt)
+    [Anonymous Symbol]                       0x08005c24   Section        0  .\build\us_ticker.o(.text.us_ticker_disable_interrupt)
+    [Anonymous Symbol]                       0x08005c38   Section        0  .\build\us_ticker.o(.text.us_ticker_fire_interrupt)
+    [Anonymous Symbol]                       0x08005c5c   Section        0  .\build\us_ticker.o(.text.us_ticker_get_info)
+    [Anonymous Symbol]                       0x08005c68   Section        0  .\build\us_ticker.o(.text.us_ticker_init)
+    [Anonymous Symbol]                       0x08005c80   Section        0  .\build\mbed_us_ticker_api.o(.text.us_ticker_irq_handler)
+    [Anonymous Symbol]                       0x08005c9c   Section        0  .\build\us_ticker.o(.text.us_ticker_read)
+    [Anonymous Symbol]                       0x08005ca8   Section        0  .\build\us_ticker.o(.text.us_ticker_set_interrupt)
+    [Anonymous Symbol]                       0x08005cc4   Section        0  .\build\mbed_retarget.o(.text.write)
+    i.__aeabi_errno_addr                     0x08005d00   Section        0  C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(errno.o)(i.__aeabi_errno_addr)
+    i.__scatterload_copy                     0x08005d08   Section       14  C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(handlers.o)(i.__scatterload_copy)
+    i.__scatterload_null                     0x08005d16   Section        2  C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(handlers.o)(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x08005d18   Section       14  C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(handlers.o)(i.__scatterload_zeroinit)
+    i._fflush$full                           0x08005d26   Section        0  C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(fflush_f.o)(i._fflush$full)
+    do_serial_init()::console_pinmap         0x08005ec0   Data          24  .\build\mbed_retarget.o(.rodata._ZZL14do_serial_initvE14console_pinmap)
+    [Anonymous Symbol]                       0x08005ec0   Section        0  .\build\mbed_retarget.o(.rodata._ZZL14do_serial_initvE14console_pinmap)
+    .Lswitch.table.UART_SetConfig.5          0x08005ed8   Data          16  .\build\stm32l4xx_hal_uart.o(.rodata.cst16)
+    lp_data                                  0x08005f28   Data           8  .\build\mbed_lp_ticker_api.o(.rodata.lp_data)
+    [Anonymous Symbol]                       0x08005f28   Section        0  .\build\mbed_lp_ticker_api.o(.rodata.lp_data)
+    lp_interface                             0x08005f30   Data          36  .\build\mbed_lp_ticker_api.o(.rodata.lp_interface)
+    [Anonymous Symbol]                       0x08005f30   Section        0  .\build\mbed_lp_ticker_api.o(.rodata.lp_interface)
+    lp_ticker_get_info.info                  0x08005f54   Data           8  .\build\lp_ticker.o(.rodata.lp_ticker_get_info.info)
+    [Anonymous Symbol]                       0x08005f54   Section        0  .\build\lp_ticker.o(.rodata.lp_ticker_get_info.info)
+    .L.str.19                                0x08005f5c   Data          26  .\build\mbed_error.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x08005f5c   Section        0  .\build\mbed_error.o(.rodata.str1.1)
+    .L.str.3                                 0x08005f76   Data          73  .\build\mbed_error.o(.rodata.str1.1)
+    .L.str.5                                 0x08005fbf   Data          21  .\build\mbed_error.o(.rodata.str1.1)
+    .L.str.4                                 0x08005fd4   Data          81  .\build\mbed_error.o(.rodata.str1.1)
+    .L.str.18                                0x08006025   Data          79  .\build\mbed_error.o(.rodata.str1.1)
+    .L.str.17                                0x08006074   Data          19  .\build\mbed_error.o(.rodata.str1.1)
+    .L.str.14                                0x08006087   Data          16  .\build\mbed_error.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x08006097   Section        0  .\build\mbed_retarget.o(.rodata.str1.1)
+    .L.str.2                                 0x080060ba   Data          30  .\build\mbed_retarget.o(.rodata.str1.1)
+    .L.str.4                                 0x080060d8   Data          55  .\build\mbed_retarget.o(.rodata.str1.1)
+    .L.str.10                                0x08006121   Data          35  .\build\mbed_retarget.o(.rodata.str1.1)
+    .L.str.11                                0x08006144   Data          60  .\build\mbed_retarget.o(.rodata.str1.1)
+    .L.str.3                                 0x0800614b   Data          53  .\build\mbed_retarget.o(.rodata.str1.1)
+    .L.str.5                                 0x08006180   Data          51  .\build\serial_api.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x08006180   Section        0  .\build\serial_api.o(.rodata.str1.1)
+    .L.str                                   0x080061b3   Data          10  .\build\systimer.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x080061b3   Section        0  .\build\systimer.o(.rodata.str1.1)
+    .L.str.1                                 0x080061bd   Data          48  .\build\systimer.o(.rodata.str1.1)
+    .L.str.2                                 0x080061ed   Data          29  .\build\systimer.o(.rodata.str1.1)
+    us_data                                  0x0800620c   Data           8  .\build\mbed_us_ticker_api.o(.rodata.us_data)
+    [Anonymous Symbol]                       0x0800620c   Section        0  .\build\mbed_us_ticker_api.o(.rodata.us_data)
+    us_interface                             0x08006214   Data          36  .\build\mbed_us_ticker_api.o(.rodata.us_interface)
+    [Anonymous Symbol]                       0x08006214   Section        0  .\build\mbed_us_ticker_api.o(.rodata.us_interface)
+    us_ticker_get_info.info                  0x08006238   Data           8  .\build\us_ticker.o(.rodata.us_ticker_get_info.info)
+    [Anonymous Symbol]                       0x08006238   Section        0  .\build\us_ticker.o(.rodata.us_ticker_get_info.info)
+    .init_array                              0x08006264   Section        0  C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(cpp_init.o)(.init_array)
     _errno                                   0x10000288   Data           4  C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(errno.o)(.data)
     .data                                    0x10000288   Section        4  C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(errno.o)(.data)
     irq_handler                              0x10000290   Data           4  .\build\mbed_lp_ticker_api.o(.data.irq_handler)
@@ -21034,65 +21033,65 @@ Image Symbol Table
     lp_ticker_read                           0x08003df5   Thumb Code    18  .\build\lp_ticker.o(.text.lp_ticker_read)
     lp_ticker_set_interrupt                  0x08003e09   Thumb Code   278  .\build\lp_ticker.o(.text.lp_ticker_set_interrupt)
     $Super$$main                             0x08003f21   Thumb Code    64  .\build\main.o(.text.main)
-    mbed_assert_internal                     0x08003f85   Thumb Code    26  .\build\mbed_assert.o(.text.mbed_assert_internal)
-    mbed_die                                 0x08003fa1   Thumb Code    98  .\build\mbed_board.o(.text.mbed_die)
-    mbed_error                               0x08004005   Thumb Code   464  .\build\mbed_error.o(.text.mbed_error)
-    mbed_error_hook                          0x08004209   Thumb Code     2  .\build\mbed_error.o(.text.mbed_error_hook)
-    mbed_error_printf                        0x0800420d   Thumb Code    68  .\build\mbed_board.o(.text.mbed_error_printf)
-    mbed_error_puts                          0x08004251   Thumb Code    86  .\build\mbed_board.o(.text.mbed_error_puts)
-    mbed_error_vprintf                       0x080042a9   Thumb Code    52  .\build\mbed_board.o(.text.mbed_error_vprintf)
-    mbed_main                                0x08004321   Thumb Code     2  .\build\mbed_sdk_boot.o(.text.mbed_main)
-    mbed_minimal_formatted_string            0x08004329   Thumb Code  2102  .\build\mbed_printf_implementation.o(.text.mbed_minimal_formatted_string)
-    mbed_sdk_init                            0x08004db1   Thumb Code    62  .\build\mbed_overrides.o(.text.mbed_sdk_init)
-    mbed_tiny_compute_crc32                  0x08004df1   Thumb Code    64  .\build\mbedcrc.o(.text.mbed_tiny_compute_crc32)
-    pin_function                             0x08004e31   Thumb Code   264  .\build\pinmap.o(.text.pin_function)
-    pin_mode                                 0x08004f6d   Thumb Code   138  .\build\pinmap.o(.text.pin_mode)
-    pinmap_find_function                     0x08004ff9   Thumb Code    38  .\build\mbed_pinmap_common.o(.text.pinmap_find_function)
-    pinmap_merge                             0x08005021   Thumb Code    52  .\build\mbed_pinmap_common.o(.text.pinmap_merge)
-    pinmap_peripheral                        0x08005069   Thumb Code    96  .\build\mbed_pinmap_common.o(.text.pinmap_peripheral)
-    serial_baud                              0x08005489   Thumb Code   140  .\build\serial_api.o(.text.serial_baud)
-    serial_init                              0x08005515   Thumb Code   556  .\build\serial_api.o(.text.serial_init)
-    serial_init_direct                       0x080057b1   Thumb Code    14  .\build\static_pinmap.o(.text.serial_init_direct)
-    serial_putc                              0x080057c1   Thumb Code    42  .\build\serial_device.o(.text.serial_putc)
-    serial_writable                          0x080057ed   Thumb Code    26  .\build\serial_api.o(.text.serial_writable)
-    sleep_manager_lock_deep_sleep_internal   0x08005809   Thumb Code    60  .\build\mbed_power_mgmt.o(.text.sleep_manager_lock_deep_sleep_internal)
-    sleep_manager_sleep_auto                 0x08005869   Thumb Code    18  .\build\mbed_power_mgmt.o(.text.sleep_manager_sleep_auto)
-    sleep_manager_unlock_deep_sleep_internal 0x0800587d   Thumb Code    68  .\build\mbed_power_mgmt.o(.text.sleep_manager_unlock_deep_sleep_internal)
-    thread_sleep_for                         0x080058e5   Thumb Code     8  .\build\mbed_thread.o(.text.thread_sleep_for)
-    ticker_insert_event_us                   0x080058ed   Thumb Code   266  .\build\mbed_ticker_api.o(.text.ticker_insert_event_us)
-    ticker_irq_handler                       0x08005a01   Thumb Code   238  .\build\mbed_ticker_api.o(.text.ticker_irq_handler)
-    ticker_read_us                           0x08005af1   Thumb Code   160  .\build\mbed_ticker_api.o(.text.ticker_read_us)
-    ticker_remove_event                      0x08005b91   Thumb Code    60  .\build\mbed_ticker_api.o(.text.ticker_remove_event)
-    ticker_set_handler                       0x08005bcd   Thumb Code    26  .\build\mbed_ticker_api.o(.text.ticker_set_handler)
-    timer_irq_handler                        0x08005be9   Thumb Code    48  .\build\us_ticker.o(.text.timer_irq_handler)
-    us_ticker_clear_interrupt                0x08005c19   Thumb Code    18  .\build\us_ticker.o(.text.us_ticker_clear_interrupt)
-    us_ticker_disable_interrupt              0x08005c2d   Thumb Code    20  .\build\us_ticker.o(.text.us_ticker_disable_interrupt)
-    us_ticker_fire_interrupt                 0x08005c41   Thumb Code    34  .\build\us_ticker.o(.text.us_ticker_fire_interrupt)
-    us_ticker_get_info                       0x08005c65   Thumb Code    10  .\build\us_ticker.o(.text.us_ticker_get_info)
-    us_ticker_init                           0x08005c71   Thumb Code    24  .\build\us_ticker.o(.text.us_ticker_init)
-    us_ticker_irq_handler                    0x08005c89   Thumb Code    26  .\build\mbed_us_ticker_api.o(.text.us_ticker_irq_handler)
-    us_ticker_read                           0x08005ca5   Thumb Code    12  .\build\us_ticker.o(.text.us_ticker_read)
-    us_ticker_set_interrupt                  0x08005cb1   Thumb Code    28  .\build\us_ticker.o(.text.us_ticker_set_interrupt)
-    write                                    0x08005ccd   Thumb Code    60  .\build\mbed_retarget.o(.text.write)
-    __aeabi_errno_addr                       0x08005d09   Thumb Code     4  C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(errno.o)(i.__aeabi_errno_addr)
-    __rt_errno_addr                          0x08005d09   Thumb Code     0  C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(errno.o)(i.__aeabi_errno_addr)
-    __scatterload_copy                       0x08005d11   Thumb Code    14  C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(handlers.o)(i.__scatterload_copy)
-    __scatterload_null                       0x08005d1f   Thumb Code     2  C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(handlers.o)(i.__scatterload_null)
-    __scatterload_zeroinit                   0x08005d21   Thumb Code    14  C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(handlers.o)(i.__scatterload_zeroinit)
-    fflush                                   0x08005d2f   Thumb Code    24  C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(fflush_f.o)(i._fflush$full)
-    AHBPrescTable                            0x08005d48   Data          16  .\build\system_stm32l4xx.o(.rodata.AHBPrescTable)
-    os_cb_sections                           0x08005d48   Data           0  .\build\mbed_sdk_boot.o(.rodata)
-    APBPrescTable                            0x08005d58   Data           8  .\build\system_stm32l4xx.o(.rodata.APBPrescTable)
-    MSIRangeTable                            0x08005d60   Data          48  .\build\system_stm32l4xx.o(.rodata.MSIRangeTable)
-    PinMap_UART_RX                           0x08005d90   Data         144  .\build\peripheralpins.o(.rodata.PinMap_UART_RX)
-    PinMap_UART_TX                           0x08005e20   Data         144  .\build\peripheralpins.o(.rodata.PinMap_UART_TX)
-    vtable for mbed::TimerEvent              0x08005eb0   Data          12  .\build\timerevent.o(.rodata._ZTVN4mbed10TimerEventE)
-    vtable for mbed::internal::SysTimer<std::__2::ratio<1ll, 1000ll>, true> 0x08005ebc   Data          12  .\build\systimer.o(.rodata._ZTVN4mbed8internal8SysTimerINSt3__25ratioILx1ELx1000EEELb1EEE)
-    ll_pin_defines                           0x08005ef0   Data          64  .\build\pinmap.o(.rodata.ll_pin_defines)
-    Region$$Table$$Base                      0x08006248   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08006268   Number         0  anon$$obj.o(Region$$Table)
-    SHT$$INIT_ARRAY$$Base                    0x08006268   Number         0  .\build\main.o(.init_array)
-    SHT$$INIT_ARRAY$$Limit                   0x0800626c   Number         0  C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(cpp_init.o)(.init_array)
+    mbed_assert_internal                     0x08003f81   Thumb Code    26  .\build\mbed_assert.o(.text.mbed_assert_internal)
+    mbed_die                                 0x08003f9d   Thumb Code    98  .\build\mbed_board.o(.text.mbed_die)
+    mbed_error                               0x08004001   Thumb Code   464  .\build\mbed_error.o(.text.mbed_error)
+    mbed_error_hook                          0x08004205   Thumb Code     2  .\build\mbed_error.o(.text.mbed_error_hook)
+    mbed_error_printf                        0x08004209   Thumb Code    68  .\build\mbed_board.o(.text.mbed_error_printf)
+    mbed_error_puts                          0x0800424d   Thumb Code    86  .\build\mbed_board.o(.text.mbed_error_puts)
+    mbed_error_vprintf                       0x080042a5   Thumb Code    52  .\build\mbed_board.o(.text.mbed_error_vprintf)
+    mbed_main                                0x0800431d   Thumb Code     2  .\build\mbed_sdk_boot.o(.text.mbed_main)
+    mbed_minimal_formatted_string            0x08004321   Thumb Code  2102  .\build\mbed_printf_implementation.o(.text.mbed_minimal_formatted_string)
+    mbed_sdk_init                            0x08004da9   Thumb Code    62  .\build\mbed_overrides.o(.text.mbed_sdk_init)
+    mbed_tiny_compute_crc32                  0x08004de9   Thumb Code    64  .\build\mbedcrc.o(.text.mbed_tiny_compute_crc32)
+    pin_function                             0x08004e29   Thumb Code   264  .\build\pinmap.o(.text.pin_function)
+    pin_mode                                 0x08004f65   Thumb Code   138  .\build\pinmap.o(.text.pin_mode)
+    pinmap_find_function                     0x08004ff1   Thumb Code    38  .\build\mbed_pinmap_common.o(.text.pinmap_find_function)
+    pinmap_merge                             0x08005019   Thumb Code    52  .\build\mbed_pinmap_common.o(.text.pinmap_merge)
+    pinmap_peripheral                        0x08005061   Thumb Code    96  .\build\mbed_pinmap_common.o(.text.pinmap_peripheral)
+    serial_baud                              0x08005481   Thumb Code   140  .\build\serial_api.o(.text.serial_baud)
+    serial_init                              0x0800550d   Thumb Code   556  .\build\serial_api.o(.text.serial_init)
+    serial_init_direct                       0x080057a9   Thumb Code    14  .\build\static_pinmap.o(.text.serial_init_direct)
+    serial_putc                              0x080057b9   Thumb Code    42  .\build\serial_device.o(.text.serial_putc)
+    serial_writable                          0x080057e5   Thumb Code    26  .\build\serial_api.o(.text.serial_writable)
+    sleep_manager_lock_deep_sleep_internal   0x08005801   Thumb Code    60  .\build\mbed_power_mgmt.o(.text.sleep_manager_lock_deep_sleep_internal)
+    sleep_manager_sleep_auto                 0x08005861   Thumb Code    18  .\build\mbed_power_mgmt.o(.text.sleep_manager_sleep_auto)
+    sleep_manager_unlock_deep_sleep_internal 0x08005875   Thumb Code    68  .\build\mbed_power_mgmt.o(.text.sleep_manager_unlock_deep_sleep_internal)
+    thread_sleep_for                         0x080058dd   Thumb Code     8  .\build\mbed_thread.o(.text.thread_sleep_for)
+    ticker_insert_event_us                   0x080058e5   Thumb Code   266  .\build\mbed_ticker_api.o(.text.ticker_insert_event_us)
+    ticker_irq_handler                       0x080059f9   Thumb Code   238  .\build\mbed_ticker_api.o(.text.ticker_irq_handler)
+    ticker_read_us                           0x08005ae9   Thumb Code   160  .\build\mbed_ticker_api.o(.text.ticker_read_us)
+    ticker_remove_event                      0x08005b89   Thumb Code    60  .\build\mbed_ticker_api.o(.text.ticker_remove_event)
+    ticker_set_handler                       0x08005bc5   Thumb Code    26  .\build\mbed_ticker_api.o(.text.ticker_set_handler)
+    timer_irq_handler                        0x08005be1   Thumb Code    48  .\build\us_ticker.o(.text.timer_irq_handler)
+    us_ticker_clear_interrupt                0x08005c11   Thumb Code    18  .\build\us_ticker.o(.text.us_ticker_clear_interrupt)
+    us_ticker_disable_interrupt              0x08005c25   Thumb Code    20  .\build\us_ticker.o(.text.us_ticker_disable_interrupt)
+    us_ticker_fire_interrupt                 0x08005c39   Thumb Code    34  .\build\us_ticker.o(.text.us_ticker_fire_interrupt)
+    us_ticker_get_info                       0x08005c5d   Thumb Code    10  .\build\us_ticker.o(.text.us_ticker_get_info)
+    us_ticker_init                           0x08005c69   Thumb Code    24  .\build\us_ticker.o(.text.us_ticker_init)
+    us_ticker_irq_handler                    0x08005c81   Thumb Code    26  .\build\mbed_us_ticker_api.o(.text.us_ticker_irq_handler)
+    us_ticker_read                           0x08005c9d   Thumb Code    12  .\build\us_ticker.o(.text.us_ticker_read)
+    us_ticker_set_interrupt                  0x08005ca9   Thumb Code    28  .\build\us_ticker.o(.text.us_ticker_set_interrupt)
+    write                                    0x08005cc5   Thumb Code    60  .\build\mbed_retarget.o(.text.write)
+    __aeabi_errno_addr                       0x08005d01   Thumb Code     4  C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(errno.o)(i.__aeabi_errno_addr)
+    __rt_errno_addr                          0x08005d01   Thumb Code     0  C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(errno.o)(i.__aeabi_errno_addr)
+    __scatterload_copy                       0x08005d09   Thumb Code    14  C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(handlers.o)(i.__scatterload_copy)
+    __scatterload_null                       0x08005d17   Thumb Code     2  C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(handlers.o)(i.__scatterload_null)
+    __scatterload_zeroinit                   0x08005d19   Thumb Code    14  C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(handlers.o)(i.__scatterload_zeroinit)
+    fflush                                   0x08005d27   Thumb Code    24  C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(fflush_f.o)(i._fflush$full)
+    AHBPrescTable                            0x08005d40   Data          16  .\build\system_stm32l4xx.o(.rodata.AHBPrescTable)
+    os_cb_sections                           0x08005d40   Data           0  .\build\mbed_sdk_boot.o(.rodata)
+    APBPrescTable                            0x08005d50   Data           8  .\build\system_stm32l4xx.o(.rodata.APBPrescTable)
+    MSIRangeTable                            0x08005d58   Data          48  .\build\system_stm32l4xx.o(.rodata.MSIRangeTable)
+    PinMap_UART_RX                           0x08005d88   Data         144  .\build\peripheralpins.o(.rodata.PinMap_UART_RX)
+    PinMap_UART_TX                           0x08005e18   Data         144  .\build\peripheralpins.o(.rodata.PinMap_UART_TX)
+    vtable for mbed::TimerEvent              0x08005ea8   Data          12  .\build\timerevent.o(.rodata._ZTVN4mbed10TimerEventE)
+    vtable for mbed::internal::SysTimer<std::__2::ratio<1ll, 1000ll>, true> 0x08005eb4   Data          12  .\build\systimer.o(.rodata._ZTVN4mbed8internal8SysTimerINSt3__25ratioILx1ELx1000EEELb1EEE)
+    ll_pin_defines                           0x08005ee8   Data          64  .\build\pinmap.o(.rodata.ll_pin_defines)
+    Region$$Table$$Base                      0x08006240   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08006260   Number         0  anon$$obj.o(Region$$Table)
+    SHT$$INIT_ARRAY$$Base                    0x08006260   Number         0  .\build\main.o(.init_array)
+    SHT$$INIT_ARRAY$$Limit                   0x08006264   Number         0  C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(cpp_init.o)(.init_array)
     Image$$RW_m_crash_data$$ZI$$Base         0x10000188   Number         0  anon$$obj.o ABSOLUTE
     SystemCoreClock                          0x1000028c   Data           4  .\build\system_stm32l4xx.o(.data.SystemCoreClock)
     uwTickPrio                               0x10000298   Data           4  .\build\stm32l4xx_hal.o(.data.uwTickPrio)
@@ -21132,13 +21131,13 @@ Memory Map of the image
 
   Image Entry point : 0x08000189
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00006288, Max: 0x00100000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00006280, Max: 0x00100000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x0000626c, Max: 0x00100000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00006264, Max: 0x00100000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x08000000   0x08000000   0x00000188   Data   RO         3442    RESET               .\build\startup_stm32l476xx.o
+    0x08000000   0x08000000   0x00000188   Data   RO         3384    RESET               .\build\startup_stm32l476xx.o
     0x08000188   0x08000188   0x00000000   Code   RO         7972  * .ARM.Collect$$$$00000000  C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(entry.o)
     0x08000188   0x08000188   0x00000004   Code   RO         8112    .ARM.Collect$$$$00000003  C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(entry4.o)
     0x0800018c   0x0800018c   0x00000004   Code   RO         8115    .ARM.Collect$$$$00000004  C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(entry5.o)
@@ -21150,7 +21149,7 @@ Memory Map of the image
     0x080001a0   0x080001a0   0x00000000   Code   RO         8122    .ARM.Collect$$$$0000000D  C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(entry10a.o)
     0x080001a0   0x080001a0   0x00000000   Code   RO         8124    .ARM.Collect$$$$0000000F  C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(entry11a.o)
     0x080001a0   0x080001a0   0x00000004   Code   RO         8113    .ARM.Collect$$$$00002714  C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(entry4.o)
-    0x080001a4   0x080001a4   0x00000024   Code   RO         3443    .text               .\build\startup_stm32l476xx.o
+    0x080001a4   0x080001a4   0x00000024   Code   RO         3385    .text               .\build\startup_stm32l476xx.o
     0x080001c8   0x080001c8   0x00000020   Code   RO         7985    .text               C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(initio_oe.o)
     0x080001e8   0x080001e8   0x00000028   Code   RO         7991    .text               C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(fputc_fp.o)
     0x08000210   0x08000210   0x00000068   Code   RO         8001    .text               C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(uldiv.o)
@@ -21171,350 +21170,350 @@ Memory Map of the image
     0x080006c2   0x080006c2   0x00000000   Code   RO         8149    .text               C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(iusefp.o)
     0x080006c2   0x080006c2   0x000000ba   Code   RO         8157    .text               C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mf_w.l(depilogue.o)
     0x0800077c   0x0800077c   0x00000030   Code   RO         8170    .text               C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(init.o)
-    0x080007ac   0x080007ac   0x00000032   Code   RO         1998    .text.$Sub$$__2printf  .\build\mbed_printf_armlink_overrides.o
+    0x080007ac   0x080007ac   0x00000032   Code   RO         1940    .text.$Sub$$__2printf  .\build\mbed_printf_armlink_overrides.o
     0x080007de   0x080007de   0x00000002   PAD
-    0x080007e0   0x080007e0   0x0000001c   Code   RO         2012    .text.$Sub$$__2vfprintf  .\build\mbed_printf_armlink_overrides.o
-    0x080007fc   0x080007fc   0x00000002   Code   RO         2369    .text.$Sub$$__cpp_initialize__aeabi_  .\build\mbed_sdk_boot.o
+    0x080007e0   0x080007e0   0x0000001c   Code   RO         1954    .text.$Sub$$__2vfprintf  .\build\mbed_printf_armlink_overrides.o
+    0x080007fc   0x080007fc   0x00000002   Code   RO         2311    .text.$Sub$$__cpp_initialize__aeabi_  .\build\mbed_sdk_boot.o
     0x080007fe   0x080007fe   0x00000002   PAD
-    0x08000800   0x08000800   0x00000004   Code   RO         2034    .text.$Sub$$_printf_f  .\build\mbed_printf_armlink_overrides.o
-    0x08000804   0x08000804   0x00000004   Code   RO         2036    .text.$Sub$$_printf_fp_dec  .\build\mbed_printf_armlink_overrides.o
-    0x08000808   0x08000808   0x00000004   Code   RO         2056    .text.$Sub$$_printf_int_dec  .\build\mbed_printf_armlink_overrides.o
-    0x0800080c   0x0800080c   0x00000004   Code   RO         2102    .text.$Sub$$_printf_percent  .\build\mbed_printf_armlink_overrides.o
-    0x08000810   0x08000810   0x00000004   Code   RO         2118    .text.$Sub$$_printf_u  .\build\mbed_printf_armlink_overrides.o
-    0x08000814   0x08000814   0x00000096   Code   RO         2375    .text.$Sub$$main    .\build\mbed_sdk_boot.o
+    0x08000800   0x08000800   0x00000004   Code   RO         1976    .text.$Sub$$_printf_f  .\build\mbed_printf_armlink_overrides.o
+    0x08000804   0x08000804   0x00000004   Code   RO         1978    .text.$Sub$$_printf_fp_dec  .\build\mbed_printf_armlink_overrides.o
+    0x08000808   0x08000808   0x00000004   Code   RO         1998    .text.$Sub$$_printf_int_dec  .\build\mbed_printf_armlink_overrides.o
+    0x0800080c   0x0800080c   0x00000004   Code   RO         2044    .text.$Sub$$_printf_percent  .\build\mbed_printf_armlink_overrides.o
+    0x08000810   0x08000810   0x00000004   Code   RO         2060    .text.$Sub$$_printf_u  .\build\mbed_printf_armlink_overrides.o
+    0x08000814   0x08000814   0x00000096   Code   RO         2317    .text.$Sub$$main    .\build\mbed_sdk_boot.o
     0x080008aa   0x080008aa   0x00000002   PAD
-    0x080008ac   0x080008ac   0x00000014   Code   RO         2158    .text.$Sub$$vsnprintf  .\build\mbed_printf_wrapper.o
-    0x080008c0   0x080008c0   0x00000004   Code   RO          506    .text.CAN1_RX0_IRQHandler  .\build\can_api.o
-    0x080008c4   0x080008c4   0x00000004   Code   RO          512    .text.CAN1_SCE_IRQHandler  .\build\can_api.o
-    0x080008c8   0x080008c8   0x00000004   Code   RO          510    .text.CAN1_TX_IRQHandler  .\build\can_api.o
-    0x080008cc   0x080008cc   0x0000009c   Code   RO         1030    .text.HAL_GetTick   .\build\hal_tick_overrides.o
-    0x08000968   0x08000968   0x0000001e   Code   RO         3475    .text.HAL_Init      .\build\stm32l4xx_hal.o
+    0x080008ac   0x080008ac   0x00000014   Code   RO         2100    .text.$Sub$$vsnprintf  .\build\mbed_printf_wrapper.o
+    0x080008c0   0x080008c0   0x00000004   Code   RO         7913    .text.CAN1_RX0_IRQHandler  .\build\can_api.o
+    0x080008c4   0x080008c4   0x00000004   Code   RO         7919    .text.CAN1_SCE_IRQHandler  .\build\can_api.o
+    0x080008c8   0x080008c8   0x00000004   Code   RO         7917    .text.CAN1_TX_IRQHandler  .\build\can_api.o
+    0x080008cc   0x080008cc   0x0000009c   Code   RO          972    .text.HAL_GetTick   .\build\hal_tick_overrides.o
+    0x08000968   0x08000968   0x0000001e   Code   RO         3417    .text.HAL_Init      .\build\stm32l4xx_hal.o
     0x08000986   0x08000986   0x00000002   PAD
-    0x08000988   0x08000988   0x0000000a   Code   RO         1028    .text.HAL_InitTick  .\build\hal_tick_overrides.o
+    0x08000988   0x08000988   0x0000000a   Code   RO          970    .text.HAL_InitTick  .\build\hal_tick_overrides.o
     0x08000992   0x08000992   0x00000002   PAD
-    0x08000994   0x08000994   0x00000098   Code   RO         4642    .text.HAL_LPTIM_Counter_Start  .\build\stm32l4xx_hal_lptim.o
-    0x08000a2c   0x08000a2c   0x000000d4   Code   RO         4590    .text.HAL_LPTIM_Init  .\build\stm32l4xx_hal_lptim.o
-    0x08000b00   0x08000b00   0x00000002   Code   RO         4592    .text.HAL_LPTIM_MspInit  .\build\stm32l4xx_hal_lptim.o
+    0x08000994   0x08000994   0x00000098   Code   RO         4584    .text.HAL_LPTIM_Counter_Start  .\build\stm32l4xx_hal_lptim.o
+    0x08000a2c   0x08000a2c   0x000000d4   Code   RO         4532    .text.HAL_LPTIM_Init  .\build\stm32l4xx_hal_lptim.o
+    0x08000b00   0x08000b00   0x00000002   Code   RO         4534    .text.HAL_LPTIM_MspInit  .\build\stm32l4xx_hal_lptim.o
     0x08000b02   0x08000b02   0x00000002   PAD
-    0x08000b04   0x08000b04   0x00000002   Code   RO         3479    .text.HAL_MspInit   .\build\stm32l4xx_hal.o
+    0x08000b04   0x08000b04   0x00000002   Code   RO         3421    .text.HAL_MspInit   .\build\stm32l4xx_hal.o
     0x08000b06   0x08000b06   0x00000002   PAD
-    0x08000b08   0x08000b08   0x00000020   Code   RO         3759    .text.HAL_NVIC_SetPriorityGrouping  .\build\stm32l4xx_hal_cortex.o
-    0x08000b28   0x08000b28   0x00000058   Code   RO         5098    .text.HAL_PWREx_DisableLowPowerRunMode  .\build\stm32l4xx_hal_pwr_ex.o
-    0x08000b80   0x08000b80   0x00000012   Code   RO         5096    .text.HAL_PWREx_EnableLowPowerRunMode  .\build\stm32l4xx_hal_pwr_ex.o
+    0x08000b08   0x08000b08   0x00000020   Code   RO         3701    .text.HAL_NVIC_SetPriorityGrouping  .\build\stm32l4xx_hal_cortex.o
+    0x08000b28   0x08000b28   0x00000058   Code   RO         5040    .text.HAL_PWREx_DisableLowPowerRunMode  .\build\stm32l4xx_hal_pwr_ex.o
+    0x08000b80   0x08000b80   0x00000012   Code   RO         5038    .text.HAL_PWREx_EnableLowPowerRunMode  .\build\stm32l4xx_hal_pwr_ex.o
     0x08000b92   0x08000b92   0x00000002   PAD
-    0x08000b94   0x08000b94   0x00000012   Code   RO         5052    .text.HAL_PWREx_EnableVddIO2  .\build\stm32l4xx_hal_pwr_ex.o
+    0x08000b94   0x08000b94   0x00000012   Code   RO         4994    .text.HAL_PWREx_EnableVddIO2  .\build\stm32l4xx_hal_pwr_ex.o
     0x08000ba6   0x08000ba6   0x00000002   PAD
-    0x08000ba8   0x08000ba8   0x00000010   Code   RO         5040    .text.HAL_PWREx_GetVoltageRange  .\build\stm32l4xx_hal_pwr_ex.o
-    0x08000bb8   0x08000bb8   0x00000012   Code   RO         5002    .text.HAL_PWR_EnableBkUpAccess  .\build\stm32l4xx_hal_pwr.o
+    0x08000ba8   0x08000ba8   0x00000010   Code   RO         4982    .text.HAL_PWREx_GetVoltageRange  .\build\stm32l4xx_hal_pwr_ex.o
+    0x08000bb8   0x08000bb8   0x00000012   Code   RO         4944    .text.HAL_PWR_EnableBkUpAccess  .\build\stm32l4xx_hal_pwr.o
     0x08000bca   0x08000bca   0x00000002   PAD
-    0x08000bcc   0x08000bcc   0x00000048   Code   RO         5016    .text.HAL_PWR_EnterSLEEPMode  .\build\stm32l4xx_hal_pwr.o
-    0x08000c14   0x08000c14   0x00000012   Code   RO         5286    .text.HAL_RCCEx_EnableMSIPLLMode  .\build\stm32l4xx_hal_rcc_ex.o
+    0x08000bcc   0x08000bcc   0x00000048   Code   RO         4958    .text.HAL_PWR_EnterSLEEPMode  .\build\stm32l4xx_hal_pwr.o
+    0x08000c14   0x08000c14   0x00000012   Code   RO         5228    .text.HAL_RCCEx_EnableMSIPLLMode  .\build\stm32l4xx_hal_rcc_ex.o
     0x08000c26   0x08000c26   0x00000002   PAD
-    0x08000c28   0x08000c28   0x000003b0   Code   RO         5248    .text.HAL_RCCEx_PeriphCLKConfig  .\build\stm32l4xx_hal_rcc_ex.o
-    0x08000fd8   0x08000fd8   0x00000212   Code   RO         5220    .text.HAL_RCC_ClockConfig  .\build\stm32l4xx_hal_rcc.o
+    0x08000c28   0x08000c28   0x000003b0   Code   RO         5190    .text.HAL_RCCEx_PeriphCLKConfig  .\build\stm32l4xx_hal_rcc_ex.o
+    0x08000fd8   0x08000fd8   0x00000212   Code   RO         5162    .text.HAL_RCC_ClockConfig  .\build\stm32l4xx_hal_rcc.o
     0x080011ea   0x080011ea   0x00000002   PAD
-    0x080011ec   0x080011ec   0x00000042   Code   RO         5232    .text.HAL_RCC_GetClockConfig  .\build\stm32l4xx_hal_rcc.o
+    0x080011ec   0x080011ec   0x00000042   Code   RO         5174    .text.HAL_RCC_GetClockConfig  .\build\stm32l4xx_hal_rcc.o
     0x0800122e   0x0800122e   0x00000002   PAD
-    0x08001230   0x08001230   0x0000002a   Code   RO         5226    .text.HAL_RCC_GetPCLK1Freq  .\build\stm32l4xx_hal_rcc.o
+    0x08001230   0x08001230   0x0000002a   Code   RO         5168    .text.HAL_RCC_GetPCLK1Freq  .\build\stm32l4xx_hal_rcc.o
     0x0800125a   0x0800125a   0x00000002   PAD
-    0x0800125c   0x0800125c   0x0000002a   Code   RO         5228    .text.HAL_RCC_GetPCLK2Freq  .\build\stm32l4xx_hal_rcc.o
+    0x0800125c   0x0800125c   0x0000002a   Code   RO         5170    .text.HAL_RCC_GetPCLK2Freq  .\build\stm32l4xx_hal_rcc.o
     0x08001286   0x08001286   0x00000002   PAD
-    0x08001288   0x08001288   0x000000c0   Code   RO         5218    .text.HAL_RCC_GetSysClockFreq  .\build\stm32l4xx_hal_rcc.o
-    0x08001348   0x08001348   0x00000746   Code   RO         5216    .text.HAL_RCC_OscConfig  .\build\stm32l4xx_hal_rcc.o
+    0x08001288   0x08001288   0x000000c0   Code   RO         5160    .text.HAL_RCC_GetSysClockFreq  .\build\stm32l4xx_hal_rcc.o
+    0x08001348   0x08001348   0x00000746   Code   RO         5158    .text.HAL_RCC_OscConfig  .\build\stm32l4xx_hal_rcc.o
     0x08001a8e   0x08001a8e   0x00000002   PAD
-    0x08001a90   0x08001a90   0x00000062   Code   RO         6091    .text.HAL_TIM_OC_Init  .\build\stm32l4xx_hal_tim.o
+    0x08001a90   0x08001a90   0x00000062   Code   RO         6033    .text.HAL_TIM_OC_Init  .\build\stm32l4xx_hal_tim.o
     0x08001af2   0x08001af2   0x00000002   PAD
-    0x08001af4   0x08001af4   0x00000002   Code   RO         6093    .text.HAL_TIM_OC_MspInit  .\build\stm32l4xx_hal_tim.o
+    0x08001af4   0x08001af4   0x00000002   Code   RO         6035    .text.HAL_TIM_OC_MspInit  .\build\stm32l4xx_hal_tim.o
     0x08001af6   0x08001af6   0x00000002   PAD
-    0x08001af8   0x08001af8   0x00000192   Code   RO         6099    .text.HAL_TIM_OC_Start  .\build\stm32l4xx_hal_tim.o
+    0x08001af8   0x08001af8   0x00000192   Code   RO         6041    .text.HAL_TIM_OC_Start  .\build\stm32l4xx_hal_tim.o
     0x08001c8a   0x08001c8a   0x00000002   PAD
-    0x08001c8c   0x08001c8c   0x00000020   Code   RO         6571    .text.HAL_UARTEx_DisableClockStopMode  .\build\stm32l4xx_hal_uart_ex.o
-    0x08001cac   0x08001cac   0x00000020   Code   RO         6579    .text.HAL_UARTEx_DisableStopMode  .\build\stm32l4xx_hal_uart_ex.o
-    0x08001ccc   0x08001ccc   0x00000020   Code   RO         6577    .text.HAL_UARTEx_EnableStopMode  .\build\stm32l4xx_hal_uart_ex.o
-    0x08001cec   0x08001cec   0x0000005e   Code   RO         6430    .text.HAL_UART_Init  .\build\stm32l4xx_hal_uart.o
+    0x08001c8c   0x08001c8c   0x00000020   Code   RO         6513    .text.HAL_UARTEx_DisableClockStopMode  .\build\stm32l4xx_hal_uart_ex.o
+    0x08001cac   0x08001cac   0x00000020   Code   RO         6521    .text.HAL_UARTEx_DisableStopMode  .\build\stm32l4xx_hal_uart_ex.o
+    0x08001ccc   0x08001ccc   0x00000020   Code   RO         6519    .text.HAL_UARTEx_EnableStopMode  .\build\stm32l4xx_hal_uart_ex.o
+    0x08001cec   0x08001cec   0x0000005e   Code   RO         6372    .text.HAL_UART_Init  .\build\stm32l4xx_hal_uart.o
     0x08001d4a   0x08001d4a   0x00000002   PAD
-    0x08001d4c   0x08001d4c   0x00000002   Code   RO         6432    .text.HAL_UART_MspInit  .\build\stm32l4xx_hal_uart.o
+    0x08001d4c   0x08001d4c   0x00000002   Code   RO         6374    .text.HAL_UART_MspInit  .\build\stm32l4xx_hal_uart.o
     0x08001d4e   0x08001d4e   0x00000002   PAD
-    0x08001d50   0x08001d50   0x00000140   Code   RO         1381    .text.LPTIM_IRQHandler  .\build\lp_ticker.o
-    0x08001e90   0x08001e90   0x00000184   Code   RO         5250    .text.RCCEx_PLLSAI1_Config  .\build\stm32l4xx_hal_rcc_ex.o
-    0x08002014   0x08002014   0x0000015e   Code   RO         5252    .text.RCCEx_PLLSAI2_Config  .\build\stm32l4xx_hal_rcc_ex.o
+    0x08001d50   0x08001d50   0x00000140   Code   RO         1323    .text.LPTIM_IRQHandler  .\build\lp_ticker.o
+    0x08001e90   0x08001e90   0x00000184   Code   RO         5192    .text.RCCEx_PLLSAI1_Config  .\build\stm32l4xx_hal_rcc_ex.o
+    0x08002014   0x08002014   0x0000015e   Code   RO         5194    .text.RCCEx_PLLSAI2_Config  .\build\stm32l4xx_hal_rcc_ex.o
     0x08002172   0x08002172   0x00000002   PAD
-    0x08002174   0x08002174   0x00000028   Code   RO         7427    .text.SetSysClock   .\build\system_clock.o
-    0x0800219c   0x0800219c   0x0000007e   Code   RO         7429    .text.SetSysClock_PLL_MSI  .\build\system_clock.o
+    0x08002174   0x08002174   0x00000028   Code   RO         7369    .text.SetSysClock   .\build\system_clock.o
+    0x0800219c   0x0800219c   0x0000007e   Code   RO         7371    .text.SetSysClock_PLL_MSI  .\build\system_clock.o
     0x0800221a   0x0800221a   0x00000002   PAD
-    0x0800221c   0x0800221c   0x0000019c   Code   RO          967    .text.Set_GPIO_Clock  .\build\gpio_api.o
-    0x080023b8   0x080023b8   0x000000be   Code   RO         7441    .text.SystemCoreClockUpdate  .\build\system_stm32l4xx.o
+    0x0800221c   0x0800221c   0x0000019c   Code   RO          909    .text.Set_GPIO_Clock  .\build\gpio_api.o
+    0x080023b8   0x080023b8   0x000000be   Code   RO         7383    .text.SystemCoreClockUpdate  .\build\system_stm32l4xx.o
     0x08002476   0x08002476   0x00000002   PAD
-    0x08002478   0x08002478   0x00000050   Code   RO         7439    .text.SystemInit    .\build\system_stm32l4xx.o
-    0x080024c8   0x080024c8   0x00000126   Code   RO         6067    .text.TIM_Base_SetConfig  .\build\stm32l4xx_hal_tim.o
+    0x08002478   0x08002478   0x00000050   Code   RO         7381    .text.SystemInit    .\build\system_stm32l4xx.o
+    0x080024c8   0x080024c8   0x00000126   Code   RO         6009    .text.TIM_Base_SetConfig  .\build\stm32l4xx_hal_tim.o
     0x080025ee   0x080025ee   0x00000002   PAD
-    0x080025f0   0x080025f0   0x00000002   Code   RO         1893    .text.TargetBSP_Init  .\build\mbed_overrides.o
+    0x080025f0   0x080025f0   0x00000002   Code   RO         1835    .text.TargetBSP_Init  .\build\mbed_overrides.o
     0x080025f2   0x080025f2   0x00000002   PAD
-    0x080025f4   0x080025f4   0x000000e6   Code   RO         6436    .text.UART_AdvFeatureConfig  .\build\stm32l4xx_hal_uart.o
+    0x080025f4   0x080025f4   0x000000e6   Code   RO         6378    .text.UART_AdvFeatureConfig  .\build\stm32l4xx_hal_uart.o
     0x080026da   0x080026da   0x00000002   PAD
-    0x080026dc   0x080026dc   0x000000ba   Code   RO         6438    .text.UART_CheckIdleState  .\build\stm32l4xx_hal_uart.o
+    0x080026dc   0x080026dc   0x000000ba   Code   RO         6380    .text.UART_CheckIdleState  .\build\stm32l4xx_hal_uart.o
     0x08002796   0x08002796   0x00000002   PAD
-    0x08002798   0x08002798   0x00000250   Code   RO         6434    .text.UART_SetConfig  .\build\stm32l4xx_hal_uart.o
+    0x08002798   0x08002798   0x00000250   Code   RO         6376    .text.UART_SetConfig  .\build\stm32l4xx_hal_uart.o
     0x080029e8   0x080029e8   0x0000001e   Code   RO         7941    .text._GLOBAL__sub_I_main.cpp  .\build\main.o
     0x08002a06   0x08002a06   0x00000002   PAD
-    0x08002a08   0x08002a08   0x000000a6   Code   RO         2200    .text._ZL19do_serial_init_oncev  .\build\mbed_retarget.o
+    0x08002a08   0x08002a08   0x000000a6   Code   RO         2142    .text._ZL19do_serial_init_oncev  .\build\mbed_retarget.o
     0x08002aae   0x08002aae   0x00000002   PAD
-    0x08002ab0   0x08002ab0   0x00000018   Code   RO         7768    .text._ZN4mbed10TimerEvent15insert_absoluteENSt3__26chrono10time_pointINS_15TickerDataClockENS2_8durationIxNS1_5ratioILx1ELx1000000EEEEEEE  .\build\timerevent.o
-    0x08002ac8   0x08002ac8   0x00000006   Code   RO         7758    .text._ZN4mbed10TimerEvent3irqEj  .\build\timerevent.o
+    0x08002ab0   0x08002ab0   0x00000018   Code   RO         7710    .text._ZN4mbed10TimerEvent15insert_absoluteENSt3__26chrono10time_pointINS_15TickerDataClockENS2_8durationIxNS1_5ratioILx1ELx1000000EEEEEEE  .\build\timerevent.o
+    0x08002ac8   0x08002ac8   0x00000006   Code   RO         7700    .text._ZN4mbed10TimerEvent3irqEj  .\build\timerevent.o
     0x08002ace   0x08002ace   0x00000002   PAD
-    0x08002ad0   0x08002ad0   0x0000000c   Code   RO         7762    .text._ZN4mbed10TimerEvent6removeEv  .\build\timerevent.o
-    0x08002adc   0x08002adc   0x00000030   Code   RO         7756    .text._ZN4mbed10TimerEventC2EPK13ticker_data_t  .\build\timerevent.o
-    0x08002b0c   0x08002b0c   0x0000000c   Code   RO          582    .text._ZN4mbed19CriticalSectionLockC2Ev  .\build\criticalsectionlock.o
-    0x08002b18   0x08002b18   0x0000000c   Code   RO          584    .text._ZN4mbed19CriticalSectionLockD2Ev  .\build\criticalsectionlock.o
-    0x08002b24   0x08002b24   0x0000001a   Code   RO         2198    .text._ZN4mbed20minimal_console_putcEi  .\build\mbed_retarget.o
+    0x08002ad0   0x08002ad0   0x0000000c   Code   RO         7704    .text._ZN4mbed10TimerEvent6removeEv  .\build\timerevent.o
+    0x08002adc   0x08002adc   0x00000030   Code   RO         7698    .text._ZN4mbed10TimerEventC2EPK13ticker_data_t  .\build\timerevent.o
+    0x08002b0c   0x08002b0c   0x0000000c   Code   RO          524    .text._ZN4mbed19CriticalSectionLockC2Ev  .\build\criticalsectionlock.o
+    0x08002b18   0x08002b18   0x0000000c   Code   RO          526    .text._ZN4mbed19CriticalSectionLockD2Ev  .\build\criticalsectionlock.o
+    0x08002b24   0x08002b24   0x0000001a   Code   RO         2140    .text._ZN4mbed20minimal_console_putcEi  .\build\mbed_retarget.o
     0x08002b3e   0x08002b3e   0x00000002   PAD
-    0x08002b40   0x08002b40   0x0000008e   Code   RO         1890    .text._ZN4mbed8internal18do_sleep_operationINS0_18timed_predicate_opEEEvRT_  .\build\mbed_os_timer.o
+    0x08002b40   0x08002b40   0x0000008e   Code   RO         1832    .text._ZN4mbed8internal18do_sleep_operationINS0_18timed_predicate_opEEEvRT_  .\build\mbed_os_timer.o
     0x08002bce   0x08002bce   0x00000002   PAD
-    0x08002bd0   0x08002bd0   0x00000096   Code   RO         1879    .text._ZN4mbed8internal34do_timed_sleep_relative_or_foreverENSt3__26chrono8durationIjNS1_5ratioILx1ELx1000EEEEEPFbPvES7_  .\build\mbed_os_timer.o
+    0x08002bd0   0x08002bd0   0x00000096   Code   RO         1821    .text._ZN4mbed8internal34do_timed_sleep_relative_or_foreverENSt3__26chrono8durationIjNS1_5ratioILx1ELx1000EEEEEPFbPvES7_  .\build\mbed_os_timer.o
     0x08002c66   0x08002c66   0x00000002   PAD
-    0x08002c68   0x08002c68   0x00000044   Code   RO         7471    .text._ZN4mbed8internal8SysTimerINSt3__25ratioILx1ELx1000EEELb1EE11cancel_wakeEv  .\build\systimer.o
-    0x08002cac   0x08002cac   0x00000190   Code   RO         7475    .text._ZN4mbed8internal8SysTimerINSt3__25ratioILx1ELx1000EEELb1EE13set_wake_timeENS2_6chrono10time_pointIS5_NS6_8durationIyS4_EEEE  .\build\systimer.o
-    0x08002e3c   0x08002e3c   0x000000b0   Code   RO         7477    .text._ZN4mbed8internal8SysTimerINSt3__25ratioILx1ELx1000EEELb1EE19update_and_get_tickEv  .\build\systimer.o
-    0x08002eec   0x08002eec   0x00000066   Code   RO         7505    .text._ZN4mbed8internal8SysTimerINSt3__25ratioILx1ELx1000EEELb1EE7handlerEv  .\build\systimer.o
+    0x08002c68   0x08002c68   0x00000044   Code   RO         7413    .text._ZN4mbed8internal8SysTimerINSt3__25ratioILx1ELx1000EEELb1EE11cancel_wakeEv  .\build\systimer.o
+    0x08002cac   0x08002cac   0x00000190   Code   RO         7417    .text._ZN4mbed8internal8SysTimerINSt3__25ratioILx1ELx1000EEELb1EE13set_wake_timeENS2_6chrono10time_pointIS5_NS6_8durationIyS4_EEEE  .\build\systimer.o
+    0x08002e3c   0x08002e3c   0x000000b0   Code   RO         7419    .text._ZN4mbed8internal8SysTimerINSt3__25ratioILx1ELx1000EEELb1EE19update_and_get_tickEv  .\build\systimer.o
+    0x08002eec   0x08002eec   0x00000066   Code   RO         7447    .text._ZN4mbed8internal8SysTimerINSt3__25ratioILx1ELx1000EEELb1EE7handlerEv  .\build\systimer.o
     0x08002f52   0x08002f52   0x00000002   PAD
-    0x08002f54   0x08002f54   0x00000036   Code   RO         7465    .text._ZN4mbed8internal8SysTimerINSt3__25ratioILx1ELx1000EEELb1EEC2EPK13ticker_data_t  .\build\systimer.o
+    0x08002f54   0x08002f54   0x00000036   Code   RO         7407    .text._ZN4mbed8internal8SysTimerINSt3__25ratioILx1ELx1000EEELb1EEC2EPK13ticker_data_t  .\build\systimer.o
     0x08002f8a   0x08002f8a   0x00000002   PAD
-    0x08002f8c   0x08002f8c   0x00000024   Code   RO         1670    .text.__NVIC_SystemReset  .\build\mbed_error.o
+    0x08002f8c   0x08002f8c   0x00000024   Code   RO         1612    .text.__NVIC_SystemReset  .\build\mbed_error.o
     0x08002fb0   0x08002fb0   0x00000028   Code   RO         7967    .text.__cxa_pure_virtual  C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\libcxx\libcppabi_w.l(cxa_virtual.cpp.o)
-    0x08002fd8   0x08002fd8   0x00000004   Code   RO         2224    .text.__user_setup_stackheap  .\build\mbed_retarget.o
-    0x08002fdc   0x08002fdc   0x00000034   Code   RO         2222    .text._mbed_user_setup_stackheap  .\build\mbed_retarget.o
-    0x08003010   0x08003010   0x00000028   Code   RO         2190    .text._sys_open     .\build\mbed_retarget.o
-    0x08003038   0x08003038   0x00000006   Code   RO         2216    .text._sys_seek     .\build\mbed_retarget.o
+    0x08002fd8   0x08002fd8   0x00000004   Code   RO         2166    .text.__user_setup_stackheap  .\build\mbed_retarget.o
+    0x08002fdc   0x08002fdc   0x00000034   Code   RO         2164    .text._mbed_user_setup_stackheap  .\build\mbed_retarget.o
+    0x08003010   0x08003010   0x00000028   Code   RO         2132    .text._sys_open     .\build\mbed_retarget.o
+    0x08003038   0x08003038   0x00000006   Code   RO         2158    .text._sys_seek     .\build\mbed_retarget.o
     0x0800303e   0x0800303e   0x00000002   PAD
-    0x08003040   0x08003040   0x00000186   Code   RO         2194    .text._sys_write    .\build\mbed_retarget.o
+    0x08003040   0x08003040   0x00000186   Code   RO         2136    .text._sys_write    .\build\mbed_retarget.o
     0x080031c6   0x080031c6   0x00000002   PAD
-    0x080031c8   0x080031c8   0x00000016   Code   RO         2541    .text._wait_us_ticks  .\build\mbed_wait_api_no_rtos.o
+    0x080031c8   0x080031c8   0x00000016   Code   RO         2483    .text._wait_us_ticks  .\build\mbed_wait_api_no_rtos.o
     0x080031de   0x080031de   0x00000004   Code   RO         8093    .text.abort_message  C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\libcxx\libcppabi_w.l(abort_message.cpp.o)
     0x080031e2   0x080031e2   0x00000002   PAD
-    0x080031e4   0x080031e4   0x00000002   Code   RO         2515    .text.block_us_ticker_free  .\build\mbed_us_ticker_api.o
+    0x080031e4   0x080031e4   0x00000002   Code   RO         2457    .text.block_us_ticker_free  .\build\mbed_us_ticker_api.o
     0x080031e6   0x080031e6   0x00000002   PAD
-    0x080031e8   0x080031e8   0x00000140   Code   RO          508    .text.can_irq       .\build\can_api.o
-    0x08003328   0x08003328   0x0000000c   Code   RO         1593    .text.core_util_are_interrupts_enabled  .\build\mbed_critical.o
-    0x08003334   0x08003334   0x00000016   Code   RO         1499    .text.core_util_atomic_load_u64  .\build\mbed_atomic_impl.o
+    0x080031e8   0x080031e8   0x00000140   Code   RO         7915    .text.can_irq       .\build\can_api.o
+    0x08003328   0x08003328   0x0000000c   Code   RO         1535    .text.core_util_are_interrupts_enabled  .\build\mbed_critical.o
+    0x08003334   0x08003334   0x00000016   Code   RO         1441    .text.core_util_atomic_load_u64  .\build\mbed_atomic_impl.o
     0x0800334a   0x0800334a   0x00000002   PAD
-    0x0800334c   0x0800334c   0x00000090   Code   RO         1599    .text.core_util_critical_section_enter  .\build\mbed_critical.o
-    0x080033dc   0x080033dc   0x0000001c   Code   RO         1601    .text.core_util_critical_section_exit  .\build\mbed_critical.o
-    0x080033f8   0x080033f8   0x0000000c   Code   RO         1595    .text.core_util_is_isr_active  .\build\mbed_critical.o
-    0x08003404   0x08003404   0x00000054   Code   RO         3059    .text.debug         .\build\serial_api.o
-    0x08003458   0x08003458   0x00000128   Code   RO         1628    .text.error         .\build\mbed_error.o
-    0x08003580   0x08003580   0x0000001c   Code   RO         2236    .text.exit          .\build\mbed_retarget.o
-    0x0800359c   0x0800359c   0x0000000a   Code   RO         1767    .text.get_lp_ticker_data  .\build\mbed_lp_ticker_api.o
+    0x0800334c   0x0800334c   0x00000090   Code   RO         1541    .text.core_util_critical_section_enter  .\build\mbed_critical.o
+    0x080033dc   0x080033dc   0x0000001c   Code   RO         1543    .text.core_util_critical_section_exit  .\build\mbed_critical.o
+    0x080033f8   0x080033f8   0x0000000c   Code   RO         1537    .text.core_util_is_isr_active  .\build\mbed_critical.o
+    0x08003404   0x08003404   0x00000054   Code   RO         3001    .text.debug         .\build\serial_api.o
+    0x08003458   0x08003458   0x00000128   Code   RO         1570    .text.error         .\build\mbed_error.o
+    0x08003580   0x08003580   0x0000001c   Code   RO         2178    .text.exit          .\build\mbed_retarget.o
+    0x0800359c   0x0800359c   0x0000000a   Code   RO         1709    .text.get_lp_ticker_data  .\build\mbed_lp_ticker_api.o
     0x080035a6   0x080035a6   0x00000002   PAD
-    0x080035a8   0x080035a8   0x0000002c   Code   RO          975    .text.gpio_dir      .\build\gpio_api.o
-    0x080035d4   0x080035d4   0x00000058   Code   RO          971    .text.gpio_init     .\build\gpio_api.o
-    0x0800362c   0x0800362c   0x0000002a   Code   RO         1717    .text.gpio_init_out  .\build\mbed_gpio.o
+    0x080035a8   0x080035a8   0x0000002c   Code   RO          917    .text.gpio_dir      .\build\gpio_api.o
+    0x080035d4   0x080035d4   0x00000058   Code   RO          913    .text.gpio_init     .\build\gpio_api.o
+    0x0800362c   0x0800362c   0x0000002a   Code   RO         1659    .text.gpio_init_out  .\build\mbed_gpio.o
     0x08003656   0x08003656   0x00000002   PAD
-    0x08003658   0x08003658   0x00000008   Code   RO          973    .text.gpio_mode     .\build\gpio_api.o
-    0x08003660   0x08003660   0x0000002a   Code   RO         1612    .text.hal_critical_section_enter  .\build\mbed_critical_section_api.o
+    0x08003658   0x08003658   0x00000008   Code   RO          915    .text.gpio_mode     .\build\gpio_api.o
+    0x08003660   0x08003660   0x0000002a   Code   RO         1554    .text.hal_critical_section_enter  .\build\mbed_critical_section_api.o
     0x0800368a   0x0800368a   0x00000002   PAD
-    0x0800368c   0x0800368c   0x00000090   Code   RO         1614    .text.hal_critical_section_exit  .\build\mbed_critical_section_api.o
-    0x0800371c   0x0800371c   0x00000022   Code   RO         3272    .text.hal_sleep     .\build\sleep.o
+    0x0800368c   0x0800368c   0x00000090   Code   RO         1556    .text.hal_critical_section_exit  .\build\mbed_critical_section_api.o
+    0x0800371c   0x0800371c   0x00000022   Code   RO         3214    .text.hal_sleep     .\build\sleep.o
     0x0800373e   0x0800373e   0x00000002   PAD
-    0x08003740   0x08003740   0x000000bc   Code   RO         7859    .text.init_32bit_timer  .\build\us_ticker.o
-    0x080037fc   0x080037fc   0x0000008c   Code   RO         3057    .text.init_uart     .\build\serial_api.o
-    0x08003888   0x08003888   0x000001fc   Code   RO         2426    .text.initialize    .\build\mbed_ticker_api.o
-    0x08003a84   0x08003a84   0x00000028   Code   RO         1387    .text.lp_ticker_clear_interrupt  .\build\lp_ticker.o
-    0x08003aac   0x08003aac   0x00000074   Code   RO         1379    .text.lp_ticker_disable_interrupt  .\build\lp_ticker.o
-    0x08003b20   0x08003b20   0x00000036   Code   RO         1389    .text.lp_ticker_fire_interrupt  .\build\lp_ticker.o
+    0x08003740   0x08003740   0x000000bc   Code   RO         7801    .text.init_32bit_timer  .\build\us_ticker.o
+    0x080037fc   0x080037fc   0x0000008c   Code   RO         2999    .text.init_uart     .\build\serial_api.o
+    0x08003888   0x08003888   0x000001fc   Code   RO         2368    .text.initialize    .\build\mbed_ticker_api.o
+    0x08003a84   0x08003a84   0x00000028   Code   RO         1329    .text.lp_ticker_clear_interrupt  .\build\lp_ticker.o
+    0x08003aac   0x08003aac   0x00000074   Code   RO         1321    .text.lp_ticker_disable_interrupt  .\build\lp_ticker.o
+    0x08003b20   0x08003b20   0x00000036   Code   RO         1331    .text.lp_ticker_fire_interrupt  .\build\lp_ticker.o
     0x08003b56   0x08003b56   0x00000002   PAD
-    0x08003b58   0x08003b58   0x00000074   Code   RO         1391    .text.lp_ticker_free  .\build\lp_ticker.o
-    0x08003bcc   0x08003bcc   0x0000000a   Code   RO         1375    .text.lp_ticker_get_info  .\build\lp_ticker.o
+    0x08003b58   0x08003b58   0x00000074   Code   RO         1333    .text.lp_ticker_free  .\build\lp_ticker.o
+    0x08003bcc   0x08003bcc   0x0000000a   Code   RO         1317    .text.lp_ticker_get_info  .\build\lp_ticker.o
     0x08003bd6   0x08003bd6   0x00000002   PAD
-    0x08003bd8   0x08003bd8   0x00000200   Code   RO         1377    .text.lp_ticker_init  .\build\lp_ticker.o
-    0x08003dd8   0x08003dd8   0x0000001a   Code   RO         1771    .text.lp_ticker_irq_handler  .\build\mbed_lp_ticker_api.o
+    0x08003bd8   0x08003bd8   0x00000200   Code   RO         1319    .text.lp_ticker_init  .\build\lp_ticker.o
+    0x08003dd8   0x08003dd8   0x0000001a   Code   RO         1713    .text.lp_ticker_irq_handler  .\build\mbed_lp_ticker_api.o
     0x08003df2   0x08003df2   0x00000002   PAD
-    0x08003df4   0x08003df4   0x00000012   Code   RO         1383    .text.lp_ticker_read  .\build\lp_ticker.o
+    0x08003df4   0x08003df4   0x00000012   Code   RO         1325    .text.lp_ticker_read  .\build\lp_ticker.o
     0x08003e06   0x08003e06   0x00000002   PAD
-    0x08003e08   0x08003e08   0x00000116   Code   RO         1385    .text.lp_ticker_set_interrupt  .\build\lp_ticker.o
+    0x08003e08   0x08003e08   0x00000116   Code   RO         1327    .text.lp_ticker_set_interrupt  .\build\lp_ticker.o
     0x08003f1e   0x08003f1e   0x00000002   PAD
-    0x08003f20   0x08003f20   0x00000064   Code   RO         7939    .text.main          .\build\main.o
-    0x08003f84   0x08003f84   0x0000001a   Code   RO         1428    .text.mbed_assert_internal  .\build\mbed_assert.o
-    0x08003f9e   0x08003f9e   0x00000002   PAD
-    0x08003fa0   0x08003fa0   0x00000062   Code   RO         1539    .text.mbed_die      .\build\mbed_board.o
-    0x08004002   0x08004002   0x00000002   PAD
-    0x08004004   0x08004004   0x00000204   Code   RO         1650    .text.mbed_error    .\build\mbed_error.o
-    0x08004208   0x08004208   0x00000002   Code   RO         1634    .text.mbed_error_hook  .\build\mbed_error.o
-    0x0800420a   0x0800420a   0x00000002   PAD
-    0x0800420c   0x0800420c   0x00000044   Code   RO         1541    .text.mbed_error_printf  .\build\mbed_board.o
-    0x08004250   0x08004250   0x00000056   Code   RO         1545    .text.mbed_error_puts  .\build\mbed_board.o
-    0x080042a6   0x080042a6   0x00000002   PAD
-    0x080042a8   0x080042a8   0x00000034   Code   RO         1543    .text.mbed_error_vprintf  .\build\mbed_board.o
-    0x080042dc   0x080042dc   0x00000044   Code   RO         1632    .text.mbed_halt_system  .\build\mbed_error.o
-    0x08004320   0x08004320   0x00000002   Code   RO         2359    .text.mbed_main     .\build\mbed_sdk_boot.o
-    0x08004322   0x08004322   0x00000006   PAD
-    0x08004328   0x08004328   0x0000083c   Code   RO         2136    .text.mbed_minimal_formatted_string  .\build\mbed_printf_implementation.o
-    0x08004b64   0x08004b64   0x0000024a   Code   RO         2138    .text.mbed_minimal_formatted_string_integer  .\build\mbed_printf_implementation.o
-    0x08004dae   0x08004dae   0x00000002   PAD
-    0x08004db0   0x08004db0   0x0000003e   Code   RO         1895    .text.mbed_sdk_init  .\build\mbed_overrides.o
-    0x08004dee   0x08004dee   0x00000002   PAD
-    0x08004df0   0x08004df0   0x00000040   Code   RO         2556    .text.mbed_tiny_compute_crc32  .\build\mbedcrc.o
-    0x08004e30   0x08004e30   0x0000013c   Code   RO         2714    .text.pin_function  .\build\pinmap.o
-    0x08004f6c   0x08004f6c   0x0000008a   Code   RO         2716    .text.pin_mode      .\build\pinmap.o
-    0x08004ff6   0x08004ff6   0x00000002   PAD
-    0x08004ff8   0x08004ff8   0x00000026   Code   RO         1913    .text.pinmap_find_function  .\build\mbed_pinmap_common.o
-    0x0800501e   0x0800501e   0x00000002   PAD
-    0x08005020   0x08005020   0x00000048   Code   RO         1907    .text.pinmap_merge  .\build\mbed_pinmap_common.o
-    0x08005068   0x08005068   0x00000080   Code   RO         1911    .text.pinmap_peripheral  .\build\mbed_pinmap_common.o
-    0x080050e8   0x080050e8   0x000001ac   Code   RO         1630    .text.print_error_report  .\build\mbed_error.o
-    0x08005294   0x08005294   0x000001f4   Code   RO         2430    .text.schedule_interrupt  .\build\mbed_ticker_api.o
-    0x08005488   0x08005488   0x0000008c   Code   RO         3055    .text.serial_baud   .\build\serial_api.o
-    0x08005514   0x08005514   0x0000029a   Code   RO         3051    .text.serial_init   .\build\serial_api.o
-    0x080057ae   0x080057ae   0x00000002   PAD
-    0x080057b0   0x080057b0   0x0000000e   Code   RO         3459    .text.serial_init_direct  .\build\static_pinmap.o
-    0x080057be   0x080057be   0x00000002   PAD
-    0x080057c0   0x080057c0   0x0000002a   Code   RO         3112    .text.serial_putc   .\build\serial_device.o
-    0x080057ea   0x080057ea   0x00000002   PAD
-    0x080057ec   0x080057ec   0x0000001a   Code   RO         3073    .text.serial_writable  .\build\serial_api.o
-    0x08005806   0x08005806   0x00000002   PAD
-    0x08005808   0x08005808   0x00000060   Code   RO         1979    .text.sleep_manager_lock_deep_sleep_internal  .\build\mbed_power_mgmt.o
-    0x08005868   0x08005868   0x00000012   Code   RO         1987    .text.sleep_manager_sleep_auto  .\build\mbed_power_mgmt.o
-    0x0800587a   0x0800587a   0x00000002   PAD
-    0x0800587c   0x0800587c   0x00000064   Code   RO         1981    .text.sleep_manager_unlock_deep_sleep_internal  .\build\mbed_power_mgmt.o
-    0x080058e0   0x080058e0   0x00000004   Code   RO         1652    .text.system_reset  .\build\mbed_error.o
-    0x080058e4   0x080058e4   0x00000008   Code   RO         2410    .text.thread_sleep_for  .\build\mbed_thread.o
-    0x080058ec   0x080058ec   0x00000114   Code   RO         2434    .text.ticker_insert_event_us  .\build\mbed_ticker_api.o
-    0x08005a00   0x08005a00   0x000000ee   Code   RO         2428    .text.ticker_irq_handler  .\build\mbed_ticker_api.o
-    0x08005aee   0x08005aee   0x00000002   PAD
-    0x08005af0   0x08005af0   0x000000a0   Code   RO         2440    .text.ticker_read_us  .\build\mbed_ticker_api.o
-    0x08005b90   0x08005b90   0x0000003c   Code   RO         2436    .text.ticker_remove_event  .\build\mbed_ticker_api.o
-    0x08005bcc   0x08005bcc   0x0000001a   Code   RO         2424    .text.ticker_set_handler  .\build\mbed_ticker_api.o
-    0x08005be6   0x08005be6   0x00000002   PAD
-    0x08005be8   0x08005be8   0x00000030   Code   RO         7857    .text.timer_irq_handler  .\build\us_ticker.o
-    0x08005c18   0x08005c18   0x00000012   Code   RO         7871    .text.us_ticker_clear_interrupt  .\build\us_ticker.o
-    0x08005c2a   0x08005c2a   0x00000002   PAD
-    0x08005c2c   0x08005c2c   0x00000014   Code   RO         7869    .text.us_ticker_disable_interrupt  .\build\us_ticker.o
-    0x08005c40   0x08005c40   0x00000022   Code   RO         7867    .text.us_ticker_fire_interrupt  .\build\us_ticker.o
-    0x08005c62   0x08005c62   0x00000002   PAD
-    0x08005c64   0x08005c64   0x0000000a   Code   RO         7855    .text.us_ticker_get_info  .\build\us_ticker.o
-    0x08005c6e   0x08005c6e   0x00000002   PAD
-    0x08005c70   0x08005c70   0x00000018   Code   RO         7861    .text.us_ticker_init  .\build\us_ticker.o
-    0x08005c88   0x08005c88   0x0000001a   Code   RO         2513    .text.us_ticker_irq_handler  .\build\mbed_us_ticker_api.o
-    0x08005ca2   0x08005ca2   0x00000002   PAD
-    0x08005ca4   0x08005ca4   0x0000000c   Code   RO         7863    .text.us_ticker_read  .\build\us_ticker.o
-    0x08005cb0   0x08005cb0   0x0000001c   Code   RO         7865    .text.us_ticker_set_interrupt  .\build\us_ticker.o
-    0x08005ccc   0x08005ccc   0x0000003c   Code   RO         2196    .text.write         .\build\mbed_retarget.o
-    0x08005d08   0x08005d08   0x00000008   Code   RO         8052    i.__aeabi_errno_addr  C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(errno.o)
-    0x08005d10   0x08005d10   0x0000000e   Code   RO         8190    i.__scatterload_copy  C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(handlers.o)
-    0x08005d1e   0x08005d1e   0x00000002   Code   RO         8191    i.__scatterload_null  C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(handlers.o)
-    0x08005d20   0x08005d20   0x0000000e   Code   RO         8192    i.__scatterload_zeroinit  C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(handlers.o)
-    0x08005d2e   0x08005d2e   0x00000018   Code   RO         7981    i._fflush$full      C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(fflush_f.o)
-    0x08005d46   0x08005d46   0x00000002   PAD
-    0x08005d48   0x08005d48   0x00000000   Data   RO         2379    .rodata             .\build\mbed_sdk_boot.o
-    0x08005d48   0x08005d48   0x00000010   Data   RO         7444    .rodata.AHBPrescTable  .\build\system_stm32l4xx.o
-    0x08005d58   0x08005d58   0x00000008   Data   RO         7445    .rodata.APBPrescTable  .\build\system_stm32l4xx.o
-    0x08005d60   0x08005d60   0x00000030   Data   RO         7446    .rodata.MSIRangeTable  .\build\system_stm32l4xx.o
-    0x08005d90   0x08005d90   0x00000090   Data   RO         2693    .rodata.PinMap_UART_RX  .\build\peripheralpins.o
-    0x08005e20   0x08005e20   0x00000090   Data   RO         2692    .rodata.PinMap_UART_TX  .\build\peripheralpins.o
-    0x08005eb0   0x08005eb0   0x0000000c   Data   RO         7779    .rodata._ZTVN4mbed10TimerEventE  .\build\timerevent.o
-    0x08005ebc   0x08005ebc   0x0000000c   Data   RO         7601    .rodata._ZTVN4mbed8internal8SysTimerINSt3__25ratioILx1ELx1000EEELb1EEE  .\build\systimer.o
-    0x08005ec8   0x08005ec8   0x00000018   Data   RO         2305    .rodata._ZZL14do_serial_initvE14console_pinmap  .\build\mbed_retarget.o
-    0x08005ee0   0x08005ee0   0x00000010   Data   RO         6556    .rodata.cst16       .\build\stm32l4xx_hal_uart.o
-    0x08005ef0   0x08005ef0   0x00000040   Data   RO         2718    .rodata.ll_pin_defines  .\build\pinmap.o
-    0x08005f30   0x08005f30   0x00000008   Data   RO         1773    .rodata.lp_data     .\build\mbed_lp_ticker_api.o
-    0x08005f38   0x08005f38   0x00000024   Data   RO         1775    .rodata.lp_interface  .\build\mbed_lp_ticker_api.o
-    0x08005f5c   0x08005f5c   0x00000008   Data   RO         1393    .rodata.lp_ticker_get_info.info  .\build\lp_ticker.o
-    0x08005f64   0x08005f64   0x0000013b   Data   RO         1677    .rodata.str1.1      .\build\mbed_error.o
-    0x0800609f   0x0800609f   0x000000e9   Data   RO         2300    .rodata.str1.1      .\build\mbed_retarget.o
-    0x08006188   0x08006188   0x00000033   Data   RO         3085    .rodata.str1.1      .\build\serial_api.o
-    0x080061bb   0x080061bb   0x00000057   Data   RO         7455    .rodata.str1.1      .\build\systimer.o
-    0x08006212   0x08006212   0x00000002   PAD
-    0x08006214   0x08006214   0x00000008   Data   RO         2517    .rodata.us_data     .\build\mbed_us_ticker_api.o
-    0x0800621c   0x0800621c   0x00000024   Data   RO         2519    .rodata.us_interface  .\build\mbed_us_ticker_api.o
-    0x08006240   0x08006240   0x00000008   Data   RO         7879    .rodata.us_ticker_get_info.info  .\build\us_ticker.o
-    0x08006248   0x08006248   0x00000020   Data   RO         8189    Region$$Table       anon$$obj.o
-    0x08006268   0x08006268   0x00000004   Data   RO         7944    .init_array         .\build\main.o
-    0x0800626c   0x08006268   0x00000000   Data   RO         8064    .init_array         C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(cpp_init.o)
+    0x08003f20   0x08003f20   0x00000060   Code   RO         7939    .text.main          .\build\main.o
+    0x08003f80   0x08003f80   0x0000001a   Code   RO         1370    .text.mbed_assert_internal  .\build\mbed_assert.o
+    0x08003f9a   0x08003f9a   0x00000002   PAD
+    0x08003f9c   0x08003f9c   0x00000062   Code   RO         1481    .text.mbed_die      .\build\mbed_board.o
+    0x08003ffe   0x08003ffe   0x00000002   PAD
+    0x08004000   0x08004000   0x00000204   Code   RO         1592    .text.mbed_error    .\build\mbed_error.o
+    0x08004204   0x08004204   0x00000002   Code   RO         1576    .text.mbed_error_hook  .\build\mbed_error.o
+    0x08004206   0x08004206   0x00000002   PAD
+    0x08004208   0x08004208   0x00000044   Code   RO         1483    .text.mbed_error_printf  .\build\mbed_board.o
+    0x0800424c   0x0800424c   0x00000056   Code   RO         1487    .text.mbed_error_puts  .\build\mbed_board.o
+    0x080042a2   0x080042a2   0x00000002   PAD
+    0x080042a4   0x080042a4   0x00000034   Code   RO         1485    .text.mbed_error_vprintf  .\build\mbed_board.o
+    0x080042d8   0x080042d8   0x00000044   Code   RO         1574    .text.mbed_halt_system  .\build\mbed_error.o
+    0x0800431c   0x0800431c   0x00000002   Code   RO         2301    .text.mbed_main     .\build\mbed_sdk_boot.o
+    0x0800431e   0x0800431e   0x00000002   PAD
+    0x08004320   0x08004320   0x0000083c   Code   RO         2078    .text.mbed_minimal_formatted_string  .\build\mbed_printf_implementation.o
+    0x08004b5c   0x08004b5c   0x0000024a   Code   RO         2080    .text.mbed_minimal_formatted_string_integer  .\build\mbed_printf_implementation.o
+    0x08004da6   0x08004da6   0x00000002   PAD
+    0x08004da8   0x08004da8   0x0000003e   Code   RO         1837    .text.mbed_sdk_init  .\build\mbed_overrides.o
+    0x08004de6   0x08004de6   0x00000002   PAD
+    0x08004de8   0x08004de8   0x00000040   Code   RO         2498    .text.mbed_tiny_compute_crc32  .\build\mbedcrc.o
+    0x08004e28   0x08004e28   0x0000013c   Code   RO         2656    .text.pin_function  .\build\pinmap.o
+    0x08004f64   0x08004f64   0x0000008a   Code   RO         2658    .text.pin_mode      .\build\pinmap.o
+    0x08004fee   0x08004fee   0x00000002   PAD
+    0x08004ff0   0x08004ff0   0x00000026   Code   RO         1855    .text.pinmap_find_function  .\build\mbed_pinmap_common.o
+    0x08005016   0x08005016   0x00000002   PAD
+    0x08005018   0x08005018   0x00000048   Code   RO         1849    .text.pinmap_merge  .\build\mbed_pinmap_common.o
+    0x08005060   0x08005060   0x00000080   Code   RO         1853    .text.pinmap_peripheral  .\build\mbed_pinmap_common.o
+    0x080050e0   0x080050e0   0x000001ac   Code   RO         1572    .text.print_error_report  .\build\mbed_error.o
+    0x0800528c   0x0800528c   0x000001f4   Code   RO         2372    .text.schedule_interrupt  .\build\mbed_ticker_api.o
+    0x08005480   0x08005480   0x0000008c   Code   RO         2997    .text.serial_baud   .\build\serial_api.o
+    0x0800550c   0x0800550c   0x0000029a   Code   RO         2993    .text.serial_init   .\build\serial_api.o
+    0x080057a6   0x080057a6   0x00000002   PAD
+    0x080057a8   0x080057a8   0x0000000e   Code   RO         3401    .text.serial_init_direct  .\build\static_pinmap.o
+    0x080057b6   0x080057b6   0x00000002   PAD
+    0x080057b8   0x080057b8   0x0000002a   Code   RO         3054    .text.serial_putc   .\build\serial_device.o
+    0x080057e2   0x080057e2   0x00000002   PAD
+    0x080057e4   0x080057e4   0x0000001a   Code   RO         3015    .text.serial_writable  .\build\serial_api.o
+    0x080057fe   0x080057fe   0x00000002   PAD
+    0x08005800   0x08005800   0x00000060   Code   RO         1921    .text.sleep_manager_lock_deep_sleep_internal  .\build\mbed_power_mgmt.o
+    0x08005860   0x08005860   0x00000012   Code   RO         1929    .text.sleep_manager_sleep_auto  .\build\mbed_power_mgmt.o
+    0x08005872   0x08005872   0x00000002   PAD
+    0x08005874   0x08005874   0x00000064   Code   RO         1923    .text.sleep_manager_unlock_deep_sleep_internal  .\build\mbed_power_mgmt.o
+    0x080058d8   0x080058d8   0x00000004   Code   RO         1594    .text.system_reset  .\build\mbed_error.o
+    0x080058dc   0x080058dc   0x00000008   Code   RO         2352    .text.thread_sleep_for  .\build\mbed_thread.o
+    0x080058e4   0x080058e4   0x00000114   Code   RO         2376    .text.ticker_insert_event_us  .\build\mbed_ticker_api.o
+    0x080059f8   0x080059f8   0x000000ee   Code   RO         2370    .text.ticker_irq_handler  .\build\mbed_ticker_api.o
+    0x08005ae6   0x08005ae6   0x00000002   PAD
+    0x08005ae8   0x08005ae8   0x000000a0   Code   RO         2382    .text.ticker_read_us  .\build\mbed_ticker_api.o
+    0x08005b88   0x08005b88   0x0000003c   Code   RO         2378    .text.ticker_remove_event  .\build\mbed_ticker_api.o
+    0x08005bc4   0x08005bc4   0x0000001a   Code   RO         2366    .text.ticker_set_handler  .\build\mbed_ticker_api.o
+    0x08005bde   0x08005bde   0x00000002   PAD
+    0x08005be0   0x08005be0   0x00000030   Code   RO         7799    .text.timer_irq_handler  .\build\us_ticker.o
+    0x08005c10   0x08005c10   0x00000012   Code   RO         7813    .text.us_ticker_clear_interrupt  .\build\us_ticker.o
+    0x08005c22   0x08005c22   0x00000002   PAD
+    0x08005c24   0x08005c24   0x00000014   Code   RO         7811    .text.us_ticker_disable_interrupt  .\build\us_ticker.o
+    0x08005c38   0x08005c38   0x00000022   Code   RO         7809    .text.us_ticker_fire_interrupt  .\build\us_ticker.o
+    0x08005c5a   0x08005c5a   0x00000002   PAD
+    0x08005c5c   0x08005c5c   0x0000000a   Code   RO         7797    .text.us_ticker_get_info  .\build\us_ticker.o
+    0x08005c66   0x08005c66   0x00000002   PAD
+    0x08005c68   0x08005c68   0x00000018   Code   RO         7803    .text.us_ticker_init  .\build\us_ticker.o
+    0x08005c80   0x08005c80   0x0000001a   Code   RO         2455    .text.us_ticker_irq_handler  .\build\mbed_us_ticker_api.o
+    0x08005c9a   0x08005c9a   0x00000002   PAD
+    0x08005c9c   0x08005c9c   0x0000000c   Code   RO         7805    .text.us_ticker_read  .\build\us_ticker.o
+    0x08005ca8   0x08005ca8   0x0000001c   Code   RO         7807    .text.us_ticker_set_interrupt  .\build\us_ticker.o
+    0x08005cc4   0x08005cc4   0x0000003c   Code   RO         2138    .text.write         .\build\mbed_retarget.o
+    0x08005d00   0x08005d00   0x00000008   Code   RO         8052    i.__aeabi_errno_addr  C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(errno.o)
+    0x08005d08   0x08005d08   0x0000000e   Code   RO         8190    i.__scatterload_copy  C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(handlers.o)
+    0x08005d16   0x08005d16   0x00000002   Code   RO         8191    i.__scatterload_null  C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(handlers.o)
+    0x08005d18   0x08005d18   0x0000000e   Code   RO         8192    i.__scatterload_zeroinit  C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(handlers.o)
+    0x08005d26   0x08005d26   0x00000018   Code   RO         7981    i._fflush$full      C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(fflush_f.o)
+    0x08005d3e   0x08005d3e   0x00000002   PAD
+    0x08005d40   0x08005d40   0x00000000   Data   RO         2321    .rodata             .\build\mbed_sdk_boot.o
+    0x08005d40   0x08005d40   0x00000010   Data   RO         7386    .rodata.AHBPrescTable  .\build\system_stm32l4xx.o
+    0x08005d50   0x08005d50   0x00000008   Data   RO         7387    .rodata.APBPrescTable  .\build\system_stm32l4xx.o
+    0x08005d58   0x08005d58   0x00000030   Data   RO         7388    .rodata.MSIRangeTable  .\build\system_stm32l4xx.o
+    0x08005d88   0x08005d88   0x00000090   Data   RO         2635    .rodata.PinMap_UART_RX  .\build\peripheralpins.o
+    0x08005e18   0x08005e18   0x00000090   Data   RO         2634    .rodata.PinMap_UART_TX  .\build\peripheralpins.o
+    0x08005ea8   0x08005ea8   0x0000000c   Data   RO         7721    .rodata._ZTVN4mbed10TimerEventE  .\build\timerevent.o
+    0x08005eb4   0x08005eb4   0x0000000c   Data   RO         7543    .rodata._ZTVN4mbed8internal8SysTimerINSt3__25ratioILx1ELx1000EEELb1EEE  .\build\systimer.o
+    0x08005ec0   0x08005ec0   0x00000018   Data   RO         2247    .rodata._ZZL14do_serial_initvE14console_pinmap  .\build\mbed_retarget.o
+    0x08005ed8   0x08005ed8   0x00000010   Data   RO         6498    .rodata.cst16       .\build\stm32l4xx_hal_uart.o
+    0x08005ee8   0x08005ee8   0x00000040   Data   RO         2660    .rodata.ll_pin_defines  .\build\pinmap.o
+    0x08005f28   0x08005f28   0x00000008   Data   RO         1715    .rodata.lp_data     .\build\mbed_lp_ticker_api.o
+    0x08005f30   0x08005f30   0x00000024   Data   RO         1717    .rodata.lp_interface  .\build\mbed_lp_ticker_api.o
+    0x08005f54   0x08005f54   0x00000008   Data   RO         1335    .rodata.lp_ticker_get_info.info  .\build\lp_ticker.o
+    0x08005f5c   0x08005f5c   0x0000013b   Data   RO         1619    .rodata.str1.1      .\build\mbed_error.o
+    0x08006097   0x08006097   0x000000e9   Data   RO         2242    .rodata.str1.1      .\build\mbed_retarget.o
+    0x08006180   0x08006180   0x00000033   Data   RO         3027    .rodata.str1.1      .\build\serial_api.o
+    0x080061b3   0x080061b3   0x00000057   Data   RO         7397    .rodata.str1.1      .\build\systimer.o
+    0x0800620a   0x0800620a   0x00000002   PAD
+    0x0800620c   0x0800620c   0x00000008   Data   RO         2459    .rodata.us_data     .\build\mbed_us_ticker_api.o
+    0x08006214   0x08006214   0x00000024   Data   RO         2461    .rodata.us_interface  .\build\mbed_us_ticker_api.o
+    0x08006238   0x08006238   0x00000008   Data   RO         7821    .rodata.us_ticker_get_info.info  .\build\us_ticker.o
+    0x08006240   0x08006240   0x00000020   Data   RO         8189    Region$$Table       anon$$obj.o
+    0x08006260   0x08006260   0x00000004   Data   RO         7944    .init_array         .\build\main.o
+    0x08006264   0x08006260   0x00000000   Data   RO         8064    .init_array         C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(cpp_init.o)
 
 
-    Execution Region RW_m_crash_data (Exec base: 0x10000188, Load base: 0x0800626c, Size: 0x00000100, Max: 0x00000100, ABSOLUTE)
+    Execution Region RW_m_crash_data (Exec base: 0x10000188, Load base: 0x08006264, Size: 0x00000100, Max: 0x00000100, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x10000188        -       0x00000100   Zero   RW            1    RW_m_crash_data.bss  anon$$obj.o
 
 
-    Execution Region RW_IRAM2 (Exec base: 0x10000288, Load base: 0x08006270, Size: 0x000005e4, Max: 0x00007d78, ABSOLUTE)
+    Execution Region RW_IRAM2 (Exec base: 0x10000288, Load base: 0x08006268, Size: 0x000005e4, Max: 0x00007d78, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x10000288   0x08006270   0x00000004   Data   RW         8055    .data               C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(errno.o)
-    0x1000028c   0x08006274   0x00000004   Data   RW         7443    .data.SystemCoreClock  .\build\system_stm32l4xx.o
-    0x10000290   0x08006278   0x00000004   Data   RW         1774    .data.irq_handler   .\build\mbed_lp_ticker_api.o
-    0x10000294   0x0800627c   0x00000004   Data   RW         2518    .data.irq_handler   .\build\mbed_us_ticker_api.o
-    0x10000298   0x08006280   0x00000004   Data   RW         3545    .data.uwTickPrio    .\build\stm32l4xx_hal.o
-    0x1000029c   0x08006284   0x00000004   PAD
+    0x10000288   0x08006268   0x00000004   Data   RW         8055    .data               C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(errno.o)
+    0x1000028c   0x0800626c   0x00000004   Data   RW         7385    .data.SystemCoreClock  .\build\system_stm32l4xx.o
+    0x10000290   0x08006270   0x00000004   Data   RW         1716    .data.irq_handler   .\build\mbed_lp_ticker_api.o
+    0x10000294   0x08006274   0x00000004   Data   RW         2460    .data.irq_handler   .\build\mbed_us_ticker_api.o
+    0x10000298   0x08006278   0x00000004   Data   RW         3487    .data.uwTickPrio    .\build\stm32l4xx_hal.o
+    0x1000029c   0x0800627c   0x00000004   PAD
     0x100002a0        -       0x00000014   Zero   RW         7999    .bss                C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(stdout_f.o)
     0x100002b4        -       0x00000014   Zero   RW         8000    .bss                C:\Keil_v5\ARM\ARMCLANG\Bin\..\lib\armlib\mc_w.l(stderr_f.o)
-    0x100002c8        -       0x00000001   Zero   RW         1401    .bss.LPTICKER_inited  .\build\lp_ticker.o
-    0x100002c9   0x08006284   0x00000003   PAD
-    0x100002cc        -       0x00000038   Zero   RW         1402    .bss.LptimHandle    .\build\lp_ticker.o
-    0x10000304        -       0x0000004c   Zero   RW         7880    .bss.TimMasterHandle  .\build\us_ticker.o
-    0x10000350        -       0x00000003   Zero   RW         2298    .bss._ZL14stdio_out_prev  .\build\mbed_retarget.o
-    0x10000353   0x08006284   0x00000005   PAD
-    0x10000358        -       0x00000048   Zero   RW         1882    .bss._ZN4mbed8internal12_GLOBAL__N_113os_timer_dataE  .\build\mbed_os_timer.o
-    0x100003a0        -       0x00000004   Zero   RW         1881    .bss._ZN4mbed8internal8os_timerE  .\build\mbed_os_timer.o
-    0x100003a4        -       0x00000001   Zero   RW         2304    .bss._ZZL19do_serial_init_oncevE4once.0  .\build\mbed_retarget.o
-    0x100003a5   0x08006284   0x00000003   PAD
-    0x100003a8        -       0x00000004   Zero   RW          521    .bss.can_irq_contexts  .\build\can_api.o
-    0x100003ac        -       0x00000001   Zero   RW         1619    .bss.critical_interrupts_enabled  .\build\mbed_critical_section_api.o
-    0x100003ad   0x08006284   0x00000003   PAD
-    0x100003b0        -       0x00000004   Zero   RW         1603    .bss.critical_section_reentrancy_counter  .\build\mbed_critical.o
-    0x100003b4        -       0x00000002   Zero   RW         1989    .bss.deep_sleep_lock  .\build\mbed_power_mgmt.o
-    0x100003b6   0x08006284   0x00000002   PAD
-    0x100003b8        -       0x00000004   Zero   RW         1676    .bss.error_count    .\build\mbed_error.o
-    0x100003bc        -       0x00000004   Zero   RW         1678    .bss.error_hook     .\build\mbed_error.o
-    0x100003c0        -       0x00000038   Zero   RW         1776    .bss.events         .\build\mbed_lp_ticker_api.o
-    0x100003f8        -       0x00000038   Zero   RW         2520    .bss.events         .\build\mbed_us_ticker_api.o
-    0x10000430        -       0x00000040   Zero   RW         1675    .bss.first_error_ctx  .\build\mbed_error.o
-    0x10000470        -       0x00000001   Zero   RW         1396    .bss.future_event_flag  .\build\lp_ticker.o
-    0x10000471        -       0x00000001   Zero   RW         1679    .bss.halt_in_progress  .\build\mbed_error.o
-    0x10000472   0x08006284   0x00000002   PAD
-    0x10000474        -       0x00000004   Zero   RW          520    .bss.irq_handler    .\build\can_api.o
-    0x10000478        -       0x00000040   Zero   RW         1673    .bss.last_error_ctx  .\build\mbed_error.o
+    0x100002c8        -       0x00000001   Zero   RW         1343    .bss.LPTICKER_inited  .\build\lp_ticker.o
+    0x100002c9   0x0800627c   0x00000003   PAD
+    0x100002cc        -       0x00000038   Zero   RW         1344    .bss.LptimHandle    .\build\lp_ticker.o
+    0x10000304        -       0x0000004c   Zero   RW         7822    .bss.TimMasterHandle  .\build\us_ticker.o
+    0x10000350        -       0x00000003   Zero   RW         2240    .bss._ZL14stdio_out_prev  .\build\mbed_retarget.o
+    0x10000353   0x0800627c   0x00000005   PAD
+    0x10000358        -       0x00000048   Zero   RW         1824    .bss._ZN4mbed8internal12_GLOBAL__N_113os_timer_dataE  .\build\mbed_os_timer.o
+    0x100003a0        -       0x00000004   Zero   RW         1823    .bss._ZN4mbed8internal8os_timerE  .\build\mbed_os_timer.o
+    0x100003a4        -       0x00000001   Zero   RW         2246    .bss._ZZL19do_serial_init_oncevE4once.0  .\build\mbed_retarget.o
+    0x100003a5   0x0800627c   0x00000003   PAD
+    0x100003a8        -       0x00000004   Zero   RW         7928    .bss.can_irq_contexts  .\build\can_api.o
+    0x100003ac        -       0x00000001   Zero   RW         1561    .bss.critical_interrupts_enabled  .\build\mbed_critical_section_api.o
+    0x100003ad   0x0800627c   0x00000003   PAD
+    0x100003b0        -       0x00000004   Zero   RW         1545    .bss.critical_section_reentrancy_counter  .\build\mbed_critical.o
+    0x100003b4        -       0x00000002   Zero   RW         1931    .bss.deep_sleep_lock  .\build\mbed_power_mgmt.o
+    0x100003b6   0x0800627c   0x00000002   PAD
+    0x100003b8        -       0x00000004   Zero   RW         1618    .bss.error_count    .\build\mbed_error.o
+    0x100003bc        -       0x00000004   Zero   RW         1620    .bss.error_hook     .\build\mbed_error.o
+    0x100003c0        -       0x00000038   Zero   RW         1718    .bss.events         .\build\mbed_lp_ticker_api.o
+    0x100003f8        -       0x00000038   Zero   RW         2462    .bss.events         .\build\mbed_us_ticker_api.o
+    0x10000430        -       0x00000040   Zero   RW         1617    .bss.first_error_ctx  .\build\mbed_error.o
+    0x10000470        -       0x00000001   Zero   RW         1338    .bss.future_event_flag  .\build\lp_ticker.o
+    0x10000471        -       0x00000001   Zero   RW         1621    .bss.halt_in_progress  .\build\mbed_error.o
+    0x10000472   0x0800627c   0x00000002   PAD
+    0x10000474        -       0x00000004   Zero   RW         7927    .bss.irq_handler    .\build\can_api.o
+    0x10000478        -       0x00000040   Zero   RW         1615    .bss.last_error_ctx  .\build\mbed_error.o
     0x100004b8        -       0x0000001c   Zero   RW         7943    .bss.led_ld2        .\build\main.o
-    0x100004d4        -       0x00000001   Zero   RW         1394    .bss.lp_Fired       .\build\lp_ticker.o
-    0x100004d5        -       0x00000001   Zero   RW         1398    .bss.lp_cmpok       .\build\lp_ticker.o
-    0x100004d6   0x08006284   0x00000002   PAD
-    0x100004d8        -       0x00000004   Zero   RW         1399    .bss.lp_delayed_counter  .\build\lp_ticker.o
-    0x100004dc        -       0x00000001   Zero   RW         1395    .bss.lp_delayed_prog  .\build\lp_ticker.o
-    0x100004dd        -       0x00000001   Zero   RW         1672    .bss.mbed_error_in_progress  .\build\mbed_error.o
-    0x100004de   0x08006284   0x00000002   PAD
-    0x100004e0        -       0x00000004   Zero   RW         2295    .bss.mbed_heap_size  .\build\mbed_retarget.o
-    0x100004e4        -       0x00000004   Zero   RW         2294    .bss.mbed_heap_start  .\build\mbed_retarget.o
-    0x100004e8        -       0x00000004   Zero   RW         1897    .bss.mbed_sdk_inited  .\build\mbed_overrides.o
-    0x100004ec        -       0x00000004   Zero   RW         2378    .bss.mbed_stack_isr_size  .\build\mbed_sdk_boot.o
-    0x100004f0        -       0x00000004   Zero   RW         2377    .bss.mbed_stack_isr_start  .\build\mbed_sdk_boot.o
-    0x100004f4        -       0x00000002   Zero   RW         1037    .bss.prev_tick_remainder  .\build\hal_tick_overrides.o
-    0x100004f6   0x08006284   0x00000002   PAD
-    0x100004f8        -       0x00000004   Zero   RW         1036    .bss.prev_time      .\build\hal_tick_overrides.o
-    0x100004fc        -       0x00000001   Zero   RW         1397    .bss.roll_over_flag  .\build\lp_ticker.o
-    0x100004fd        -       0x00000001   Zero   RW         1400    .bss.sleep_manager_locked  .\build\lp_ticker.o
-    0x100004fe        -       0x00000001   Zero   RW         1618    .bss.state_saved    .\build\mbed_critical_section_api.o
-    0x100004ff   0x08006284   0x00000001   PAD
-    0x10000500        -       0x0000004c   Zero   RW         3084    .bss.stdio_uart     .\build\serial_api.o
-    0x1000054c        -       0x00000004   Zero   RW         3083    .bss.stdio_uart_inited  .\build\serial_api.o
-    0x10000550        -       0x00000004   Zero   RW         1038    .bss.total_ticks    .\build\hal_tick_overrides.o
-    0x10000554        -       0x00000318   Zero   RW         3140    .bss.uart_handlers  .\build\serial_device.o
+    0x100004d4        -       0x00000001   Zero   RW         1336    .bss.lp_Fired       .\build\lp_ticker.o
+    0x100004d5        -       0x00000001   Zero   RW         1340    .bss.lp_cmpok       .\build\lp_ticker.o
+    0x100004d6   0x0800627c   0x00000002   PAD
+    0x100004d8        -       0x00000004   Zero   RW         1341    .bss.lp_delayed_counter  .\build\lp_ticker.o
+    0x100004dc        -       0x00000001   Zero   RW         1337    .bss.lp_delayed_prog  .\build\lp_ticker.o
+    0x100004dd        -       0x00000001   Zero   RW         1614    .bss.mbed_error_in_progress  .\build\mbed_error.o
+    0x100004de   0x0800627c   0x00000002   PAD
+    0x100004e0        -       0x00000004   Zero   RW         2237    .bss.mbed_heap_size  .\build\mbed_retarget.o
+    0x100004e4        -       0x00000004   Zero   RW         2236    .bss.mbed_heap_start  .\build\mbed_retarget.o
+    0x100004e8        -       0x00000004   Zero   RW         1839    .bss.mbed_sdk_inited  .\build\mbed_overrides.o
+    0x100004ec        -       0x00000004   Zero   RW         2320    .bss.mbed_stack_isr_size  .\build\mbed_sdk_boot.o
+    0x100004f0        -       0x00000004   Zero   RW         2319    .bss.mbed_stack_isr_start  .\build\mbed_sdk_boot.o
+    0x100004f4        -       0x00000002   Zero   RW          979    .bss.prev_tick_remainder  .\build\hal_tick_overrides.o
+    0x100004f6   0x0800627c   0x00000002   PAD
+    0x100004f8        -       0x00000004   Zero   RW          978    .bss.prev_time      .\build\hal_tick_overrides.o
+    0x100004fc        -       0x00000001   Zero   RW         1339    .bss.roll_over_flag  .\build\lp_ticker.o
+    0x100004fd        -       0x00000001   Zero   RW         1342    .bss.sleep_manager_locked  .\build\lp_ticker.o
+    0x100004fe        -       0x00000001   Zero   RW         1560    .bss.state_saved    .\build\mbed_critical_section_api.o
+    0x100004ff   0x0800627c   0x00000001   PAD
+    0x10000500        -       0x0000004c   Zero   RW         3026    .bss.stdio_uart     .\build\serial_api.o
+    0x1000054c        -       0x00000004   Zero   RW         3025    .bss.stdio_uart_inited  .\build\serial_api.o
+    0x10000550        -       0x00000004   Zero   RW          980    .bss.total_ticks    .\build\hal_tick_overrides.o
+    0x10000554        -       0x00000318   Zero   RW         3082    .bss.uart_handlers  .\build\serial_device.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x0800626c, Size: 0x00000000, Max: 0x00006000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08006264, Size: 0x00000000, Max: 0x00006000, ABSOLUTE)
 
     **** No section assigned to this execution region ****
 
 
-    Execution Region ARM_LIB_HEAP (Exec base: 0x20000000, Load base: 0x0800626c, Size: 0x00017000, Max: 0x00017000, ABSOLUTE)
+    Execution Region ARM_LIB_HEAP (Exec base: 0x20000000, Load base: 0x08006264, Size: 0x00017000, Max: 0x00017000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x20000000        -       0x00017000   Zero   RW            2    ARM_LIB_HEAP.bss    anon$$obj.o
 
 
-    Execution Region ARM_LIB_STACK (Exec base: 0x20017000, Load base: 0x08006288, Size: 0x00001000, Max: 0x00001000, ABSOLUTE)
+    Execution Region ARM_LIB_STACK (Exec base: 0x20017000, Load base: 0x08006280, Size: 0x00001000, Max: 0x00001000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -21533,7 +21532,7 @@ Image component sizes
        552         44          0          0          0       7920   .\build\gpio_api.o
        166          0          0          0         10       2381   .\build\hal_tick_overrides.o
       1464         88          8          0         67      12073   .\build\lp_ticker.o
-       130         36          4          0         28      31716   .\build\main.o
+       126         32          4          0         28      31716   .\build\main.o
         26          0          0          0          0      14017   .\build\mbed_assert.o
         22          0          0          0          0      15585   .\build\mbed_atomic_impl.o
        304          0          0          0          0       5901   .\build\mbed_board.o
@@ -21580,9 +21579,9 @@ Image component sizes
        382          0          8          0         76      10285   .\build\us_ticker.o
 
     ----------------------------------------------------------------------
-     21842       1604       1708         16     100008     869383   Object Totals
+     21834       1600       1708         16     100008     869383   Object Totals
          0          0         32          0      98560          0   (incl. Generated)
-       142          0          2          0         29          0   (incl. Padding)
+       138          0          2          0         29          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -21648,15 +21647,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     23488       1678       1708         20     100048     869571   Grand Totals
-     23488       1678       1708         20     100048     869571   ELF Image Totals
-     23488       1678       1708         20          0          0   ROM Totals
+     23480       1674       1708         20     100048     869571   Grand Totals
+     23480       1674       1708         20     100048     869571   ELF Image Totals
+     23480       1674       1708         20          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                25196 (  24.61kB)
+    Total RO  Size (Code + RO Data)                25188 (  24.60kB)
     Total RW  Size (RW Data + ZI Data)            100068 (  97.72kB)
-    Total ROM Size (Code + RO Data + RW Data)      25216 (  24.62kB)
+    Total ROM Size (Code + RO Data + RW Data)      25208 (  24.62kB)
 
 ==============================================================================
 

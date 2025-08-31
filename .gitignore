@@ -1,3 +1,12 @@
+# Répertoires de build Keil / STM32
+BUILD/
+build/
+Debug/
+Release/
+Objects/
+Listings/
+Output/
+
 # Prerequisites
 *.d
 

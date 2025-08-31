@@ -12,7 +12,6 @@
 ".\build\businout.o"
 ".\build\busout.o"
 ".\build\can.o"
-".\build\can_api.o"
 ".\build\chainingblockdevice.o"
 ".\build\conditionvariable.o"
 ".\build\criticalsectionlock.o"
@@ -247,6 +246,7 @@
 ".\build\usbphy_stm32.o"
 ".\build\watchdog.o"
 ".\build\watchdog_api.o"
+".\build\can_api.o"
 ".\build\main.o"
 --scatter "C:/Keil_v5/mbed-os/targets/TARGET_STM/TARGET_STM32L4/TARGET_STM32L476xG/TOOLCHAIN_ARM/stm32l476xg.sct"
 --predefine="-DMBED_RAM_START=0x20000000" --predefine="-DMBED_RAM_SIZE=0x18000" --library_type=microlib --any_contingency --verbose --keep=os_cb_sections --predefine="-DXIP_ENABLE=0" --predefine="-DMBED_RAM1_START=0x10000000" --predefine="-DMBED_BOOT_STACK_SIZE=4096" --show_full_path --cpu=Cortex-M4 --predefine="-DMBED_RAM1_SIZE=0x8000" --remove --predefine="-DMBED_ROM_SIZE=0x100000" --predefine="-DMBED_ROM_START=0x8000000" --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols

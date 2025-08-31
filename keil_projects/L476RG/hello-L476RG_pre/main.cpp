@@ -15,7 +15,7 @@ DigitalOut led_ld2(LED1);
 
 int main()
 {
-    printf("\tLEnsE - L476RG  v%.1lf\n", 1.1);
+    printf("\tLEnsE - L476RG  v%lf\n", 1.0);
 
     while (true)
     {
