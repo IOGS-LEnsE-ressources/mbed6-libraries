@@ -1,0 +1,162 @@
+Parfait, tu touches à un cas très concret 👍
+La carte **STM32F469I-DISCO** a un écran **TFT-LCD 800×480** connecté via le **LTDC (LCD-TFT Display Controller)** + interface **DSI/parallel** et une **SDRAM externe** (pour stocker les framebuffers).
+La configuration dans **CubeMX** est un peu lourde car il faut activer plusieurs périphériques qui travaillent ensemble.
+
+---
+
+# 🔹 Étapes dans CubeMX pour configurer l’écran LCD (STM32F469I-DISCO)
+
+### 1. Sélection de la carte
+
+* Dans CubeMX, choisis directement la **board** : `STM32F469I-DISCO`
+  👉 Avantage : CubeMX pré-configure déjà les pins de la SDRAM, LTDC, et parfois DSI.
+
+---
+
+### 2. Activer les périphériques nécessaires
+
+* **RCC (Clock Configuration)**
+
+  * Mets le **HSE (8 MHz)** → PLL → jusqu’à 180 MHz CPU.
+  * LTDC et SDRAM ont besoin d’horloges précises (souvent 9 ou 10 MHz pour l’écran).
+* **LTDC (LCD-TFT Controller)**
+
+  * Active-le → configure la **résolution 800×480**.
+  * Paramètre la synchro horizontale et verticale (tirées de la datasheet de l’écran).
+
+    * HSYNC = 1
+    * HBP = 46
+    * HFP = 210
+    * VSYNC = 1
+    * VBP = 23
+    * VFP = 22
+	
+* **DMA2D**
+
+  * Active-le pour accélérer les transferts graphiques (copie mémoire → LCD).
+* **FMC (Flexible Memory Controller)**
+
+  * Active en mode **SDRAM** pour piloter la RAM externe (IS42S16400J = 8 MB).
+  * SDRAM sert de framebuffer.
+
+---
+
+### 3. Middlewares
+
+* Active **FATFS** si tu veux charger des images depuis µSD.
+* Active **TouchGFX Generator** si tu veux une interface graphique complète (CubeMX propose une intégration).
+
+---
+
+### 4. Initialisation
+
+CubeMX génère du code :
+
+* `MX_LTDC_Init()` → configure la couche graphique (pixel format, framebuffer address).
+* `MX_DMA2D_Init()` → moteur de transfert graphique.
+* `MX_FMC_Init()` → initialise la SDRAM externe.
+
+Tu dois ensuite :
+
+1. **Allouer le framebuffer** en SDRAM (exemple : `0xC0000000`).
+2. Initialiser le backlight et l’alimentation du LCD (GPIOs spécifiques).
+3. Activer le contrôleur LCD.
+
+---
+
+### 5. Exemple pratique
+
+ST fournit un exemple **BSP (Board Support Package)** déjà prêt :
+`STM32CubeF4/Projects/STM32469I-Discovery/Examples/LTDC/LTDC_Display_2Layers`
+
+Dans cet exemple, tu verras :
+
+* Comment initialiser la SDRAM
+* Comment définir une couche LTDC :
+
+  ```c
+  hltdc.LayerCfg[0].FBStartAdress = 0xC0000000;  // Framebuffer en SDRAM
+  hltdc.LayerCfg[0].ImageWidth   = 800;
+  hltdc.LayerCfg[0].ImageHeight  = 480;
+  hltdc.LayerCfg[0].PixelFormat  = LTDC_PIXEL_FORMAT_RGB565;
+  ```
+
+---
+
+# 🔹 En résumé
+
+1. Dans CubeMX : sélectionne **STM32F469I-DISCO**
+2. Active **LTDC + DMA2D + FMC/SDRAM**
+3. Configure la synchro et la résolution 800×480
+4. Garde le framebuffer en SDRAM (0xC0000000)
+5. Ajoute le code BSP ST pour l’alim + backlight
+
+---
+
+
+
+
+Très bonne question 👌 et elle est piégeuse, parce que sur la STM32F469I-Discovery tu as effectivement un écran MIPI-DSI (pas un écran RGB parallèle classique).
+
+🔹 Comment ça marche sur la F469I-DISCO
+
+L’écran est un AMPIRE 800×480 TFT connecté en MIPI-DSI 2-lanes.
+
+Le STM32F469 a deux blocs importants :
+
+LTDC → génère le flux RGB (comme si tu avais un écran parallèle classique).
+
+DSI Host (DSI) → convertit ce flux LTDC en signaux MIPI-DSI pour l’écran.
+
+Donc :
+➝ Tu dois activer ET configurer LTDC + DSI.
+
+LTDC génère les timings et pixels.
+
+DSI les encapsule et les envoie à l’écran.
+
+⚠️ Si tu n’actives que LTDC (sans DSI), rien ne s’affiche car il n’y a pas de bus parallèle sur cette carte.
+
+🔹 Dans CubeMX
+
+Choisis la carte STM32F469I-DISCO.
+CubeMX pré-assigne déjà les pins DSI et SDRAM.
+
+Active :
+
+LTDC : configure la résolution (800×480), polarités, front/back porch (les mêmes que pour un écran RGB).
+
+DSIHOST : mets-le en Adapted Command Mode ou Video Burst Mode selon l’exemple ST (souvent Video Burst).
+
+DMA2D (optionnel mais recommandé).
+
+FMC/SDRAM pour stocker le framebuffer (0xC0000000).
+
+Génère le code.
+
+🔹 Initialisation après génération
+
+CubeMX ne fait pas tout tout seul :
+
+Tu devras compléter avec les fonctions BSP fournies par ST pour initialiser le panneau OTM8009A (le driver de l’écran).
+Exemple :
+
+OTM8009A_Init(OTM8009A_FORMAT_RGB888, OTM8009A_ORIENTATION_LANDSCAPE);
+
+
+ST fournit ces drivers dans :
+STM32CubeF4/Drivers/BSP/STM32469I-Discovery/otm8009a.c
+
+🔹 Exemple officiel
+
+ST a déjà un projet prêt dans CubeF4 :
+Projects/STM32469I-Discovery/Examples/LTDC/LTDC_Display_2Layers
+et aussi dans TouchGFX demos.
+Tu peux t’en inspirer pour récupérer :
+
+La config LTDC
+
+La config DSI
+
+L’init du driver OTM8009A
+

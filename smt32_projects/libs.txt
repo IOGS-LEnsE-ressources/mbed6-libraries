@@ -1,0 +1,76 @@
+Super question 👌 C’est **l’étape clé** pour garder ton projet STM32CubeIDE propre tout en réutilisant ton code perso (librairies maison, drivers spécifiques, algos, etc.).
+
+---
+
+# 🔹 Étapes pour intégrer une bibliothèque dans STM32CubeIDE
+
+### 1. Organisation du projet
+
+👉 Crée un dossier dédié à tes libs, par exemple :
+
+```
+MyProject/
+ ├── Core/
+ ├── Drivers/
+ ├── Middlewares/
+ ├── Libs/         <-- tes bibliothèques perso ici
+ │    ├── mylib.h
+ │    ├── mylib.c
+ │    └── utils/
+ │         ├── utils.h
+ │         └── utils.c
+ └── ...
+```
+
+Tu peux mettre ce dossier dans le projet, ou bien en dehors (et juste ajouter le chemin).
+
+---
+
+### 2. Ajouter le chemin des includes
+
+* Dans **CubeIDE** :
+
+  * Clique droit sur ton projet → **Properties**
+  * `C/C++ General → Paths and Symbols`
+  * Onglet **Includes** → Ajoute `../Libs` (ou le chemin relatif vers ton dossier).
+
+👉 Tu peux aussi le faire par fichier `CMakeLists.txt` si tu passes par CMake, mais avec CubeIDE standard c’est Eclipse qui gère.
+
+---
+
+### 3. Ajouter les fichiers source
+
+Deux options :
+
+#### ✅ Option 1 : copier directement dans le projet
+
+* Place tes `.c` et `.h` dans `Libs/`
+* Ajoute `Libs/*.c` à la **build configuration** → normalement CubeIDE les compile automatiquement si le dossier est dans l’arborescence du projet.
+
+#### ✅ Option 2 : garder tes libs en dehors du projet
+
+* Dans `Properties → C/C++ Build → Settings → Tool Settings → MCU GCC Compiler → Include paths` → ajoute le chemin vers les headers.
+* Dans `MCU GCC Linker → Libraries` → ajoute le chemin vers la lib compilée (`.a`) si tu veux distribuer une lib précompilée.
+
+---
+
+### 4. Utilisation dans le code
+
+Une fois configuré, tu peux inclure tes headers normalement :
+
+```c
+#include "mylib.h"
+#include "utils/utils.h"
+```
+
+---
+
+### 5. Bonnes pratiques
+
+* **Ne mets pas tes libs dans Core/** → ce dossier est régénéré par CubeMX et risque d’écraser tes fichiers.
+* Si ta lib est utilisée dans plusieurs projets : crée un dépôt Git séparé et ajoute-le comme **submodule**.
+* Si tu distribues une lib compilée (`.a`), garde aussi les headers `.h` dans `Libs/include/`.
+
+---
+
+👉 Veux-tu que je te montre un **exemple minimal** (avec un `mylib.c` + `mylib.h` + config CubeIDE) pour que tu voies comment l’intégrer pas à pas ?
