@@ -51,6 +51,7 @@ uint8_t* imgs[] = { &im1_1, &im2_1, &im3_1, &im4_1, &im5_1, &im6_1, &im7_1, &im8
 
 /* Private function prototypes -----------------------------------------------*/
 void init_MCU(void);
+void init_LCD(void);
 void sync_action(void);
 uint8_t *rand_number_pic(uint32_t value);
 static void Draw_Image(const volatile uint8_t *pbmp, uint32_t color);
@@ -76,11 +77,12 @@ static void MX_ADC1_Init(void);
 int main(void)
 {
 	init_MCU();
+	//init_LCD();
 
 	init_ws2812(&led_strip_mirror, LED_SW1_GPIO_Port, LED_SW1_Pin, 10, 24);
 	init_array(&led_array, 10, 24);
 
-	set_timings(&led_strip_mirror, 3, 5, 5, 2);
+	set_timings(&led_strip_mirror, 1, 3, 2, 2);
 	break_trame(&led_strip_mirror);
 	send_leds(&led_strip_mirror, get_array(&led_array));
 
@@ -93,19 +95,24 @@ int main(void)
   while (1)
   {
 	  //sync_action();
-	  /*
-	  __NOP();
 
-	  HAL_GPIO_TogglePin(LED_SW1_GPIO_Port, LED_SW1_Pin);
-	  send_led_one(&led_strip_mirror);
-	  for(int k = 0; k < 100000; k++){
-		  __NOP();
-	  }
-	  */
 		break_trame(&led_strip_mirror);
 		set_all_RGB(&led_array, 255, 0, 128);
 		send_leds(&led_strip_mirror, get_array(&led_array));
+	  /*
+		break_trame(&led_strip_mirror);
+		set_all_RGB(&led_array, 255, 0, 128);
+		send_leds(&led_strip_mirror, get_array(&led_array));
+		*/
 
+	  /*
+		HAL_GPIO_WritePin(LED_SW1_GPIO_Port, LED_SW1_Pin, GPIO_PIN_SET);
+		HAL_GPIO_WritePin(LED_SW1_GPIO_Port, LED_SW1_Pin, GPIO_PIN_RESET);
+	  for(int k = 0; k < 10; k++)
+		GPIOG->BSRR = GPIO_BSRR_BS11; // met la pin PG11 à 1
+	  for(int k = 0; k < 10; k++)
+		GPIOG->BSRR = GPIO_BSRR_BR11; // met la pin PG11 à 0
+*/
   }
 }
 
@@ -116,8 +123,6 @@ int main(void)
 void init_MCU(void){
 	color_cnt = 0;
 	rand_cnt = 0;
-	uint8_t  sdram_status = SDRAM_OK;
-	uint8_t  lcd_status = LCD_OK;
 
 	/* STM32F4xx HAL library initialization:
 	- Configure the Flash prefetch, instruction and Data caches
@@ -136,6 +141,15 @@ void init_MCU(void){
 
 	MX_GPIO_Init();
 	MX_ADC1_Init();
+}
+
+/**
+  * @brief  Init the LCD screen.
+  * @retval None
+  */
+void init_LCD(void){
+	uint8_t  sdram_status = SDRAM_OK;
+	uint8_t  lcd_status = LCD_OK;
 
 	/*##-1- Initialize the SDRAM ###############################################*/
 	sdram_status = BSP_SDRAM_Init();
@@ -408,11 +422,6 @@ static void SystemClock_Config(void)
   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
-#if defined(USE_STM32469I_DISCO_REVA)
-  RCC_OscInitStruct.PLL.PLLM = 25;
-#else
-  RCC_OscInitStruct.PLL.PLLM = 8;
-#endif /* USE_STM32469I_DISCO_REVA */
   RCC_OscInitStruct.PLL.PLLM = 8;
   RCC_OscInitStruct.PLL.PLLN = 360;
   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
