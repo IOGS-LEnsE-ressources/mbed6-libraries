@@ -18,34 +18,30 @@ void init_ws2812(WS2812 *ws, GPIO_TypeDef* port_name, uint16_t pin_strip, int nb
 	ws->t1l = 0;
 }
 
-void send_led_one(WS2812 *ws){
-	/*
-	GPIOA->BSRR = GPIO_BSRR_BS5; // met la pin PA5 à 1
-	GPIOA->BSRR = GPIO_BSRR_BR5; // met la pin PA5 à 0
-	 */
+void send_led_one(WS2812 *ws, GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin) {
     int k;
-    HAL_GPIO_WritePin(ws->port_name, ws->pin_nb, GPIO_PIN_SET);
-    for(k = 0; k < ws->t1h; k++)
+    GPIOx->BSRR = (uint32_t)GPIO_Pin;	// Pin to 1
+    for (k = 0; k < ws->t1h; k++)
         __NOP();
-    HAL_GPIO_WritePin(ws->port_name, ws->pin_nb, GPIO_PIN_RESET);
-    for(k = 0; k < ws->t1l; k++)
-        __NOP();
+    GPIOx->BSRR = ((uint32_t)GPIO_Pin) << 16;	// Pin to 0
+    for (k = 0; k < ws->t1l; k++)
+    	__NOP();
 }
 
-void send_led_zero(WS2812 *ws){
+void send_led_zero(WS2812 *ws, GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin){
     int k;
-    HAL_GPIO_WritePin(ws->port_name, ws->pin_nb, GPIO_PIN_SET);
-    for(k = 0; k < ws->t0h; k++)
+    GPIOx->BSRR = (uint32_t)GPIO_Pin;	// Pin to 1
+    for (k = 0; k < ws->t0h; k++)
         __NOP();
-    HAL_GPIO_WritePin(ws->port_name, ws->pin_nb, GPIO_PIN_RESET);
-    for(k = 0; k < ws->t0l; k++)
-        __NOP();
+    GPIOx->BSRR = ((uint32_t)GPIO_Pin) << 16;	// Pin to 0
+    for (k = 0; k < ws->t0l; k++)
+    	__NOP();
 }
 
 // Break function
 void break_trame(WS2812 *ws){
     HAL_GPIO_WritePin(ws->port_name, ws->pin_nb, GPIO_PIN_RESET);
-    for(int wk = 0; wk < 10000; wk++){		// To test for 100us ??
+    for(int wk = 0; wk < 100000; wk++){		// To test for 100us ??
     	__NOP();
     }
 }
@@ -54,9 +50,9 @@ void send_led_trame(WS2812 *ws, int cl){
 	uint32_t mask = 1U << (ws->__nb_bits - 1);  // bit le plus significatif
 	for (int k = 0; k < ws->__nb_bits; k++) {
 	    if (cl & mask) {
-	        send_led_one(ws);
+	        send_led_one(ws, ws->port_name, ws->pin_nb);
 	    } else {
-	        send_led_zero(ws);
+	        send_led_zero(ws, ws->port_name, ws->pin_nb);
 	    }
 	    mask >>= 1;  // décale le masque à droite
 	}

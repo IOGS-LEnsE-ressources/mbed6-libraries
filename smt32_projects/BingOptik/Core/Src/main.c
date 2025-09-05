@@ -76,43 +76,50 @@ static void MX_ADC1_Init(void);
   */
 int main(void)
 {
+	int k;
 	init_MCU();
 	//init_LCD();
 
-	init_ws2812(&led_strip_mirror, LED_SW1_GPIO_Port, LED_SW1_Pin, 10, 24);
-	init_array(&led_array, 10, 24);
+	init_ws2812(&led_strip_mirror, LED_SW1_GPIO_Port, LED_SW2_Pin, 32, 24);
+	init_array(&led_array, 32, 24);
 
-	set_timings(&led_strip_mirror, 1, 3, 2, 2);
+	set_timings(&led_strip_mirror, 3, 6, 6, 4);
 	break_trame(&led_strip_mirror);
-	send_leds(&led_strip_mirror, get_array(&led_array));
-
+	blackout(&led_strip_mirror);
+	/*
 	break_trame(&led_strip_mirror);
 	set_all_RGB(&led_array, 255, 0, 128);
 	send_leds(&led_strip_mirror, get_array(&led_array));
-
+	 */
 	/* START !! */
-  /* Infinite loop */
-  while (1)
-  {
-	  //sync_action();
-
+	/* Infinite loop */
+	while (1)
+	{
+		//sync_action();
+		/*
 		break_trame(&led_strip_mirror);
-		set_all_RGB(&led_array, 255, 0, 128);
-		send_leds(&led_strip_mirror, get_array(&led_array));
-	  /*
-		break_trame(&led_strip_mirror);
-		set_all_RGB(&led_array, 255, 0, 128);
+		set_all_RGB(&led_array, 0, 0, 128);
 		send_leds(&led_strip_mirror, get_array(&led_array));
 		*/
+		for(k = 0; k < 10000000; k++)
+			__NOP();
+		break_trame(&led_strip_mirror);
+		set_all_RGB(&led_array, 255, 0, 128);
+		send_leds(&led_strip_mirror, get_array(&led_array));
+		for(k = 0; k < 10000000; k++)
+			__NOP();
+		break_trame(&led_strip_mirror);
+		set_all_RGB(&led_array, 0, 128, 0);
+		send_leds(&led_strip_mirror, get_array(&led_array));
 
-	  /*
+		/*
 		HAL_GPIO_WritePin(LED_SW1_GPIO_Port, LED_SW1_Pin, GPIO_PIN_SET);
 		HAL_GPIO_WritePin(LED_SW1_GPIO_Port, LED_SW1_Pin, GPIO_PIN_RESET);
-	  for(int k = 0; k < 10; k++)
-		GPIOG->BSRR = GPIO_BSRR_BS11; // met la pin PG11 à 1
-	  for(int k = 0; k < 10; k++)
-		GPIOG->BSRR = GPIO_BSRR_BR11; // met la pin PG11 à 0
-*/
+		for(int k = 0; k < 10; k++)
+			GPIOG->BSRR = GPIO_BSRR_BS11; // met la pin PG11 à 1
+		for(int k = 0; k < 10; k++)
+			GPIOG->BSRR = GPIO_BSRR_BR11; // met la pin PG11 à 0
+		*/
   }
 }
 

@@ -54,9 +54,9 @@ void init_ws2812(WS2812 *ws, GPIO_TypeDef* port_name, uint16_t pin_strip, int nb
 /* Setup the timings values */
 void set_timings(WS2812 *ws, int t0h, int t0l, int t1h, int t1l);
 /* Bit of value equal to 1 */
-void send_led_one(WS2812 *ws);
+void send_led_one(WS2812 *ws, GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin);
 /* Bit of value equal to 0 */
-void send_led_zero(WS2812 *ws);
+void send_led_zero(WS2812 *ws, GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin);
 /* Break function between two trames */
 void break_trame(WS2812 *ws);
 /* Send trame to a led */
