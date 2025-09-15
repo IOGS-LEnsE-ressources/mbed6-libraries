@@ -78,7 +78,7 @@ int main(void)
 {
 	int k;
 	init_MCU();
-	//init_LCD();
+	init_LCD();
 
 	init_ws2812(&led_strip_mirror, LED_SW1_GPIO_Port, LED_SW2_Pin, 32, 24);
 	init_array(&led_array, 32, 24);
