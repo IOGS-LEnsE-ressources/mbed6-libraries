@@ -1,6 +1,4 @@
-Super question 👌 C’est **l’étape clé** pour garder ton projet STM32CubeIDE propre tout en réutilisant ton code perso (librairies maison, drivers spécifiques, algos, etc.).
 
----
 
 # 🔹 Étapes pour intégrer une bibliothèque dans STM32CubeIDE
 
