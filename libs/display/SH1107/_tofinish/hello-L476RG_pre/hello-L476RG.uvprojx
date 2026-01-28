@@ -16,7 +16,7 @@
         <TargetCommonOption>
           <Device>STM32L476RGTx</Device>
           <Vendor>STMicroelectronics</Vendor>
-          <PackID>Keil.STM32L4xx_DFP.3.0.0</PackID>
+          <PackID>Keil.STM32L4xx_DFP.3.1.0</PackID>
           <PackURL>https://www.keil.com/pack/</PackURL>
           <Cpu>CPUTYPE("Cortex-M4") FPU2</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
@@ -2210,14 +2210,14 @@
           <GroupName>hello-L476RG</GroupName>
           <Files>
             <File>
-              <FileName>main.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>./main.cpp</FilePath>
-            </File>
-            <File>
               <FileName>mbed_config.h</FileName>
               <FileType>5</FileType>
               <FilePath>mbed_config.h</FilePath>
+            </File>
+            <File>
+              <FileName>test_2.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\test_2.cpp</FilePath>
             </File>
           </Files>
         </Group>
@@ -3468,6 +3468,43 @@
         </Group>
         <Group>
           <GroupName>libs</GroupName>
+          <Files>
+            <File>
+              <FileName>sh1107.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\libs\sh1107.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>sh1107.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\libs\sh1107.h</FilePath>
+            </File>
+            <File>
+              <FileName>sh1107_constants.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\libs\sh1107_constants.h</FilePath>
+            </File>
+            <File>
+              <FileName>font.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\libs\font.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>font.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\libs\font.h</FilePath>
+            </File>
+            <File>
+              <FileName>LCD_graphics.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\libs\LCD_graphics.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>LCD_graphics.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\libs\LCD_graphics.h</FilePath>
+            </File>
+          </Files>
         </Group>
       </Groups>
     </Target>
