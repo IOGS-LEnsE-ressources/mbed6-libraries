@@ -17,20 +17,20 @@ void WS2812::send_led_one(){
     int k;
     this->__ws_led = 1;
     for(k = 0; k < this->t1h; k++)
-        __nop();
+        __asm__("nop");
     this->__ws_led = 0;
     for(k = 0; k < this->t1l; k++)
-        __nop();
+        __asm__("nop");
 }
 
 void WS2812::send_led_zero(){
     int k;
     this->__ws_led = 1;  
     for(k = 0; k < 6; k++)  // Attention, pb avec this->t0h !!
-        __nop();
+        __asm__("nop");
     this->__ws_led = 0;
     for(k = 0; k < this->t0l; k++)
-        __nop();
+        __asm__("nop");
 }
 
 // Break function
