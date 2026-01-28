@@ -32,7 +32,7 @@ class SH1107 : public LCD_graphics {
     private:
 	    /// The memory buffer for the LCD
 	    std::vector<uint8_t> __buffer;
-        uint16_t    __buff_size;
+      uint16_t    __buff_size;
 
         /// I2C interface 
         I2C			*__i2c;
@@ -42,11 +42,19 @@ class SH1107 : public LCD_graphics {
 		uint16_t		__height;
 		
         /**
-        * @brief Send a data of 8 bits to the driver.
+        * @brief Send a command of 8 bits to the driver.
         * @param cmd char - Command to send, 1 byte.
         * @return bool - True if acknowledgement is done.
 		*/		
-		bool	send_command(char cmd);
+		bool	send_command(uint8_t cmd);
+		
+        /**
+        * @brief Send a list of commands of 8 bits to the driver.
+        * @param cmds char* - Pointer to a table of Commands to send, 1 byte/cmd.
+        * @param size uint16_t - Number of data to send.
+        * @return bool - True if acknowledgement is done.
+		*/			
+		bool send_command_list(uint8_t* cmds, uint16_t size);
 		
         /**
         * @brief Send a data of 8 bits to the driver.
@@ -54,10 +62,16 @@ class SH1107 : public LCD_graphics {
         * @param size uint16_t - Number of data to send.
         * @return bool - True if acknowledgement is done.
 		*/		
-		bool	send_data(char* data, uint16_t size);
+		bool	send_data(uint8_t* data, uint16_t size);
+		
+		
+		/**
+    * @brief Clear the buffer
+		*/			
+		void 	clear_buffer();
 				
 		/**
-        * @brief Check if the coordinates are in the range of the screen size
+    * @brief Check if the coordinates are in the range of the screen size
 		* @param x  uint16_t - coordinate on X axis
 		* @param y 	uint16_t - coordinate on Y axis
 		* @return true if is in the range of the screen size

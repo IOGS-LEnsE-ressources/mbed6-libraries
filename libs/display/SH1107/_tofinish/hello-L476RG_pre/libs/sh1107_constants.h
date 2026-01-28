@@ -24,6 +24,8 @@
 #define 	SSD_I2C_FREQ		100000
 
 #define     SH_I2C_ADDRESS     0x3C
+#define		SH_I2C_CMD		0x00
+#define		SH_I2C_DATA		0x40
 
 
   // Colors
@@ -62,8 +64,7 @@
 #define SH1107_SETPRECHARGE 0xD9       ///< See datasheet
 #define SH1107_SETCOMPINS 0xDA         ///< See datasheet
 #define SH1107_SETVCOMDETECT 0xDB      ///< See datasheet
-#define SH1107_SETDISPSTARTLINE                                                \
-  0xDC ///< Specify Column address to determine the initial display line or
+#define SH1107_SETDISPSTARTLINE      0xDC ///< Specify Column address to determine the initial display line or
        ///< COM0.
 
 #define SH1107_SETLOWCOLUMN 0x00  ///< Not currently used

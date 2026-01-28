@@ -24,7 +24,7 @@ Ticker controlLoopTik;
 
 
 I2C         my_i2c(PB_9, PB_8);
-SH1107	    my_lcd(&my_i2c, MAX_X, MAX_Y);
+SH1107	    my_lcd(&my_i2c, MAX_Y, MAX_X);
 
 
 /* Methods */
@@ -49,19 +49,29 @@ int main()
 {
   // Initialization 
   printf("OLED M5 SH1107 / LCD Screen / Initialization\r\n");
+	/// almost 100 ms after power on Screen
+	thread_sleep_for(200);
+	/// Init LCD
 	bool ack = my_lcd.init();
 	printf("\t\tInit OK ? %d \r\n", ack); 
-	//ack = my_lcd.clear_screen();
+	ack = my_lcd.clear_screen();
 	printf("\t\tClear OK ? %d \r\n", ack); 
   printf("\tEND Initialization\r\n");
 	
 	thread_sleep_for(100);
 	ack = my_lcd.display_on();
 	printf("\t\tOn OK ? %d \r\n", ack); 
-  
+	
 	/*
   my_lcd.set_position(10, 50);
-  my_lcd.draw_char('a', ST7735_BLUE, NORMAL);
+  my_lcd.draw_char('a', SH1107_WHITE, NORMAL);
+	my_lcd.draw_line(30, 50, 100, 40, SH1107_WHITE);
+	my_lcd.draw_line(30, 50, 20, 60, SH1107_WHITE);
+	*/
+	ack = my_lcd.display();
+	printf("\t\tDisplay OK ? %d \r\n", ack); 
+  
+	/*
   my_lcd.set_position(80, 100);
 	my_lcd.draw_char('V', ST7735_GREEN, NORMAL);
 
@@ -69,8 +79,6 @@ int main()
         my_lcd.draw_string("Test LCD", ST7735_GREEN, NORMAL);
     }
     
-    my_lcd.draw_line(30, 50, 100, 40, ST7735_DONT_KNOW);
-    my_lcd.draw_line(30, 50, 20, 60, ST7735_BLUE);
 
     my_lcd.draw_rect(50, 50, 20, 30, ST7735_GREEN);
     my_lcd.fill_rect(55, 55, 10, 20, ST7735_BLUE);
