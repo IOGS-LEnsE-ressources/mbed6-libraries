@@ -3,17 +3,19 @@
 // === Pins I2C ===
 I2C i2c(I2C_SDA, I2C_SCL);
 const int OLED_ADDR = 0x3C << 1;  // adresse I2C
+const int I2C_FREQ = 400000;
 
 // === Écran ===
 #define WIDTH 128     // colonnes visibles
 #define HEIGHT 64
-#define PAGES (HEIGHT/8)
+#define PAGES (HEIGHT)/8
 uint8_t buffer[WIDTH * PAGES];  // framebuffer
 
 // === Commandes I2C ===
-void send_command(uint8_t cmd) {
+bool send_command(uint8_t cmd) {
     char data[2] = {0x00, cmd};
-    i2c.write(OLED_ADDR, data, 2);
+		bool ack = i2c.write(OLED_ADDR, data, 2);
+    return ack;
 }
 
 void send_data(uint8_t *data_ptr, size_t length) {
@@ -24,28 +26,30 @@ void send_data(uint8_t *data_ptr, size_t length) {
 }
 
 // === Initialisation minimale SH1107 ===
-void sh1107_init() {
-	i2c.frequency(400000);
-    thread_sleep_for(100);
-
-    send_command(0xAE);               // Display OFF
-    send_command(0xD5); send_command(0x50); // Clock
-    send_command(0xA8); send_command(0x3F); // Multiplex 64
-    send_command(0xD3); send_command(0x00); // Display offset
-    send_command(0x40);               // Start line
-    send_command(0xAD); send_command(0x8A); // Internal DC/DC
-    send_command(0x20); send_command(0x00); // Page addressing mode
-    send_command(0xA1);               // Segment remap
-    send_command(0xC8);               // COM scan direction
-    send_command(0xDA); send_command(0x12); // COM pins
-    send_command(0x81); send_command(0x80); // Contrast
-    send_command(0xD9); send_command(0x22); // Precharge
-    send_command(0xDB); send_command(0x35); // VCOMH
-    send_command(0xA4);               // Resume RAM display
-    send_command(0xA6);               // Normal display
-    send_command(0xAF);               // Display ON
-
-    thread_sleep_for(100);
+bool sh1107_init() {
+	i2c.frequency(I2C_FREQ);
+  thread_sleep_for(200);
+	bool ack = true;
+	ack = ack && send_command(0xAE);               // Display OFF
+	/*
+	ack = ack && send_command(0xD5); ack = ack && send_command(0x50); // Clock
+	ack = ack && send_command(0xA8); ack = ack && send_command(0x3F); // Multiplex 64
+	send_command(0xD3); send_command(0x00); // Display offset
+	send_command(0x40);               // Start line
+	send_command(0xAD); send_command(0x8A); // Internal DC/DC
+	send_command(0x20); send_command(0x00); // Page addressing mode
+	send_command(0xA1);               // Segment remap
+	send_command(0xC8);               // COM scan direction
+	send_command(0xDA); send_command(0x12); // COM pins
+	send_command(0x81); send_command(0xF0); // Contrast
+	send_command(0xD9); send_command(0x22); // Precharge
+	send_command(0xDB); send_command(0x35); // VCOMH
+	send_command(0xA4);               // Resume RAM display
+	send_command(0xA6);               // Normal display
+	send_command(0xAF);               // Display ON
+	*/
+	thread_sleep_for(100);
+	return ack;
 }
 
 // === Dessiner un pixel dans le framebuffer ===
@@ -82,26 +86,30 @@ void update_screen() {
 
 // === Effacer l'écran ===
 void clear_screen(bool color = false) {
-  memset(buffer, color ? 0xFF : 0x00, sizeof(buffer));
+	for(int k = 0; k < sizeof(buffer); k++) buffer[k] = color ? 0xFF : 0x00;
 	update_screen();
 }
 
 
 // === Exemple Main ===
 int main() {
-	sh1107_init();
+	bool ack_ = sh1107_init();
+	printf("Init ? %d \r\n", ack_);
 
 	// Effacer écran noir
-	clear_screen();
-	int start = 0*64;
-	int end = 0*64 + 32;
-	for(int i = start; i < end; i++){
-		buffer[i] = 0xAA;
+	//clear_screen();
+	thread_sleep_for(200);
+	for(int k = 0; k < 32; k++){
+		int start = k*64;
+		int end = k*64 + 32;
+		for(int i = start; i < end; i++){
+			buffer[i] = 0xAA;
+		}
+		for(int i = start+32; i < end+32; i++){
+			buffer[i] = 0x55;
+		}
 	}
-	for(int i = start+32; i < end+32; i++){
-		buffer[i] = 0x55;
-	}
-		update_screen();
+	update_screen();
 
 	while (1) {
 		// boucle vide, écran reste affiché

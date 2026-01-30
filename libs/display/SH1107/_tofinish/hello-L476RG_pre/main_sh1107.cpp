@@ -22,7 +22,6 @@
 /// Inputs/outputs declaration 
 Ticker controlLoopTik;
 
-
 I2C         my_i2c(PB_9, PB_8);
 SH1107	    my_lcd(&my_i2c, MAX_Y, MAX_X);
 
@@ -54,6 +53,7 @@ int main()
 	/// Init LCD
 	bool ack = my_lcd.init();
 	printf("\t\tInit OK ? %d \r\n", ack); 
+	/*
 	ack = my_lcd.clear_screen();
 	printf("\t\tClear OK ? %d \r\n", ack); 
   printf("\tEND Initialization\r\n");
@@ -61,16 +61,19 @@ int main()
 	thread_sleep_for(100);
 	ack = my_lcd.display_on();
 	printf("\t\tOn OK ? %d \r\n", ack); 
-	
+	*/
 	/*
   my_lcd.set_position(10, 50);
   my_lcd.draw_char('a', SH1107_WHITE, NORMAL);
 	my_lcd.draw_line(30, 50, 100, 40, SH1107_WHITE);
 	my_lcd.draw_line(30, 50, 20, 60, SH1107_WHITE);
+	
 	*/
+	/*
+	my_lcd.draw_rect(0, 0, 128, 128, SH1107_WHITE);
 	ack = my_lcd.display();
 	printf("\t\tDisplay OK ? %d \r\n", ack); 
-  
+  */
 	/*
   my_lcd.set_position(80, 100);
 	my_lcd.draw_char('V', ST7735_GREEN, NORMAL);

@@ -21,9 +21,9 @@
   #define SH1107_SUCCESS        true
   #define SH1107_ERROR          false
 
-#define 	SSD_I2C_FREQ		100000
+#define 	SSD_I2C_FREQ		400000
 
-#define     SH_I2C_ADDRESS     0x3C
+#define   SH_I2C_ADDRESS     0x3C
 #define		SH_I2C_CMD		0x00
 #define		SH_I2C_DATA		0x40
 
@@ -35,8 +35,8 @@
 
   // AREA definition
   // -----------------------------------
-  #define MAX_X                 128               // max columns / MV = 0 in MADCTL
-  #define MAX_Y                 64                // max rows / MV = 0 in MADCTL
+  #define MAX_X                 64               // max columns / MV = 0 in MADCTL
+  #define MAX_Y                 128                // max rows / MV = 0 in MADCTL
   #define SIZE_X                MAX_X - 1         // columns max counter
   #define SIZE_Y                MAX_Y - 1         // rows max counter
   #define CACHE_SIZE_MEM        (MAX_X * MAX_Y)   // whole pixels

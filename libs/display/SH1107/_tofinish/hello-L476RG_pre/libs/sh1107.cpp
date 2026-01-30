@@ -23,7 +23,7 @@ SH1107::SH1107(I2C *i2c, uint16_t width, uint16_t height){
 	this->__width = width;
 	this->__height = height;
   /// Set the good size for the data buffer
-  this->__buff_size = this->__height * this->__width / 8;
+  this->__buff_size = this->__height * (this->__width + 7) / 8;
   this->__buffer.resize(this->__buff_size);
 	this->clear_buffer();
 	/// Initialization of the SPI interface
@@ -45,18 +45,20 @@ void SH1107::clear_buffer()
 bool	SH1107::init(void){
 	uint8_t data[2];
 	bool ack = true;
-  ack = ack && this->send_command(SH1107_DISPLAYOFF);
-	// 
+	ack = ack && this->send_command(SH1107_DISPLAYOFF);
+  /*
 	data[0] = SH1107_SETDISPLAYCLOCKDIV;
 	data[1] = 0x50;
-  ack = ack && this->send_command_list(data, 2);
+	ack = ack && this->send_command_list(data, 2);
 	data[0] = SH1107_SETMULTIPLEX;
 	data[1] = 0x3F;
   ack = ack && this->send_command_list(data, 2);
+	*/
 	data[0] = SH1107_SETDISPLAYOFFSET;
 	data[1] = 0x00;
   ack = ack && this->send_command_list(data, 2);
 	ack = ack && this->send_command(SH1107_SETSTARTLINE);
+	/*
 	data[0] = SH1107_DCDC;
 	data[1] = 0x8A;
   ack = ack && this->send_command_list(data, 2);
@@ -79,7 +81,27 @@ bool	SH1107::init(void){
 	ack = ack && this->send_command(SH1107_DISPLAYALLON_RESUME);
 	ack = ack && this->send_command(SH1107_NORMALDISPLAY);
 	ack = ack && this->send_command(SH1107_DISPLAYON);
-	
+	*/
+	/*
+	this->send_command(0xAE);               // Display OFF
+	thread_sleep_for(1);
+	this->send_command(0xD5); this->send_command(0x50); // Clock
+	this->send_command(0xA8); this->send_command(0x3F); // Multiplex 64
+	this->send_command(0xD3); this->send_command(0x00); // Display offset
+	this->send_command(0x40);               // Start line
+	this->send_command(0xAD); this->send_command(0x8A); // Internal DC/DC
+	this->send_command(0x20); this->send_command(0x00); // Page addressing mode
+	this->send_command(0xA1);               // Segment remap
+	this->send_command(0xC8);               // COM scan direction
+	this->send_command(0xDA); this->send_command(0x12); // COM pins
+	this->send_command(0x81); this->send_command(0x80); // Contrast
+	this->send_command(0xD9); this->send_command(0x22); // Precharge
+	this->send_command(0xDB); this->send_command(0x35); // VCOMH
+	this->send_command(0xA4);               // Resume RAM display
+	this->send_command(0xA6);               // Normal display
+	thread_sleep_for(1);
+	this->send_command(0xAF);               // Display ON
+	*/
   return ack;
 }
 
@@ -118,38 +140,43 @@ void    SH1107::invertDisplay(bool i)
  **************************************************************/
 
 bool SH1107::send_command(uint8_t cmd){
-	int ack;
+	int ack = 0;
 	char data[2];
-	data[0] = 0;
+	data[0] = SH_I2C_CMD;
 	data[1] = cmd;
-	ack = this->__i2c->write(SH_I2C_ADDRESS << 1, data, 2);
+	ack += this->__i2c->write(SH_I2C_ADDRESS << 1, data, 2);
   return  (ack == 0) ? SH1107_SUCCESS : SH1107_ERROR;
 }
 
 bool SH1107::send_command_list(uint8_t* cmds, uint16_t size){
-	bool ack = SH1107_SUCCESS;
-	ack = ack && this->__i2c->write(SH_I2C_ADDRESS << 1);
-	ack = ack && this->__i2c->write(SH_I2C_CMD);
+	bool ack = true;
+	int test = this->__i2c->write(SH_I2C_ADDRESS << 1);
+	printf("\tTT-ACK = %d \r\n", test);
+	ack = ack && (this->__i2c->write(SH_I2C_ADDRESS << 1) == 1) ? SH1107_SUCCESS : SH1107_ERROR;
+	printf("\tD-ACK = %d \r\n", ack);
+	ack = ack && (this->__i2c->write(SH_I2C_CMD) == 1) ? SH1107_SUCCESS : SH1107_ERROR;
+	printf("\tD-ACK = %d \r\n", ack);
 	for (int i = 0; i < size; i++){
-		ack = ack && this->__i2c->write(cmds[i]);
+		ack = ack && (this->__i2c->write(cmds[i]) == 1) ? SH1107_SUCCESS : SH1107_ERROR;
+		printf("\tD-ACK = %d \r\n", ack);
 	}
   return ack;
 }
 
 bool 	SH1107::send_data(uint8_t* data, uint16_t size)
-{
-	bool ack = SH1107_SUCCESS;
-	ack = ack && this->__i2c->write(SH_I2C_ADDRESS << 1);
-	ack = ack && this->__i2c->write(SH_I2C_DATA);
+{	
+	int ack = 0;
+	ack += this->__i2c->write(SH_I2C_ADDRESS << 1);
+	ack += this->__i2c->write(SH_I2C_DATA);
 	for (int i = 0; i < size; i++){
-		ack = ack && this->__i2c->write(data[i]);
+		ack += this->__i2c->write(data[i]);
 	}
-  return ack;
+  return  (ack == 0) ? SH1107_SUCCESS : SH1107_ERROR;
 }
 
 bool    SH1107::display(){
   bool ack = true;
-	uint8_t pages = this->	__height / 8;
+	uint8_t pages = (this->__height)/ 8;
 	for (uint8_t page = 0; page < pages; page++)
 	{
 			ack = ack && this->send_command(0xB0 + page);  // Page
