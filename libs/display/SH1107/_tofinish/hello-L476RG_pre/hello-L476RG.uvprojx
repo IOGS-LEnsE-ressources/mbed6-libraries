@@ -2215,9 +2215,9 @@
               <FilePath>mbed_config.h</FilePath>
             </File>
             <File>
-              <FileName>test_.cpp</FileName>
+              <FileName>test_2.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\test_.cpp</FilePath>
+              <FilePath>.\test_2.cpp</FilePath>
             </File>
           </Files>
         </Group>

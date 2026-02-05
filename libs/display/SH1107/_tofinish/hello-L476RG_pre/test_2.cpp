@@ -33,7 +33,6 @@ bool sh1107_init() {
   thread_sleep_for(200);
 	bool ack = true;
 	ack = ack && send_command(0xAE);               // Display OFF
-	/*
 	ack = ack && send_command(0xD5); ack = ack && send_command(0x50); // Clock
 	ack = ack && send_command(0xA8); ack = ack && send_command(0x3F); // Multiplex 64
 	send_command(0xD3); send_command(0x00); // Display offset
@@ -48,7 +47,6 @@ bool sh1107_init() {
 	send_command(0xDB); send_command(0x35); // VCOMH
 	send_command(0xA4);               // Resume RAM display
 	send_command(0xA6);               // Normal display
-	*/
 	send_command(0xAF);               // Display ON
 	thread_sleep_for(100);
 	return ack;
