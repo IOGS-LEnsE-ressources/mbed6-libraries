@@ -1,0 +1,257 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include "pico/stdlib.h"
+#include "pico/binary_info.h"
+#include "hardware/i2c.h"
+#include "raspberry26x32.h"
+#include "ssd1306_font.h"
+
+/*
+   GPIO PICO_DEFAULT_I2C_SDA_PIN (on Pico this is GP4 (pin 6)) -> SDA on display
+   board
+   GPIO PICO_DEFAULT_I2C_SCL_PIN (on Pico this is GP5 (pin 7)) -> SCL on
+   display board
+   3.3v (pin 36) -> VCC on display board
+   GND (pin 38)  -> GND on display board
+*/
+
+// Define the size of the display we have attached. This can vary, make sure you
+// have the right size defined or the output will look rather odd!
+// Code has been tested on 128x32 and 128x64 OLED displays
+#define SH1107_HEIGHT			128
+#define SH1107_WIDTH			64
+
+#define SH1107_I2C_ADDR			_u(0x3C)
+
+// 400 is usual, but often these can be overclocked to improve display response.
+// Tested at 1000 on both 32 and 84 pixel height devices and it worked.
+#define SH1107_I2C_CLK			400
+
+#define SH1107_BLACK			0 // draw black pixel
+#define SH1107_WHITE			1 // draw white pixel
+#define SH1107_INVERSE			2 // invert pixels
+
+// commands (see datasheet)
+#define SH1107_SET_MEM_MODE		_u(0x20)
+#define SH1107_SET_COL_ADDR		_u(0x21)
+#define SH1107_SET_PAGE_ADDR		_u(0xB0)
+#define SH1107_SET_LOW_COL		_u(0x00)
+#define SH1107_SET_HIGH_COL		_u(0x10)
+#define SH1107_SET_START_LINE		_u(0x40)
+#define SH1107_SET_CONTRAST		_u(0x81)
+#define SH1107_SET_CHARGE_PUMP		_u(0x8D)
+#define SH1107_SET_SEG_REMAP		_u(0xA0)
+#define SH1107_SET_ENTIRE_ON		_u(0xA4)
+#define SH1107_SET_ALL_ON		_u(0xA5)
+#define SH1107_SET_NORM_DISP		_u(0xA6)
+#define SH1107_SET_INV_DISP		_u(0xA7)
+#define SH1107_SET_MUX_RATIO		_u(0xA8)
+#define SH1107_SET_DISP_OFF		_u(0xAE)
+#define SH1107_SET_DCDC			_u(0xAD)
+#define SH1107_SET_DISP_ON		_u(0xAF)
+#define SH1107_SET_COM_OUT_DIR		_u(0xC0)
+#define SH1107_SET_DISP_OFFSET		_u(0xD3)
+#define SH1107_SET_DISP_CLK_DIV		_u(0xD5)
+#define SH1107_SET_PRECHARGE		_u(0xD9)
+#define SH1107_SET_COM_PIN_CFG		_u(0xDA)
+#define SH1107_SET_VCOM_DESEL		_u(0xDB)
+#define SH1107_SET_DISP_START_LINE	_u(0xDC)
+#define SH1107_PAGE_HEIGHT		_u(8)
+#define SH1107_NUM_PAGES		(SH1107_HEIGHT / SH1107_PAGE_HEIGHT)
+#define SH1107_BUF_LEN			(SH1107_NUM_PAGES * SH1107_WIDTH)
+
+struct render_area {
+    uint8_t start_col;
+    uint8_t end_col;
+    uint8_t start_page;
+    uint8_t end_page;
+
+    int buflen;
+};
+
+void calc_render_area_buflen(struct render_area *area) {
+    // calculate how long the flattened buffer will be for a render area
+    area->buflen = (area->end_col - area->start_col + 1) * (area->end_page - area->start_page + 1);
+}
+
+#ifdef i2c_default
+
+void SH1107_send_cmd(uint8_t cmd) {
+    // I2C write process expects a control byte followed by data
+    // this "data" can be a command or data to follow up a command
+    // Co = 1, D/C = 0 => the driver expects a command
+    uint8_t buf[2] = {0x80, cmd};
+    i2c_write_blocking(i2c_default, SH1107_I2C_ADDR, buf, 2, false);
+}
+
+void SH1107_send_cmd_list(uint8_t *buf, int num) {
+    for (int i=0;i<num;i++)
+        SH1107_send_cmd(buf[i]);
+}
+
+void SH1107_send_buf(uint8_t buf[], int buflen) {
+    // in horizontal addressing mode, the column address pointer auto-increments
+    // and then wraps around to the next page, so we can send the entire frame
+    // buffer in one gooooooo!
+
+    // copy our frame buffer into a new buffer because we need to add the control byte
+    // to the beginning
+
+    uint8_t *temp_buf = malloc(buflen + 1);
+
+    temp_buf[0] = 0x40;
+    memcpy(temp_buf+1, buf, buflen);
+
+    i2c_write_blocking(i2c_default, SH1107_I2C_ADDR, temp_buf, buflen + 1, false);
+
+    free(temp_buf);
+}
+
+void SH1107_init() {
+	// Some of these commands are not strictly necessary as the reset
+	// process defaults to some of these but they are shown here
+	// to demonstrate what the initialization sequence looks like
+	// Some configuration values are recommended by the board manufacturer
+
+	// Init sequence got from SSD1306, modified
+	uint8_t cmds[] = {
+		SH1107_SET_DISP_OFF,
+		SH1107_SET_MEM_MODE		|	0x00,
+		SH1107_SET_DISP_START_LINE	|	0x00,
+		SH1107_SET_SEG_REMAP,
+		SH1107_SET_MUX_RATIO		|	0x7F,
+		SH1107_HEIGHT -1,
+		SH1107_SET_COM_OUT_DIR		|	0x08,
+		SH1107_SET_DISP_OFFSET		|	0x00,
+		SH1107_SET_DISP_CLK_DIV		|	0x80,
+		SH1107_SET_PRECHARGE		|	0xF1,
+		SH1107_SET_VCOM_DESEL		|	0x30,
+		SH1107_SET_CONTRAST		|	0xFF,
+		SH1107_SET_DCDC			|	0x81,
+		SH1107_SET_ENTIRE_ON,
+		SH1107_SET_NORM_DISP,
+		SH1107_SET_CHARGE_PUMP		|	0x14,
+		SH1107_SET_DISP_ON,
+	};
+	SH1107_send_cmd_list(cmds, count_of(cmds));
+}
+
+void render(uint8_t *buf, struct render_area *area) {
+    // update a portion of the display with a render area
+    uint8_t cmds[] = {
+        SH1107_SET_COL_ADDR,
+        area->start_col,
+        area->end_col,
+        SH1107_SET_PAGE_ADDR,
+        area->start_page,
+        area->end_page
+    };
+
+    SH1107_send_cmd_list(cmds, count_of(cmds));
+    SH1107_send_buf(buf, area->buflen);
+}
+
+// Draw Pixel yoinked from adafruit
+static void SetPixel(int16_t x, int16_t y) {
+	uint8_t buf[x + (y / 8) * SH1107_WIDTH]; //|= (1 << (y & 7));
+}
+
+static inline int GetFontIndex(uint8_t ch) {
+    if (ch >= 'A' && ch <='Z') {
+        return  ch - 'A' + 1;
+    }
+    else if (ch >= '0' && ch <='9') {
+        return  ch - '0' + 27;
+    }
+    else return  0; // Not got that char so space.
+}
+
+static void WriteChar(uint8_t *buf, int16_t x, int16_t y, uint8_t ch) {
+    if (x > SH1107_WIDTH - 8 || y > SH1107_HEIGHT - 8)
+        return;
+
+    // For the moment, only write on Y row boundaries (every 8 vertical pixels)
+    y = y/8;
+
+    ch = toupper(ch);
+    int idx = GetFontIndex(ch);
+    int fb_idx = y * 128 + x;
+
+    for (int i=0;i<8;i++) {
+        buf[fb_idx++] = font[idx * 8 + i];
+    }
+}
+
+static void WriteString(uint8_t *buf, int16_t x, int16_t y, char *str) {
+    // Cull out any string off the screen
+    if (x > SH1107_WIDTH - 8 || y > SH1107_HEIGHT - 8)
+        return;
+
+    while (*str) {
+        WriteChar(buf, x, y, *str++);
+        x+=8;
+    }
+}
+
+#endif
+
+void SH1107_clearDisplay(void) {
+	uint8_t buf[SH1107_BUF_LEN];
+	memset (buf, 0, SH1107_WIDTH * ((SH1107_HEIGHT + 7) / 8));
+	struct render_area frame_area = {
+		start_col: 0,
+		end_col: SH1107_WIDTH -1,
+		start_page: 0,
+		end_page: SH1107_NUM_PAGES -1
+	};
+	render(buf, &frame_area);
+}
+
+int main() {
+	stdio_init_all();
+	// I2C is "open drain", pull ups to keep signal high when no data is being
+	// sent
+	i2c_init(i2c_default, SH1107_I2C_CLK * 1000);
+	gpio_set_function(PICO_DEFAULT_I2C_SDA_PIN, GPIO_FUNC_I2C);
+	gpio_set_function(PICO_DEFAULT_I2C_SCL_PIN, GPIO_FUNC_I2C);
+	gpio_pull_up(PICO_DEFAULT_I2C_SDA_PIN);
+	gpio_pull_up(PICO_DEFAULT_I2C_SCL_PIN);
+	// run through the complete initialization process
+	SH1107_init();
+	// Initialize render area for entire frame (SH1107_WIDTH pixels by SH1107_NUM_PAGES pages)
+	struct render_area frame_area = {
+		start_col: 0,
+		end_col : SH1107_WIDTH -1,
+		start_page : 0,
+        	end_page : SH1107_NUM_PAGES -1
+	};
+
+	calc_render_area_buflen(&frame_area);
+
+	// zero the entire display
+	uint8_t buf[SH1107_BUF_LEN];
+	memset(buf, 0, SH1107_BUF_LEN);
+	render(buf, &frame_area);
+
+	// intro sequence: flash the screen 3 times
+	for (int i = 0; i < 3; i++) {
+		SH1107_send_cmd(SH1107_SET_ALL_ON);    // Set all pixels on
+		sleep_ms(500);
+		SH1107_send_cmd(SH1107_SET_ENTIRE_ON); // go back to RAM for pixel state
+		sleep_ms(500);
+	}
+
+	// Loop code here
+	while(1){
+		SH1107_clearDisplay();			// This should clear display
+		sleep_ms(5000);
+		SH1107_send_cmd(SH1107_SET_ALL_ON);	// Set all pixels on
+		sleep_ms(500);
+		SH1107_send_cmd(SH1107_SET_ENTIRE_ON);	// Render back what's in memory
+		SetPixel(64, 64);			// Render singel pixel in middle
+		render(buf, &frame_area);		// Send buffer to render
+		sleep_ms(1000);
+	}
+}
