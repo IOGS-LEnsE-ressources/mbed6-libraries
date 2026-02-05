@@ -1,20 +1,21 @@
 /**
- * FILENAME :        COLOR_14_CLICK.h          
+ * FILENAME :        6DOF_IMU_FOXS8700.h        
  *
  * DESCRIPTION :
- *       COLOR_14_CLICK / RGB Sensor from MikroE.
+ *       6DOF_IMU_FOXS8700 / 3-axis accelerometer Sensor from NXP.
  *
- *       This module allows to measure Red Green and Blue light intensity (and IR)
- *  with a specific I2C device - APDS-9151 from BroadCom
- *       More informations : https://www.broadcom.com/products/optical-sensors/integrated-ambient-light-and-proximity-sensors/apds-9151
+ *       This module allows to measure XYZ acceleration
+ *  with a specific I2C device - FXOS8700 from NXP
+ *       More informations : https://www.nxp.com/docs/en/data-sheet/FXOS8700CQ.pdf
  *
  * NOTES :
  *       Developped by Villou / LEnsE
  **
- * AUTHOR :    Julien VILLEMEJANE        START DATE :    07/feb/2023
+ * AUTHOR :    Julien VILLEMEJANE        START DATE :    05/feb/2026
  *
  *       LEnsE / Institut d'Optique Graduate School
  */
+ 
 #ifndef __DOF_IMU_HEADER_H__
 #define __DOF_IMU_HEADER_H__
 
@@ -23,13 +24,13 @@
 /** Constant definition */
 #define     DEBUG_MODE            1
 
-#define   FXOS8700_ADD						0x1E
-#define 	FXOS8700CQ_WHOAMI 			0x0D 
+#define   FXOS8700_ADD				0x1E
+#define 	FXOS8700CQ_WHOAMI 		0x0D 
 #define 	FXOS8700CQ_WHOAMI_VAL 	0xC7
 
-#define 	FXOS8700CQ_STATUS 			0x00 
+#define 	FXOS8700CQ_STATUS 		0x00 
 #define 	FXOS8700CQ_XYZ_DATA_CFG 0x0E 
-#define 	FXOS8700CQ_CTRL_REG1 		0x2A 
+#define 	FXOS8700CQ_CTRL_REG1 	0x2A 
 #define 	FXOS8700CQ_M_CTRL_REG1 	0x5B
 #define 	FXOS8700CQ_M_CTRL_REG2 	0x5C
 
@@ -55,7 +56,7 @@ class Fxos8700{
         char    ack1, ack2;
         
         /// I2C interface pins 
-        I2C             *__i2c = NULL;
+        I2C     *__i2c = NULL;
 
     public:
         /**

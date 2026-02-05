@@ -1,17 +1,17 @@
 /**
- * FILENAME :        main_Color_14_Click.cpp          
+ * FILENAME :        main_6DOF_IMU_FOXS8700.cpp          
  *
  * DESCRIPTION :
- *       Color_14_Click / RGB Sensor Library Testing.
- *		 required : Color_14_Click library for MBED OS 6
- *
+ *       6DOF_IMU_FOXS8700 / 3-axis accelerometer Sensor from NXP.
+ *			Testing program.
  * NOTES :
  *       Developped by Villou / LEnsE
  **
- * AUTHOR :    Julien VILLEMEJANE        START DATE :    07/feb/2023
+ * AUTHOR :    Julien VILLEMEJANE        START DATE :    05/feb/2026
  *
  *       LEnsE / Institut d'Optique Graduate School
  */
+ 
 
 #include "mbed.h"
 #include "6DOF_IMU_FOXS8700.h"

@@ -1,17 +1,17 @@
 /**
- * FILENAME :        COLOR_14_CLICK.cpp          
+ * FILENAME :        6DOF_IMU_FOXS8700.cpp          
  *
  * DESCRIPTION :
- *       COLOR_14_CLICK / RGB Sensor from MikroE.
+ *       6DOF_IMU_FOXS8700 / 3-axis accelerometer Sensor from NXP.
  *
- *       This module allows to measure Red Green and Blue light intensity (and IR)
- *  with a specific I2C device - APDS-9151 from BroadCom
- *       More informations : https://www.broadcom.com/products/optical-sensors/integrated-ambient-light-and-proximity-sensors/apds-9151
+ *       This module allows to measure XYZ acceleration
+ *  with a specific I2C device - FXOS8700 from NXP
+ *       More informations : https://www.nxp.com/docs/en/data-sheet/FXOS8700CQ.pdf
  *
  * NOTES :
  *       Developped by Villou / LEnsE
  **
- * AUTHOR :    Julien VILLEMEJANE        START DATE :    07/feb/2023
+ * AUTHOR :    Julien VILLEMEJANE        START DATE :    05/feb/2026
  *
  *       LEnsE / Institut d'Optique Graduate School
  */
