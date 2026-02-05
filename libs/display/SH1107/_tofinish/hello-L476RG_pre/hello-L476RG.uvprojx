@@ -2215,9 +2215,9 @@
               <FilePath>mbed_config.h</FilePath>
             </File>
             <File>
-              <FileName>main_sh1107.cpp</FileName>
+              <FileName>test_.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\main_sh1107.cpp</FilePath>
+              <FilePath>.\test_.cpp</FilePath>
             </File>
           </Files>
         </Group>

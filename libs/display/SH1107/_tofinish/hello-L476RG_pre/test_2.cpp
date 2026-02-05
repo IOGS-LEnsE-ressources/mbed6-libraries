@@ -1,5 +1,7 @@
 #include "mbed.h"
 
+InterruptIn  bp(PB_4);
+
 // === Pins I2C ===
 I2C i2c(I2C_SDA, I2C_SCL);
 const int OLED_ADDR = 0x3C << 1;  // adresse I2C
@@ -41,13 +43,13 @@ bool sh1107_init() {
 	send_command(0xA1);               // Segment remap
 	send_command(0xC8);               // COM scan direction
 	send_command(0xDA); send_command(0x12); // COM pins
-	send_command(0x81); send_command(0xF0); // Contrast
+	send_command(0x81); send_command(0x30); // Contrast
 	send_command(0xD9); send_command(0x22); // Precharge
 	send_command(0xDB); send_command(0x35); // VCOMH
 	send_command(0xA4);               // Resume RAM display
 	send_command(0xA6);               // Normal display
-	send_command(0xAF);               // Display ON
 	*/
+	send_command(0xAF);               // Display ON
 	thread_sleep_for(100);
 	return ack;
 }
@@ -90,15 +92,19 @@ void clear_screen(bool color = false) {
 	update_screen();
 }
 
+//
+void bp_ISR(void){
+	bool ack_ = sh1107_init();
+	update_screen();
+	printf("Init");
+}
 
 // === Exemple Main ===
 int main() {
-	bool ack_ = sh1107_init();
-	printf("Init ? %d \r\n", ack_);
+	bp.fall(&bp_ISR);
 
 	// Effacer écran noir
 	//clear_screen();
-	thread_sleep_for(200);
 	for(int k = 0; k < 32; k++){
 		int start = k*64;
 		int end = k*64 + 32;
@@ -109,7 +115,7 @@ int main() {
 			buffer[i] = 0x55;
 		}
 	}
-	update_screen();
+	//update_screen();
 
 	while (1) {
 		// boucle vide, écran reste affiché
