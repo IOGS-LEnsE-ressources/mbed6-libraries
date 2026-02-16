@@ -123,3 +123,17 @@ Avant de compiler le projet, vous pouvez modifier le fichier **`mbed_app.json`**
 ```
 
 
+### CMSIS-DSP for FFT
+
+Configuration de l'environnement
+Avant de coder, vous devez inclure les fichiers nécessaires dans votre projet Keil :
+
+Manage Run-Time Environment : Ouvrez l'icône en forme de losange vert.
+
+CMSIS : Cochez DSP et Core.
+
+Device : Assurez-vous d'avoir sélectionné Startup.
+
+Symboles du préprocesseur : Dans les options du projet (Alt+F7), onglet "C/C++", ajoutez le symbole correspondant à votre architecture (ex: ARM_MATH_CM4 pour un Cortex-M4).
+
+puis code dans : https://iogs-lense-training.github.io/nucleo-advanced/contents/proc_fft.html
