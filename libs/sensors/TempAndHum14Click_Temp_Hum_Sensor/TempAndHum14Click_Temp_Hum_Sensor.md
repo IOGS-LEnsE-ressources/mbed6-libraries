@@ -14,6 +14,7 @@
 ## General Info
 
 ***TempAndHum14Click\_Temp\_Hum\_Sensor*** is a **MBED OS** library developed for the *MikroE* module called *Temp&Hum14Click*. 
+
 ATTENTION : RST pin must not be connected !!
 
 ![](https://www.mikroe.com/img/images/temp-hum-14-inner-new-img(1).jpg)
