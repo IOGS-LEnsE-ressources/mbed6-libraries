@@ -32,6 +32,8 @@ TempHum_14_Click::TempHum_14_Click(I2C *_i2c, DigitalOut *_rst){
 }
 
 void TempHum_14_Click::resetSensor(void){
+		__reset->write(1);
+    thread_sleep_for(5);    // 5 ms
     cmd[0] = TEMPHUM_14_CLICK_RESET;
     ack1 = __i2c->write(TEMPHUM_14_CLICK_ADD << 1, cmd, 1);
     if(DEBUG_MODE) printf("Reset Acq = %d\r\n", ack1);
